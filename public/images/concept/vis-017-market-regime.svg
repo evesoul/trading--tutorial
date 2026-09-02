@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 760" role="img" aria-labelledby="title desc">
+  <title id="title">市场环境三态示意图</title>
+  <desc id="desc">教学示意图。同一套抽象价格几何，三格对照趋势、震荡、看不清。环境未定时默认不交易。不是突破必涨。不是真实行情，不是买卖信号。</desc>
+  <rect width="960" height="760" fill="#f8fafc"/>
+  <rect width="960" height="64" fill="#ffffff"/>
+  <line x1="0" y1="64" x2="960" y2="64" stroke="#e2e8f0"/>
+  <text x="28" y="40" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#0f172a">市场环境三态示意图</text>
+  <rect x="820" y="19" width="112" height="26" rx="4" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="876" y="37" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#c2410c">示意图</text>
+
+  <rect x="48" y="76" width="864" height="52" rx="8" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="480" y="98" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#9a3412">先判断环境，再谈方向。环境未定，默认不交易。</text>
+  <text x="480" y="118" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#9a3412">同一套抽象价格几何，三格对照。不是突破必涨。</text>
+
+  <rect x="48" y="144" width="280" height="268" rx="8" fill="#f0fdf4" stroke="#bbf7d0"/>
+  <rect x="344" y="144" width="280" height="268" rx="8" fill="#fffbeb" stroke="#fde68a"/>
+  <rect x="640" y="144" width="280" height="268" rx="8" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="188" y="168" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="700" fill="#15803d">趋势</text>
+  <text x="484" y="168" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="700" fill="#a16207">震荡</text>
+  <text x="780" y="168" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="700" fill="#475569">看不清</text>
+  <text x="188" y="186" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#64748b">高低点抬升 · 方向相对清楚</text>
+  <text x="484" y="186" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#64748b">来回穿越 · 没有持续方向</text>
+  <text x="780" y="186" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#64748b">结构互相否定 · 环境未定</text>
+
+  <polyline points="72,368 112,340 148,352 188,300 228,312 268,248 304,260"
+    fill="none" stroke="#0f172a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="72" cy="368" r="3.5" fill="#0f172a"/>
+  <circle cx="188" cy="300" r="3.5" fill="#0f172a"/>
+  <circle cx="304" cy="260" r="3.5" fill="#0f172a"/>
+  <circle cx="148" cy="352" r="3" fill="#16a34a"/>
+  <circle cx="228" cy="312" r="3" fill="#16a34a"/>
+  <text x="148" y="372" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="10" fill="#15803d">HL</text>
+  <text x="228" y="332" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="10" fill="#15803d">HL</text>
+  <text x="188" y="288" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="10" fill="#15803d">HH</text>
+  <text x="304" y="248" text-anchor="end" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="10" fill="#15803d">HH</text>
+  <text x="188" y="400" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#334155">抽象折线 · 不是某品种 K 线</text>
+
+  <line x1="368" y1="236" x2="600" y2="236" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="5 4"/>
+  <line x1="368" y1="348" x2="600" y2="348" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="5 4"/>
+  <text x="608" y="240" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="10" fill="#64748b">上沿</text>
+  <text x="608" y="352" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="10" fill="#64748b">下沿</text>
+  <polyline points="376,292 412,248 448,332 484,244 520,336 556,252 592,320"
+    fill="none" stroke="#0f172a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="376" cy="292" r="3.5" fill="#0f172a"/>
+  <circle cx="592" cy="320" r="3.5" fill="#0f172a"/>
+  <text x="484" y="400" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#334155">抽象折线 · 不是某品种 K 线</text>
+
+  <line x1="664" y1="268" x2="896" y2="268" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <line x1="664" y1="348" x2="896" y2="348" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <polyline points="672,308 700,292 728,324 756,300 784,214 812,228 840,336 868,312 896,320"
+    fill="none" stroke="#0f172a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="672" cy="308" r="3.5" fill="#0f172a"/>
+  <circle cx="784" cy="214" r="3.5" fill="#dc2626"/>
+  <circle cx="896" cy="320" r="3.5" fill="#0f172a"/>
+  <text x="784" y="204" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" font-weight="700" fill="#b91c1c">突破 ≠ 必涨</text>
+  <text x="780" y="400" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#334155">戳出去又回来 · 不是真实行情</text>
+
+  <rect x="48" y="428" width="280" height="116" rx="8" fill="#f0fdf4" stroke="#bbf7d0"/>
+  <text x="188" y="454" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="700" fill="#166534">可讨论前提</text>
+  <text x="64" y="478" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#334155">高低点抬升，方向相对清楚。</text>
+  <text x="64" y="498" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#334155">可以开始问：允不允许多或空。</text>
+  <text x="64" y="518" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#475569">清楚 ≠ 开多，也不提高胜率。</text>
+
+  <rect x="344" y="428" width="280" height="116" rx="8" fill="#fffbeb" stroke="#fde68a"/>
+  <text x="484" y="454" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="700" fill="#92400e">趋势规则易失效</text>
+  <text x="360" y="478" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#334155">价格在上下沿之间来回穿越。</text>
+  <text x="360" y="498" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#334155">顺趋势规则在这里容易来回打脸。</text>
+  <text x="360" y="518" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#475569">不是逢高做空或逢低抄底指令。</text>
+
+  <rect x="640" y="428" width="280" height="116" rx="8" fill="#f1f5f9" stroke="#cbd5e1"/>
+  <text x="780" y="454" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="700" fill="#334155">默认不交易</text>
+  <text x="656" y="478" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#334155">高低点互相否定，或假突破后回落。</text>
+  <text x="656" y="498" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#334155">环境识别失败时，默认动作是空仓。</text>
+  <text x="656" y="518" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#475569">不要再加一个指标投票开仓。</text>
+
+  <rect x="48" y="560" width="864" height="72" rx="8" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="480" y="586" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#9a3412">不是突破必涨。价格离开整理区只是观察，推不出下一步方向。</text>
+  <text x="480" y="608" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#9a3412">三格是对照，不是连续剧本。环境未定时默认空仓，再进入 vis-008 的「不交易」出口。</text>
+
+  <rect x="72" y="648" width="22" height="4" fill="#0f172a"/>
+  <text x="100" y="654" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#334155">抽象价格</text>
+  <line x1="200" y1="652" x2="222" y2="652" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="5 4"/>
+  <text x="228" y="654" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#334155">整理区沿</text>
+  <text x="700" y="654" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#475569">高波动 / 低波动未单独成格 · 见课文</text>
+  <text x="480" y="678" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#475569">周期不同，趋势与震荡的分界会变。本图不比较均线周期，也不画假 K 线。</text>
+
+  <rect x="0" y="720" width="960" height="40" fill="#f1f5f9"/>
+  <text x="480" y="745" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#64748b">示意图 · 教学抽象几何 · 非真实行情 · 不构成交易建议</text>
+</svg>
