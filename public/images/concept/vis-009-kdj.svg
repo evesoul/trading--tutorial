@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+  <title id="title">KDJ：K 值 / D 值 / J 值示意图</title>
+  <desc id="desc">教学示意图。KDJ 的 K 值、D 值、J 值，标出 80 超买观察区、20 超卖观察区，以及 J 值可高于 100、低于 0。不是买卖信号。不是真实行情。</desc>
+  <rect width="960" height="560" fill="#f8fafc"/>
+  <rect width="960" height="64" fill="#ffffff"/>
+  <line x1="0" y1="64" x2="960" y2="64" stroke="#e2e8f0"/>
+  <text x="28" y="40" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#0f172a">KDJ：K 值 / D 值 / J 值示意图</text>
+  <rect x="820" y="19" width="112" height="26" rx="4" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="876" y="37" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#c2410c">示意图</text>
+
+  <rect x="72" y="88" width="816" height="360" rx="8" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="120" y="108" width="710" height="91" fill="#fef3c7"/>
+  <rect x="120" y="337" width="710" height="91" fill="#dbeafe"/>
+  <line x1="120" y1="154" x2="830" y2="154" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="120" y1="199" x2="830" y2="199" stroke="#d97706" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <line x1="120" y1="268" x2="830" y2="268" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <line x1="120" y1="337" x2="830" y2="337" stroke="#2563eb" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <line x1="120" y1="382" x2="830" y2="382" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="120" y1="108" x2="120" y2="428" stroke="#cbd5e1"/>
+  <text x="108" y="112" text-anchor="end" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#64748b">120</text>
+  <text x="108" y="158" text-anchor="end" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#64748b">100</text>
+  <text x="108" y="203" text-anchor="end" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#a16207">80</text>
+  <text x="108" y="272" text-anchor="end" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#64748b">50</text>
+  <text x="108" y="341" text-anchor="end" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#1d4ed8">20</text>
+  <text x="108" y="386" text-anchor="end" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#64748b">0</text>
+  <text x="108" y="432" text-anchor="end" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#64748b">-20</text>
+  <text x="838" y="148" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" fill="#a16207">超买观察区</text>
+  <text x="838" y="272" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#64748b">中线</text>
+  <text x="838" y="390" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" fill="#1d4ed8">超卖观察区</text>
+
+  <polyline points="140,323 210,231 280,167 350,122 420,167 490,263 560,323 630,387 700,410 770,337 830,263"
+    fill="none" stroke="#7c3aed" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="140,286 210,250 280,213 350,186 420,195 490,236 560,277 630,323 700,346 770,327 830,291"
+    fill="none" stroke="#2563eb" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="140,268 210,259 280,236 350,218 420,209 490,222 560,254 630,291 700,314 770,323 830,305"
+    fill="none" stroke="#d97706" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <circle cx="350" cy="122" r="4" fill="#7c3aed"/>
+  <circle cx="700" cy="410" r="4" fill="#7c3aed"/>
+  <rect x="268" y="118" width="156" height="36" rx="4" fill="#ffffff" stroke="#c4b5fd"/>
+  <text x="346" y="134" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" font-weight="600" fill="#5b21b6">J 值可高于 100</text>
+  <text x="346" y="148" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#5b21b6">不等于到了顶部</text>
+  <rect x="618" y="388" width="156" height="36" rx="4" fill="#ffffff" stroke="#c4b5fd"/>
+  <text x="696" y="404" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" font-weight="600" fill="#5b21b6">J 值可低于 0</text>
+  <text x="696" y="418" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#5b21b6">不等于马上上涨</text>
+
+  <rect x="120" y="456" width="14" height="4" fill="#2563eb"/>
+  <text x="138" y="460" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#334155">K 值（较快）</text>
+  <rect x="248" y="456" width="14" height="4" fill="#d97706"/>
+  <text x="266" y="460" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#334155">D 值（较慢）</text>
+  <rect x="376" y="456" width="14" height="4" fill="#7c3aed"/>
+  <text x="394" y="460" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#334155">J 值（更敏感，可越出 0 与 100）</text>
+  <text x="480" y="488" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" fill="#334155">KDJ 看收盘落在最近高低区间的哪里。80 / 20 是常见观察区，不是买卖开关。交叉很频繁，也不是指令。</text>
+
+  <rect x="0" y="520" width="960" height="40" fill="#f1f5f9"/>
+  <text x="480" y="545" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#64748b">示意图 · 教学抽象几何 · 非真实行情 · 不构成交易建议</text>
+</svg>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+  <title id="title">布林带中轨与开口收口示意图</title>
+  <desc id="desc">教学示意图。三格对照：收口时带宽变窄；开口时带宽变宽，向上或向下都可能出现。中轨是 SMA(20)。碰上轨不是卖点。不是真实行情。</desc>
+  <rect width="960" height="560" fill="#f8fafc"/>
+  <rect width="960" height="64" fill="#ffffff"/>
+  <line x1="0" y1="64" x2="960" y2="64" stroke="#e2e8f0"/>
+  <text x="28" y="40" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#0f172a">布林带中轨与开口收口示意图</text>
+  <rect x="820" y="19" width="112" height="26" rx="4" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="876" y="37" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#c2410c">示意图</text>
+
+  <rect x="48" y="84" width="288" height="368" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+  <rect x="336" y="84" width="288" height="368" rx="8" fill="#f0fdf4" stroke="#bbf7d0"/>
+  <rect x="624" y="84" width="288" height="368" rx="8" fill="#fef2f2" stroke="#fecaca"/>
+  <text x="192" y="108" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#334155">收口：带宽变窄</text>
+  <text x="480" y="108" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#15803d">开口对照：可贴上轨走</text>
+  <text x="768" y="108" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#b91c1c">开口对照：可贴下轨走</text>
+
+  <path d="M76,252 L308,252 L308,320 L76,320 Z" fill="#93c5fd" fill-opacity="0.28"/>
+  <path d="M360,268 L414,244 L460,220 L506,196 L552,172 L600,148 L600,292 L552,299 L506,306 L460,314 L414,321 L360,328 Z" fill="#93c5fd" fill-opacity="0.28"/>
+  <path d="M648,268 L702,276 L748,284 L794,292 L840,300 L888,308 L888,436 L840,414 L794,393 L748,371 L702,350 L648,328 Z" fill="#93c5fd" fill-opacity="0.28"/>
+
+  <polyline points="76,252 308,252" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round"/>
+  <polyline points="76,286 308,286" fill="none" stroke="#0f172a" stroke-width="2.4" stroke-linecap="round"/>
+  <polyline points="76,320 308,320" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round"/>
+  <polyline points="360,268 414,244 460,220 506,196 552,172 600,148" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="360,300 414,286 460,271 506,257 552,242 600,228" fill="none" stroke="#0f172a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="360,328 414,321 460,314 506,306 552,299 600,292" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="648,268 702,276 748,284 794,292 840,300 888,308" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="648,300 702,314 748,329 794,343 840,358 888,372" fill="none" stroke="#0f172a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="648,328 702,350 748,371 794,393 840,414 888,436" fill="none" stroke="#2563eb" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <line x1="92" y1="268" x2="92" y2="300" stroke="#16a34a" stroke-width="2"/><rect x="83" y="276" width="18" height="14" fill="#16a34a"/>
+  <line x1="128" y1="270" x2="128" y2="302" stroke="#dc2626" stroke-width="2"/><rect x="119" y="278" width="18" height="14" fill="#dc2626"/>
+  <line x1="164" y1="262" x2="164" y2="296" stroke="#16a34a" stroke-width="2"/><rect x="155" y="270" width="18" height="18" fill="#16a34a"/>
+  <line x1="200" y1="266" x2="200" y2="308" stroke="#dc2626" stroke-width="2"/><rect x="191" y="274" width="18" height="22" fill="#dc2626"/>
+  <line x1="236" y1="264" x2="236" y2="298" stroke="#16a34a" stroke-width="2"/><rect x="227" y="272" width="18" height="20" fill="#16a34a"/>
+  <line x1="272" y1="268" x2="272" y2="304" stroke="#dc2626" stroke-width="2"/><rect x="263" y="276" width="18" height="14" fill="#dc2626"/>
+
+  <line x1="368" y1="262" x2="368" y2="310" stroke="#16a34a" stroke-width="2"/><rect x="359" y="278" width="18" height="20" fill="#16a34a"/>
+  <line x1="414" y1="236" x2="414" y2="292" stroke="#16a34a" stroke-width="2"/><rect x="405" y="250" width="18" height="30" fill="#16a34a"/>
+  <line x1="460" y1="212" x2="460" y2="270" stroke="#16a34a" stroke-width="2"/><rect x="451" y="226" width="18" height="32" fill="#16a34a"/>
+  <line x1="506" y1="188" x2="506" y2="248" stroke="#16a34a" stroke-width="2"/><rect x="497" y="202" width="18" height="34" fill="#16a34a"/>
+  <line x1="552" y1="166" x2="552" y2="228" stroke="#16a34a" stroke-width="2"/><rect x="543" y="180" width="18" height="36" fill="#16a34a"/>
+  <line x1="598" y1="144" x2="598" y2="208" stroke="#16a34a" stroke-width="2"/><rect x="589" y="158" width="18" height="38" fill="#16a34a"/>
+
+  <line x1="656" y1="290" x2="656" y2="334" stroke="#dc2626" stroke-width="2"/><rect x="647" y="304" width="18" height="18" fill="#dc2626"/>
+  <line x1="702" y1="304" x2="702" y2="356" stroke="#dc2626" stroke-width="2"/><rect x="693" y="320" width="18" height="24" fill="#dc2626"/>
+  <line x1="748" y1="318" x2="748" y2="380" stroke="#dc2626" stroke-width="2"/><rect x="739" y="336" width="18" height="32" fill="#dc2626"/>
+  <line x1="794" y1="332" x2="794" y2="404" stroke="#dc2626" stroke-width="2"/><rect x="785" y="352" width="18" height="40" fill="#dc2626"/>
+  <line x1="840" y1="348" x2="840" y2="424" stroke="#dc2626" stroke-width="2"/><rect x="831" y="368" width="18" height="46" fill="#dc2626"/>
+  <line x1="886" y1="360" x2="886" y2="440" stroke="#dc2626" stroke-width="2"/><rect x="877" y="384" width="18" height="46" fill="#dc2626"/>
+
+  <text x="82" y="246" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#1d4ed8">上轨</text>
+  <text x="82" y="282" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" font-weight="600" fill="#0f172a">中轨 SMA(20)</text>
+  <text x="82" y="338" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#1d4ed8">下轨</text>
+  <text x="548" y="142" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" font-weight="600" fill="#1d4ed8">走轨道</text>
+  <text x="800" y="448" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" font-weight="600" fill="#1d4ed8">走轨道</text>
+
+  <text x="192" y="436" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#475569">只说明波动收缩，方向未知</text>
+  <text x="480" y="436" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#475569">碰上轨不是卖点</text>
+  <text x="768" y="436" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#475569">碰下轨不是买点</text>
+  <text x="480" y="478" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" fill="#334155">上轨 = 中轨 + 2倍标准差，下轨 = 中轨 - 2倍标准差。收口之后往哪边开口事先不知道。三格是对照，不是连续行情。</text>
+
+  <rect x="0" y="520" width="960" height="40" fill="#f1f5f9"/>
+  <text x="480" y="545" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#64748b">示意图 · 教学抽象几何 · 非真实行情 · 不构成交易建议</text>
+</svg>

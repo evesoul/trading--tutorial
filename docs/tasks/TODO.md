@@ -16,11 +16,11 @@
 - [x] K线（TASK-006）
 - [x] MA（TASK-006）
 - [x] EMA（TASK-006）
-- [ ] MACD
+- [x] MACD（TASK-009）
 - [x] RSI（TASK-006）
-- [ ] KDJ
-- [ ] Bollinger Bands
-- [ ] Volume
+- [x] KDJ（TASK-009）
+- [x] Bollinger Bands（TASK-009）
+- [x] Volume（TASK-009）
 - [ ] Open Interest
 - [ ] Funding Rate
 - [ ] Long/Short Ratio

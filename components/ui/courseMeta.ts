@@ -48,13 +48,18 @@ export const LEARNING_STAGES: StageMeta[] = [
   },
 ]
 
-export const MAIN_PATH_SLUGS = ['kline', 'ma', 'ema', 'rsi'] as const
+export const MAIN_PATH_SLUGS = [
+  'kline',
+  'ma',
+  'ema',
+  'rsi',
+  'volume',
+  'macd',
+  'kdj',
+  'bollinger-bands',
+] as const
 
 export const UPCOMING_INDICATOR_TITLES = [
-  'Volume',
-  'MACD',
-  'KDJ',
-  'Bollinger Bands',
   'Open Interest',
   'Funding Rate',
   'Long/Short Ratio',
@@ -67,10 +72,10 @@ const PLANNED_TITLES: Record<string, string> = {
   ma: 'MA 移动平均线',
   ema: 'EMA 指数移动平均线',
   rsi: 'RSI 相对强弱指标',
-  volume: 'Volume',
+  volume: '成交量',
   macd: 'MACD',
   kdj: 'KDJ',
-  'bollinger-bands': 'Bollinger Bands',
+  'bollinger-bands': '布林带',
   'open-interest': 'Open Interest',
   'funding-rate': 'Funding Rate',
   'long-short-ratio': 'Long/Short Ratio',
@@ -82,7 +87,10 @@ const NEXT_REASONS: Record<string, string> = {
   ma: '先用均线看价格的平滑方向。',
   ema: '对比加权后的均线，看它为何更贴近期价格。',
   rsi: '有了趋势参照之后，再用尺子看涨跌动能。',
-  volume: '下一课会看成交量是否支持价格变化；该课仍在编写。',
+  volume: '价格涨跌之后，再看成交量有没有跟上。',
+  macd: '用均线派生出的 DIF、DEA 和柱状图，对照趋势和动能。',
+  kdj: '和 RSI 对照另一把动能尺子，看刻度有何不同。',
+  'bollinger-bands': '用价格通道看波动是收窄还是张开。',
 }
 
 export function plannedLessonTitle(slug: string): string {

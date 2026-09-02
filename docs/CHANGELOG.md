@@ -2,6 +2,14 @@
 
 ## 2026-09-02
 
+- 提交 Sprint 003（本地，不推送）。
+- TASK-012 QA 终审 APPROVE：Code / Content / Visual 均 PASS。
+- 导学主路径改为八篇（到布林带），与 `/course` 一致。
+- TASK-009 主路径续四篇 + 术语表完成；编排器补挂 vis-009 / vis-010。
+- 启动 TASK-012：Sprint 003 QA。
+- TASK-010 交付 vis-009 KDJ、vis-010 布林带示意图。
+- TASK-011 课程主路径扩到八篇；未发布仍走 `resolvePublishedPath`，不生成死链。
+- 启动 Sprint 003：Volume / MACD / KDJ / 布林带教程 + 术语表 + 主路径 UI 扩展。不推送远程。
 - 首次提交：Sprint 001/002 可学主路径（导学 → K 线 → MA → EMA → RSI），不推送远程。
 - TASK-008 QA 终审 APPROVE：Code / Content / Visual 均 PASS。
 - 修复 Mobile 菜单：去掉页头 `backdrop-filter`，避免 fixed 面板被锁在 header 里。

@@ -1,6 +1,6 @@
 # Code QA Checklist
 
-Sprint 001/002 终审（2026-09-02）已核。
+Sprint 003 终审（2026-09-02）已核。
 
 ## TypeScript
 - [x] 无 any
@@ -19,7 +19,7 @@ Sprint 001/002 终审（2026-09-02）已核。
 - [x] SSR 正常
 - [ ] 无明显 hydration 问题
 
-Hydration 未在 Cursor 浏览器 MCP 中点完交互确认；SSR HTML 与 Chrome CDP 首屏一致。不据此 FAIL Code。
+`content.config.ts` exclude `HANDOFF.md` 与 `HANDOFF-*.md`。build 解析 15 个 lessons。Hydration 未在 Cursor 浏览器 MCP 中点完；Chrome CDP 首屏与 SSR 一致。不据此 FAIL Code。
 
 ## UI
 - [x] Desktop
@@ -28,7 +28,8 @@ Hydration 未在 Cursor 浏览器 MCP 中点完交互确认；SSR HTML 与 Chrom
 - [ ] 键盘操作
 - [x] focus 状态
 
-Desktop 1280 初审通过。Mobile 390 复测：CDP 鼠标点开/关菜单，面板高 776px，全屏滑出。Tablet 与键盘未做独立点选。`:focus-visible` 样式已写。
+Desktop 1280：`/course` 八步可点；KDJ / 布林带示意图宽 680；`/glossary` 六组。  
+Mobile 390：CDP 鼠标点开/关菜单，面板高 798px，`z-index: 45`，页头无 `backdrop-filter`。Tablet 与键盘未做独立点选。
 
 ## Build
 - [x] lint
@@ -40,3 +41,5 @@ Desktop 1280 初审通过。Mobile 390 复测：CDP 鼠标点开/关菜单，面
 - [x] 章节导航
 - [x] 图片路径
 - [x] Content slug
+
+`tests/check-sprint003-links.mjs` 与 `tests/check-sprint003-visual.mjs` 通过。无 `href="/indicators/open-interest"`。

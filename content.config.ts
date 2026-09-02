@@ -27,7 +27,7 @@ export default defineContentConfig({
       type: 'page',
       source: {
         include: '**/*.md',
-        exclude: ['HANDOFF.md'],
+        exclude: ['HANDOFF.md', 'HANDOFF-*.md'],
       },
       schema: z.object({
         title: z.string(),

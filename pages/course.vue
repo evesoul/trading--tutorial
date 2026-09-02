@@ -33,7 +33,7 @@ const startPath = computed(() =>
 
 useSeoMeta({
   title: '怎么学',
-  description: '先认识本站边界和风险，再按 K 线 → MA → EMA → RSI 开始读。',
+  description: '先认识本站边界和风险，再按主路径从 K 线读到布林带。未发布的课只标编写中。',
 })
 </script>
 
@@ -66,7 +66,7 @@ useSeoMeta({
     <section aria-labelledby="path-heading">
       <h2 id="path-heading">推荐主路径</h2>
       <p class="lede">
-        现阶段能读完的四篇：K 线 → MA → EMA → RSI。编写中的课只标出来，不会链到空地址。
+        主路径八篇：K 线 → MA → EMA → RSI → 成交量 → MACD → KDJ → 布林带。已发布的可以点进去；未发布只标编写中，不会链到空地址。
       </p>
       <UiPathSteps :steps="mainPath ?? []" />
       <p class="btn-row">

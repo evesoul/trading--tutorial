@@ -42,7 +42,7 @@ const emptyCopy: Record<LessonCategory, {
 
 const leads: Record<LessonCategory, string> = {
   introduction: '先认路，再进入指标。',
-  indicators: '阶段 1：先搞清楚每个指标在回答什么问题。推荐按 K 线 → MA → EMA → RSI 读。',
+  indicators: '阶段 1：先搞清楚每个指标在回答什么问题。推荐按 K 线 → MA → EMA → RSI → 成交量 → MACD → KDJ → 布林带读。',
   combinations: '阶段 2：对照多个指标。正文尚未开放，先把看图课读完。',
   'trading-system': '阶段 3：把观察写成可重复的规则。正文尚未开放。',
   glossary: '查一个词，然后回到课文。术语页不占主路径。',

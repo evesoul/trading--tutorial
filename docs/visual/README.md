@@ -37,8 +37,11 @@
 | 阳线 / 上涨柱 | `#16a34a`（常见加密交易所习惯：绿涨红跌） |
 | 阴线 / 下跌柱 | `#dc2626` |
 | EMA | `#7c3aed` |
-| MACD DIF | `#2563eb` |
-| MACD DEA | `#d97706` |
+| MACD DIF / KDJ K 值 | `#2563eb` |
+| MACD DEA / KDJ D 值 | `#d97706` |
+| KDJ J 值 | `#7c3aed` |
+| 布林带中轨 SMA | `#0f172a` |
+| 布林带上轨 / 下轨 | `#2563eb` |
 | 零轴 / 中线 | `#94a3b8` |
 | 超买观察带 | `#fef3c7` |
 | 超卖观察带 | `#dbeafe` |
@@ -118,6 +121,8 @@ UI Agent 在 Vue 中：
 | [vis-006](specs/vis-006-open-interest.md) | 持仓量与价格 | schematic | delivered | `/images/concept/vis-006-open-interest.svg` |
 | [vis-007](specs/vis-007-funding-rate.md) | 资金费率正负 | schematic | delivered | `/images/concept/vis-007-funding-rate.svg` |
 | [vis-008](specs/vis-008-trading-system-flow.md) | 交易系统流程 | flow | delivered | `/images/flow/vis-008-trading-system-flow.svg` |
+| [vis-009](specs/vis-009-kdj.md) | KDJ：K 值 / D 值 / J 值 | schematic | delivered | `/images/concept/vis-009-kdj.svg` |
+| [vis-010](specs/vis-010-bollinger-bands.md) | 布林带中轨与开口收口 | schematic | delivered | `/images/concept/vis-010-bollinger-bands.svg` |
 
 ### 真实行情图（仅 spec，待采集）
 
@@ -137,6 +142,7 @@ UI Agent 在 Vue 中：
 docs/visual/
   README.md
   HANDOFF.md
+  HANDOFF-SPRINT-003.md
   specs/
     vis-001-kline-ohlc.md
     vis-002-ema-trend.md
@@ -146,6 +152,8 @@ docs/visual/
     vis-006-open-interest.md
     vis-007-funding-rate.md
     vis-008-trading-system-flow.md
+    vis-009-kdj.md
+    vis-010-bollinger-bands.md
     vis-101-kline-real.md
     vis-102-ema-real.md
     vis-103-macd-real.md
