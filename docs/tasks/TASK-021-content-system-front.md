@@ -71,11 +71,11 @@ Content Agent
 插图：`![…示意图](/images/concept/….svg)` 或 vis-008 的 `/images/flow/vis-008-trading-system-flow.svg`。alt 含「示意图」。不要插 vis-101–107。
 
 ## Acceptance Criteria
-- [ ] 八篇 published，结构完整
-- [ ] 共振文末可点 what-is-a-trading-system
-- [ ] 无未发布 404 链接
-- [ ] 示意图标明示意图
-- [ ] HANDOFF
+- [x] 八篇 published，结构完整
+- [x] 共振文末可点 what-is-a-trading-system
+- [x] 无未发布 404 链接
+- [x] 示意图标明示意图
+- [x] HANDOFF
 
 ## Status
-in-progress
+completed

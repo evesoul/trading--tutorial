@@ -82,7 +82,13 @@ learning:
 
 > [趋势 + 动量](/combinations/trend-momentum) → [趋势 + 成交量](/combinations/trend-volume) → [RSI + MACD](/combinations/rsi-macd) → [价格 + OI](/combinations/price-oi) → [OI + Volume](/combinations/oi-volume) → [Funding + OI](/combinations/funding-oi) → [多指标共振](/combinations/multi-indicator)
 
-组合课不补讲公式。每篇先修是该组合用到的指标。阶段 3 的正文还没写。目录里看到系统课空页，先回到本页或组合课，不要把空页当成已经开课。
+组合课不补讲公式。每篇先修是该组合用到的指标。
+
+阶段 3 前半已经可学：
+
+> [什么是交易系统](/trading-system/what-is-a-trading-system) → [市场环境](/trading-system/market-regime) → [方向判断](/trading-system/direction) → [入场规则](/trading-system/entry-rules) → [出场规则](/trading-system/exit-rules) → [止损](/trading-system/stop-loss) → [止盈](/trading-system/take-profit) → [仓位管理](/trading-system/position-sizing)
+
+后七篇（风险管理、交易频率、交易日志、回测、数据统计、系统优化、完整案例）仍未写。仓位之后请回本页，不要寻找尚未发布的系统课链接。
 
 ## 原理
 
@@ -195,7 +201,7 @@ learning:
 1. 从本页进入 [K 线](/indicators/kline)。
 2. 按主路径读到布林带，再读已发布的合约数据层：[持仓量](/indicators/open-interest) → [资金费率](/indicators/funding-rate) → [多空比](/indicators/long-short-ratio) → [CVD](/indicators/cvd)。
 3. 每读完一篇，试着用自己的话复述：**这一篇在回答什么问题？**
-4. 阶段 2 已开放，每次只选一篇组合。阶段 3 仍未写，不要寻找系统课正文。
+4. 阶段 2 已开放，每次只选一篇组合。阶段 3 前半已开放，每次只选一篇系统规则；后七篇仍未写，不要寻找空链接。
 
 使用约定：
 
@@ -233,7 +239,7 @@ learning:
 2. 把永续当成加了杠杆的现货，忽略标记价、强平和资金费。
 3. 认为全仓比逐仓更安全。全仓只是缓冲来源不同。
 4. 认为收到资金费就证明方向正确。资金费是拥挤方向的补偿，不是趋势证明。
-5. 把目录里尚未发布的课点进去，期待已经有正文。阶段 1 十二篇、阶段 2 七篇已发布；阶段 3 还没有正文。
+5. 把目录里尚未发布的课点进去，期待已经有正文。阶段 1 十二篇、阶段 2 七篇、阶段 3 前八篇已发布；风险管理及之后的七篇仍未写。
 6. 用极高杠杆做「很小的止损」。手续费、滑点和盘中噪声会占很大比重，计划中的风险控制容易失效。
 
 ## 局限性
@@ -241,7 +247,7 @@ learning:
 - 本页只讲机制和学法，不讲买卖时机。
 - 数字例子忽略手续费与资金费，不能拿去对账。
 - 各交易所的标记价、维持保证金、强平流程并不完全相同。
-- 学完阶段 1 十二篇和阶段 2 七篇，仍没有进入交易系统。阶段 3 正文尚未写。
+- 学完阶段 1 十二篇、阶段 2 七篇和阶段 3 前八篇，仍没有账户层风险管理、回测和完整案例。后七篇正文尚未写。
 - 任何策略、指标组合都带有亏损可能。永续合约还可能被强平、亏掉保证金；极端情况下还可能遇到额外结算规则（视交易所保险基金与自动减仓而定）。
 
 ## 总结
