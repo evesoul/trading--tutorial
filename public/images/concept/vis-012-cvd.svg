@@ -22,7 +22,7 @@
   <rect x="640" y="148" width="40" height="100" fill="#64748b"/>
   <rect x="770" y="174" width="40" height="74" fill="#94a3b8"/>
   <line x1="100" y1="248" x2="860" y2="248" stroke="#e2e8f0"/>
-  <text x="720" y="168" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" font-weight="600" fill="#475569">本桶量最大</text>
+  <text x="660" y="142" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" font-weight="600" fill="#475569">本桶量最大</text>
 
   <rect x="48" y="272" width="864" height="148" rx="8" fill="#ffffff" stroke="#e2e8f0"/>
   <text x="64" y="294" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="700" fill="#334155">Delta</text>
@@ -35,13 +35,13 @@
   <rect x="510" y="348" width="40" height="32" fill="#dc2626"/>
   <rect x="640" y="345" width="40" height="6" fill="#94a3b8"/>
   <rect x="770" y="348" width="40" height="50" fill="#dc2626"/>
-  <text x="140" y="292" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#15803d">+ 净</text>
+  <text x="170" y="318" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#15803d">+ 净</text>
   <text x="270" y="336" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" font-weight="600" fill="#475569">≈ 0</text>
   <text x="400" y="310" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#15803d">+ 净</text>
   <text x="530" y="396" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#b91c1c">− 净</text>
   <text x="660" y="336" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" font-weight="600" fill="#475569">≈ 0</text>
   <text x="790" y="412" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#b91c1c">− 净</text>
-  <text x="302" y="412" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#475569">量大但 Delta ≈ 0：主动买卖接近打平</text>
+  <text x="660" y="412" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#475569">量大但 Delta ≈ 0：主动买卖接近打平</text>
 
   <rect x="48" y="432" width="864" height="148" rx="8" fill="#ffffff" stroke="#e2e8f0"/>
   <text x="64" y="454" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="700" fill="#334155">CVD</text>
@@ -49,7 +49,7 @@
   <line x1="100" y1="548" x2="860" y2="548" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="4 3"/>
   <text x="868" y="552" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#64748b">0</text>
   <circle cx="100" cy="548" r="4" fill="#2563eb"/>
-  <text x="100" y="566" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="10" fill="#1d4ed8">左端 = 0</text>
+  <text x="72" y="544" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="10" fill="#1d4ed8">左端 = 0</text>
   <polyline points="100,548 140,498 270,498 400,466 530,498 660,498 790,548"
     fill="none" stroke="#2563eb" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
   <circle cx="140" cy="498" r="3.5" fill="#2563eb"/>
@@ -59,9 +59,9 @@
   <circle cx="660" cy="498" r="3.5" fill="#2563eb"/>
   <circle cx="790" cy="548" r="3.5" fill="#2563eb"/>
   <text x="270" y="488" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#1d4ed8">走平</text>
-  <text x="400" y="456" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" font-weight="600" fill="#1d4ed8">斜率向上</text>
+  <text x="455" y="470" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" font-weight="600" fill="#1d4ed8">斜率向上</text>
   <text x="660" y="488" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#1d4ed8">走平</text>
-  <text x="760" y="568" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" font-weight="600" fill="#1d4ed8">斜率向下</text>
+  <text x="800" y="518" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" font-weight="600" fill="#1d4ed8">斜率向下</text>
   <text x="140" y="572" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#64748b">桶 1</text>
   <text x="270" y="572" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#64748b">桶 2</text>
   <text x="400" y="572" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#64748b">桶 3</text>

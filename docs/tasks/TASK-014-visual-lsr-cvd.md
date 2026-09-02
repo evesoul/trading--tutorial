@@ -24,5 +24,12 @@ Visual Agent
 
 图内「示意图」徽章 + 非真实行情页脚。不是买卖信号。
 
+## Acceptance Criteria
+- [x] 两张 SVG 图内有「示意图」与「非真实行情」
+- [x] vis-011 标出口径，并写明不是「市场多空」
+- [x] vis-012 区分成交量柱与 CVD
+- [x] spec 字段齐全，README 可检索
+- [x] 未重画 vis-006 / vis-007，无虚假盈利图
+
 ## Status
 completed
