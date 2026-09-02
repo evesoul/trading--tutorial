@@ -59,11 +59,11 @@ export const MAIN_PATH_SLUGS = [
   'bollinger-bands',
 ] as const
 
-export const UPCOMING_INDICATOR_TITLES = [
-  'Open Interest',
-  'Funding Rate',
-  'Long/Short Ratio',
-  'CVD',
+export const CONTRACT_PATH_SLUGS = [
+  'open-interest',
+  'funding-rate',
+  'long-short-ratio',
+  'cvd',
 ] as const
 
 const PLANNED_TITLES: Record<string, string> = {
@@ -76,10 +76,10 @@ const PLANNED_TITLES: Record<string, string> = {
   macd: 'MACD',
   kdj: 'KDJ',
   'bollinger-bands': '布林带',
-  'open-interest': 'Open Interest',
-  'funding-rate': 'Funding Rate',
-  'long-short-ratio': 'Long/Short Ratio',
-  cvd: 'CVD',
+  'open-interest': '持仓量',
+  'funding-rate': '资金费率',
+  'long-short-ratio': '多空比',
+  cvd: '累计成交量差',
 }
 
 const NEXT_REASONS: Record<string, string> = {
@@ -91,6 +91,10 @@ const NEXT_REASONS: Record<string, string> = {
   macd: '用均线派生出的 DIF、DEA 和柱状图，对照趋势和动能。',
   kdj: '和 RSI 对照另一把动能尺子，看刻度有何不同。',
   'bollinger-bands': '用价格通道看波动是收窄还是张开。',
+  'open-interest': '先有成交量对照，再看此刻还挂着多少仓。',
+  'funding-rate': '有了仓位规模，再看谁在为持仓付费、费率偏到哪边。',
+  'long-short-ratio': '看完存量和费率，再看多空结构怎么倾斜，并先问口径。',
+  cvd: '最后看主动买减主动卖的累计净额，和成交量、持仓量分开。',
 }
 
 export function plannedLessonTitle(slug: string): string {

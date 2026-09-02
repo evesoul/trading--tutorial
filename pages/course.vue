@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { MAIN_PATH_SLUGS, nextReason, plannedLessonTitle } from '../components/ui/courseMeta'
+import { CONTRACT_PATH_SLUGS, MAIN_PATH_SLUGS, nextReason, plannedLessonTitle } from '../components/ui/courseMeta'
 import type { LessonNeighbor } from '../components/ui/courseMeta'
 
 const { fetchLessons, resolvePublishedPath } = useCourse()
@@ -10,30 +10,40 @@ const introduction = computed(() =>
   lessons.value?.find(item => item.category === 'introduction') ?? null,
 )
 
-const { data: mainPath } = await useAsyncData('course-main-path', async () => {
+const { data: pathBundle } = await useAsyncData('course-paths', async () => {
   const published = await fetchLessons({ category: 'indicators' })
   const titleBySlug = new Map(published.map(item => [item.slug, item.title]))
 
-  const steps: LessonNeighbor[] = []
-  for (const slug of MAIN_PATH_SLUGS) {
-    const path = await resolvePublishedPath(slug)
-    steps.push({
-      slug,
-      title: titleBySlug.get(slug) ?? plannedLessonTitle(slug),
-      path,
-      reason: nextReason(slug),
-    })
+  async function toSteps(slugs: readonly string[]): Promise<LessonNeighbor[]> {
+    const steps: LessonNeighbor[] = []
+    for (const slug of slugs) {
+      const path = await resolvePublishedPath(slug)
+      steps.push({
+        slug,
+        title: titleBySlug.get(slug) ?? plannedLessonTitle(slug),
+        path,
+        reason: nextReason(slug),
+      })
+    }
+    return steps
   }
-  return steps
+
+  return {
+    mainPath: await toSteps(MAIN_PATH_SLUGS),
+    contractPath: await toSteps(CONTRACT_PATH_SLUGS),
+  }
 })
 
+const mainPath = computed(() => pathBundle.value?.mainPath ?? [])
+const contractPath = computed(() => pathBundle.value?.contractPath ?? [])
+
 const startPath = computed(() =>
-  mainPath.value?.find(step => step.path)?.path ?? '/indicators',
+  mainPath.value.find(step => step.path)?.path ?? '/indicators',
 )
 
 useSeoMeta({
   title: '怎么学',
-  description: '先认识本站边界和风险，再按主路径从 K 线读到布林带。未发布的课只标编写中。',
+  description: '先认识本站边界和风险，再按主路径从 K 线读到布林带，然后进入合约数据层。未发布的课只标编写中。',
 })
 </script>
 
@@ -68,7 +78,7 @@ useSeoMeta({
       <p class="lede">
         主路径八篇：K 线 → MA → EMA → RSI → 成交量 → MACD → KDJ → 布林带。已发布的可以点进去；未发布只标编写中，不会链到空地址。
       </p>
-      <UiPathSteps :steps="mainPath ?? []" />
+      <UiPathSteps :steps="mainPath" />
       <p class="btn-row">
         <UiButtonLink :to="startPath">
           从 K 线开始
@@ -77,6 +87,17 @@ useSeoMeta({
           浏览全部指标
         </UiButtonLink>
       </p>
+    </section>
+
+    <section aria-labelledby="contract-path-heading">
+      <h2 id="contract-path-heading">合约数据层</h2>
+      <p class="lede">
+        主路径里先有成交量，再进入合约特有的四步：仓（持仓量）→ 费率（资金费率）→ 结构（多空比）→ 主动净额（累计成交量差）。已发布的可以点进去；未发布只标编写中，不会链到空地址。
+      </p>
+      <UiPathSteps
+        :steps="contractPath"
+        label="合约数据层"
+      />
     </section>
   </section>
 </template>
