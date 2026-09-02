@@ -17,7 +17,7 @@ position-sizing → risk-management → trade-frequency → trading-journal → 
 |---|---|---|---|
 | TASK-025 | Content Agent | `content/` | in-progress |
 | TASK-026 | Visual Agent | `docs/visual/` `public/images/` | in-progress |
-| TASK-027 | UI Agent | `components/ui/` `pages/course.vue` | in-progress |
+| TASK-027 | UI Agent | `components/ui/` `pages/course.vue` | completed |
 
 ## 依赖
 - `docs/strategy/risk-management.md`、`backtest.md`、`system-template.md`

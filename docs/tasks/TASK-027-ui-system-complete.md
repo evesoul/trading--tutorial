@@ -29,9 +29,9 @@ UI Agent
 - lint / typecheck。
 
 ## Acceptance Criteria
-- [ ] `/course` 不再写阶段 3 后半未写
-- [ ] 十五步仍在
-- [ ] 未发布无死链
+- [x] `/course` 不再写阶段 3 后半未写
+- [x] 十五步仍在
+- [x] 未发布无死链
 
 ## Status
-in-progress
+completed
