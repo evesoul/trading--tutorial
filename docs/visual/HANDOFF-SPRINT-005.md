@@ -52,7 +52,7 @@ Front Matter 写 `visual.charts: [vis-013]` / `[vis-014]` / `[vis-015]` / `[vis-
 - 四份 spec 含 id / title / type=schematic / purpose / teaching_question / symbol / timeframe / source / period / annotations / status=delivered。
 - 四张 SVG 为 UTF-8；均含「示意图」与「非真实行情」。
 - vis-016 含「不是指标越多越准确」；无收益柱。
-- 已将 SVG 光栅化并在浏览器打开目视检查：徽章与页脚在，四张教学对照可读。
+- 已将四张 SVG 光栅化目视检查：徽章与页脚在；vis-013 同向/反向两段、vis-014 两格价量、vis-015 三格流量存量、vis-016 问题槽与「不是指标越多越准确」均在。浏览器 MCP 本轮未连上，未能在页面里再点一次。
 - 本任务无应用代码改动，未跑 lint / typecheck / build。
 
 ## 已知问题
