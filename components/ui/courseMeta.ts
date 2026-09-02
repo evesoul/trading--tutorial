@@ -66,6 +66,16 @@ export const CONTRACT_PATH_SLUGS = [
   'cvd',
 ] as const
 
+export const COMBINATION_PATH_SLUGS = [
+  'trend-momentum',
+  'trend-volume',
+  'rsi-macd',
+  'price-oi',
+  'oi-volume',
+  'funding-oi',
+  'multi-indicator',
+] as const
+
 const PLANNED_TITLES: Record<string, string> = {
   introduction: '怎么学这门课',
   kline: 'K 线',
@@ -102,6 +112,13 @@ const NEXT_REASONS: Record<string, string> = {
   'funding-rate': '有了仓位规模，再看谁在为持仓付费、费率偏到哪边。',
   'long-short-ratio': '看完存量和费率，再看多空结构怎么倾斜，并先问口径。',
   cvd: '最后看主动买减主动卖的累计净额，和成交量、持仓量分开。',
+  'trend-momentum': '先用已学的均线和动能对照，看方向还在时力度有没有跟上。',
+  'trend-volume': '方向清楚之后，再对照成交量是不是另一个独立问题。',
+  'rsi-macd': '两把动能尺子并列，一致或分歧只说明观察冲突，不自动给方向。',
+  'price-oi': '进入合约持仓，先看价格和仓位规模怎么一起变。',
+  'oi-volume': '仓和量常被当成一回事，这里专门拆开存量与流量。',
+  'funding-oi': '有了仓位规模，再看谁在为持仓付费、市场是否拥挤。',
+  'multi-indicator': '收束：多个问题得到相近答案，不是条件叠得越多越可靠。',
 }
 
 export function plannedLessonTitle(slug: string): string {

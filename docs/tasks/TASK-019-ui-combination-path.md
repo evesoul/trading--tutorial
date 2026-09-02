@@ -40,10 +40,10 @@ trend-momentum → trend-volume → rsi-macd → price-oi → oi-volume → fund
 - 不改路由。
 
 ## Acceptance Criteria
-- [ ] `/course` 可见组合七步
-- [ ] 未发布只标编写中
-- [ ] 发布后可点 `/combinations/{slug}`
-- [ ] 阶段 3 仍引导回怎么学
+- [x] `/course` 可见组合七步
+- [x] 未发布只标编写中
+- [x] 发布后可点 `/combinations/{slug}`
+- [x] 阶段 3 仍引导回怎么学
 
 ## Status
-in-progress
+completed

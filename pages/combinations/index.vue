@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useSeoMeta({
   title: '指标组合',
-  description: '阶段 2 指标组合。正文尚未开放，先学看图。',
+  description: '阶段 2 指标组合：用来对照多个指标，不构成交易信号。',
 })
 </script>
 

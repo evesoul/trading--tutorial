@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { CONTRACT_PATH_SLUGS, MAIN_PATH_SLUGS, nextReason, plannedLessonTitle } from '../components/ui/courseMeta'
+import { COMBINATION_PATH_SLUGS, CONTRACT_PATH_SLUGS, MAIN_PATH_SLUGS, nextReason, plannedLessonTitle } from '../components/ui/courseMeta'
 import type { LessonNeighbor } from '../components/ui/courseMeta'
 
 const { fetchLessons, resolvePublishedPath } = useCourse()
@@ -11,7 +11,7 @@ const introduction = computed(() =>
 )
 
 const { data: pathBundle } = await useAsyncData('course-paths', async () => {
-  const published = await fetchLessons({ category: 'indicators' })
+  const published = await fetchLessons()
   const titleBySlug = new Map(published.map(item => [item.slug, item.title]))
 
   async function toSteps(slugs: readonly string[]): Promise<LessonNeighbor[]> {
@@ -31,11 +31,13 @@ const { data: pathBundle } = await useAsyncData('course-paths', async () => {
   return {
     mainPath: await toSteps(MAIN_PATH_SLUGS),
     contractPath: await toSteps(CONTRACT_PATH_SLUGS),
+    combinationPath: await toSteps(COMBINATION_PATH_SLUGS),
   }
 })
 
 const mainPath = computed(() => pathBundle.value?.mainPath ?? [])
 const contractPath = computed(() => pathBundle.value?.contractPath ?? [])
+const combinationPath = computed(() => pathBundle.value?.combinationPath ?? [])
 
 const startPath = computed(() =>
   mainPath.value.find(step => step.path)?.path ?? '/indicators',
@@ -43,7 +45,7 @@ const startPath = computed(() =>
 
 useSeoMeta({
   title: '怎么学',
-  description: '先认识本站边界和风险，再按主路径从 K 线读到布林带，然后进入合约数据层。未发布的课只标编写中。',
+  description: '先认识本站边界和风险，再按主路径从 K 线读到布林带，然后进入合约数据层，再进入指标组合七步。未发布的课只标编写中。',
 })
 </script>
 
@@ -68,7 +70,7 @@ useSeoMeta({
     <section aria-labelledby="map-heading">
       <h2 id="map-heading">三阶段地图</h2>
       <p class="lede">
-        阶段 2、阶段 3 的正文还没写。目录可以打开，空页会把你带回已开放的课。
+        阶段 2 用来对照多个指标，不构成交易信号。阶段 3 的正文还没写；交易系统目录可以打开，空页会把你带回已开放的课。
       </p>
       <UiStageMap />
     </section>
@@ -97,6 +99,17 @@ useSeoMeta({
       <UiPathSteps
         :steps="contractPath"
         label="合约数据层"
+      />
+    </section>
+
+    <section aria-labelledby="combination-path-heading">
+      <h2 id="combination-path-heading">指标组合</h2>
+      <p class="lede">
+        阶段 2 七步：趋势 + 动量 → 趋势 + 成交量 → RSI + MACD → 价格 + 持仓量 → 持仓量 + 成交量 → 资金费率 + 持仓量 → 多指标共振。组合用来对照，不构成交易信号。已发布的可以点进去；未发布只标编写中，不会链到空地址。
+      </p>
+      <UiPathSteps
+        :steps="combinationPath"
+        label="指标组合"
       />
     </section>
   </section>
