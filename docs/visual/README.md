@@ -47,6 +47,12 @@
 | 超卖观察带 | `#dbeafe` |
 | 正费率区 | `#dcfce7` |
 | 负费率区 | `#fee2e2` |
+| 多头侧（账户 / 仓位） | `#16a34a` |
+| 空头侧（账户 / 仓位） | `#dc2626` |
+| 多空比 1 参考 | `#94a3b8` |
+| 成交量总量柱 | `#94a3b8`（中性灰，避免和有方向的 Delta 混淆） |
+| CVD 曲线 | `#2563eb` |
+| Delta 正 / 负 | `#16a34a` / `#dc2626` |
 | 页脚免责 | 「教学抽象 · 非真实行情 · 不构成交易建议」 |
 
 A 股习惯是红涨绿跌。图内同时写「阳线 / 阴线」，避免只靠颜色理解。
@@ -123,6 +129,8 @@ UI Agent 在 Vue 中：
 | [vis-008](specs/vis-008-trading-system-flow.md) | 交易系统流程 | flow | delivered | `/images/flow/vis-008-trading-system-flow.svg` |
 | [vis-009](specs/vis-009-kdj.md) | KDJ：K 值 / D 值 / J 值 | schematic | delivered | `/images/concept/vis-009-kdj.svg` |
 | [vis-010](specs/vis-010-bollinger-bands.md) | 布林带中轨与开口收口 | schematic | delivered | `/images/concept/vis-010-bollinger-bands.svg` |
+| [vis-011](specs/vis-011-long-short-ratio.md) | 多空比必须先标口径 | schematic | delivered | `/images/concept/vis-011-long-short-ratio.svg` |
+| [vis-012](specs/vis-012-cvd.md) | CVD 与成交量区分 | schematic | delivered | `/images/concept/vis-012-cvd.svg` |
 
 ### 真实行情图（仅 spec，待采集）
 
@@ -143,6 +151,7 @@ docs/visual/
   README.md
   HANDOFF.md
   HANDOFF-SPRINT-003.md
+  HANDOFF-SPRINT-004.md
   specs/
     vis-001-kline-ohlc.md
     vis-002-ema-trend.md
@@ -154,6 +163,8 @@ docs/visual/
     vis-008-trading-system-flow.md
     vis-009-kdj.md
     vis-010-bollinger-bands.md
+    vis-011-long-short-ratio.md
+    vis-012-cvd.md
     vis-101-kline-real.md
     vis-102-ema-real.md
     vis-103-macd-real.md

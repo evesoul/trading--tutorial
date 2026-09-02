@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-labelledby="title desc">
+  <title id="title">多空比必须先标口径示意图</title>
+  <desc id="desc">教学示意图。多空比是某一统计口径下多头相对空头的比值。四种口径：账户数比、持仓量比、大户账户比、大户持仓比。同一抽象时刻，账户数比可以大于 1，持仓量比可以小于 1。不是市场多空，不是真实行情，不是买卖信号。</desc>
+  <rect width="960" height="720" fill="#f8fafc"/>
+  <rect width="960" height="64" fill="#ffffff"/>
+  <line x1="0" y1="64" x2="960" y2="64" stroke="#e2e8f0"/>
+  <text x="28" y="40" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#0f172a">多空比必须先标口径示意图</text>
+  <rect x="820" y="19" width="112" height="26" rx="4" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="876" y="37" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#c2410c">示意图</text>
+
+  <rect x="48" y="76" width="864" height="56" rx="8" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="480" y="100" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="15" font-weight="700" fill="#0f172a">多空比 = 多头侧统计量 ÷ 空头侧统计量</text>
+  <text x="480" y="120" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#475569">先读口径，再读数字。没有口径的比值无法解释，也不能跨接口比较。</text>
+
+  <rect x="48" y="144" width="210" height="118" rx="8" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="48" y="144" width="210" height="8" rx="4" fill="#16a34a"/>
+  <text x="64" y="176" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="700" fill="#0f172a">账户数比</text>
+  <text x="64" y="194" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#64748b">Accounts</text>
+  <text x="64" y="216" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#334155">有多少账户持多、持空</text>
+  <text x="64" y="236" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#64748b">大户和散户各算 1</text>
+
+  <rect x="266" y="144" width="210" height="118" rx="8" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="266" y="144" width="210" height="8" rx="4" fill="#2563eb"/>
+  <text x="282" y="176" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="700" fill="#0f172a">持仓量比</text>
+  <text x="282" y="194" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#64748b">Positions / Size</text>
+  <text x="282" y="216" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#334155">多头仓位总量 ÷ 空头仓位</text>
+  <text x="282" y="236" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#64748b">可与账户数比反向</text>
+
+  <rect x="484" y="144" width="210" height="118" rx="8" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="484" y="144" width="210" height="8" rx="4" fill="#d97706"/>
+  <text x="500" y="176" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="700" fill="#0f172a">大户账户比</text>
+  <text x="500" y="194" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#64748b">Top trader accounts</text>
+  <text x="500" y="216" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#334155">排名靠前账户的人数</text>
+  <text x="500" y="236" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#64748b">「大户」由交易所定义</text>
+
+  <rect x="702" y="144" width="210" height="118" rx="8" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="702" y="144" width="210" height="8" rx="4" fill="#7c3aed"/>
+  <text x="718" y="176" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="700" fill="#0f172a">大户持仓比</text>
+  <text x="718" y="194" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#64748b">Top trader positions</text>
+  <text x="718" y="216" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#334155">排名靠前账户的仓位量</text>
+  <text x="718" y="236" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#64748b">仍不是全市场</text>
+
+  <text x="480" y="286" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#334155">同一抽象时刻 · 两种口径可以反向（教学对照，不是某品种持仓）</text>
+
+  <rect x="48" y="298" width="424" height="246" rx="8" fill="#f0fdf4" stroke="#bbf7d0"/>
+  <text x="260" y="324" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="700" fill="#15803d">口径：账户数比</text>
+  <text x="64" y="348" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#334155">多头账户（每圆 = 1）</text>
+  <circle cx="80" cy="372" r="10" fill="#16a34a"/>
+  <circle cx="108" cy="372" r="10" fill="#16a34a"/>
+  <circle cx="136" cy="372" r="10" fill="#16a34a"/>
+  <circle cx="164" cy="372" r="10" fill="#16a34a"/>
+  <circle cx="192" cy="372" r="10" fill="#16a34a"/>
+  <circle cx="220" cy="372" r="10" fill="#16a34a"/>
+  <circle cx="248" cy="372" r="10" fill="#16a34a"/>
+  <circle cx="276" cy="372" r="10" fill="#16a34a"/>
+  <text x="64" y="408" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#334155">空头账户（每圆 = 1）</text>
+  <circle cx="80" cy="432" r="10" fill="#dc2626"/>
+  <circle cx="108" cy="432" r="10" fill="#dc2626"/>
+  <circle cx="136" cy="432" r="10" fill="#dc2626"/>
+  <circle cx="164" cy="432" r="10" fill="#dc2626"/>
+  <circle cx="192" cy="432" r="10" fill="#dc2626"/>
+  <text x="260" y="476" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#166534">8 ÷ 5 → 账户比 &gt; 1</text>
+  <text x="260" y="498" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#475569">更多账户持多。人数不均，不等于力量更大。</text>
+  <text x="260" y="528" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#64748b">一个大户仍然只算 1 个账户</text>
+
+  <rect x="488" y="298" width="424" height="246" rx="8" fill="#fef2f2" stroke="#fecaca"/>
+  <text x="700" y="324" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="700" fill="#b91c1c">口径：持仓量比</text>
+  <text x="504" y="348" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#334155">多头仓位（色块长度 = 相对规模）</text>
+  <rect x="504" y="358" width="28" height="20" rx="3" fill="#16a34a"/>
+  <rect x="536" y="358" width="28" height="20" rx="3" fill="#16a34a"/>
+  <rect x="568" y="358" width="28" height="20" rx="3" fill="#16a34a"/>
+  <rect x="600" y="358" width="28" height="20" rx="3" fill="#16a34a"/>
+  <rect x="632" y="358" width="28" height="20" rx="3" fill="#16a34a"/>
+  <rect x="664" y="358" width="28" height="20" rx="3" fill="#16a34a"/>
+  <rect x="696" y="358" width="28" height="20" rx="3" fill="#16a34a"/>
+  <rect x="728" y="358" width="28" height="20" rx="3" fill="#16a34a"/>
+  <text x="504" y="408" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#334155">空头仓位（少数账户、单户更大）</text>
+  <rect x="504" y="418" width="168" height="28" rx="3" fill="#dc2626"/>
+  <rect x="680" y="418" width="148" height="28" rx="3" fill="#dc2626"/>
+  <text x="700" y="476" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#991b1b">多头总量 &lt; 空头总量 → 持仓比 &lt; 1</text>
+  <text x="700" y="498" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#475569">仓位可被少数空头主导。与左边不是同一件事。</text>
+  <text x="700" y="528" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#64748b">色块只比较相对长短，不是真实张数</text>
+
+  <rect x="48" y="556" width="864" height="44" rx="8" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="480" y="574" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#9a3412">不是「市场多空」，也不是全球交易者投票</text>
+  <text x="480" y="592" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#9a3412">只覆盖该交易所、该接口样本。散户偏多就该空，属于未验证口号，不是本图结论。</text>
+
+  <line x1="120" y1="622" x2="420" y2="622" stroke="#cbd5e1" stroke-width="2"/>
+  <circle cx="270" cy="622" r="5" fill="#94a3b8"/>
+  <text x="148" y="616" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#64748b">该口径偏空</text>
+  <text x="258" y="616" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" font-weight="600" fill="#475569">1</text>
+  <text x="348" y="616" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#64748b">该口径偏多</text>
+  <text x="560" y="626" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#334155">比值 1 附近：该口径相对均衡（两边杠杆仍可能不同）。不是超买超卖线，不是买卖开关。</text>
+  <text x="480" y="656" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" fill="#334155">四种接口不是同一个指标。人为画 2.0 / 0.5 当极端，只是个人分区，本图不采用。</text>
+
+  <rect x="0" y="680" width="960" height="40" fill="#f1f5f9"/>
+  <text x="480" y="705" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#64748b">示意图 · 教学抽象几何 · 非真实行情 · 不构成交易建议</text>
+</svg>
