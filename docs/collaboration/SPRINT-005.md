@@ -15,8 +15,8 @@ cvd → trend-momentum → trend-volume → rsi-macd → price-oi → oi-volume 
 
 | Task | Owner | 目录 | 状态 |
 |---|---|---|---|
-| TASK-017 | Content Agent | `content/` | in-progress |
-| TASK-018 | Visual Agent | `docs/visual/` `public/images/` | in-progress |
+| TASK-017 | Content Agent | `content/` | completed |
+| TASK-018 | Visual Agent | `docs/visual/` `public/images/` | completed |
 | TASK-019 | UI Agent | `components/ui/` `pages/course.vue` `components/LessonIndexPage.vue` | completed |
 
 ## 依赖

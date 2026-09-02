@@ -37,7 +37,7 @@ status: published
 
 ### 拥挤（Crowding）
 
-较多交易者站在同一方向，可从极端资金费率、一边倒的多空比、快速上升的持仓量等侧面观察。拥挤可以提高反向波动时的清算连锁风险，但不能据此定时反转。相关合约数据课文尚未发布。
+较多交易者站在同一方向，可从极端资金费率、一边倒的多空比、快速上升的持仓量等侧面观察。拥挤可以提高反向波动时的清算连锁风险，但不能据此定时反转。详见[资金费率](/indicators/funding-rate)、[多空比](/indicators/long-short-ratio)、[持仓量](/indicators/open-interest)。拥挤与存量对照见[Funding + OI](/combinations/funding-oi)。
 
 ### 收口 / 开口（Squeeze / Expansion）
 

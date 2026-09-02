@@ -1,6 +1,6 @@
 ---
 title: 动量、成交与合约数据
-description: RSI、MACD、KDJ、布林带、成交量，以及尚未成篇的 OI、资金费、多空比、CVD。
+description: RSI、MACD、KDJ、布林带、成交量，以及已发布的 OI、资金费、多空比、CVD。
 part: 0
 category: glossary
 level: beginner
@@ -11,7 +11,7 @@ status: published
 
 # 动量、成交与合约数据
 
-动量工具回答力度和位置；成交量回答转手；合约数据回答仓、费和主动方向。已发布的课可以点进去，未发布的只在这里查词。
+动量工具回答力度和位置；成交量回答转手；合约数据回答仓、费和主动方向。已发布的课可以点进去。阶段 2 组合课从 [趋势 + 动量](/combinations/trend-momentum) 开始。
 
 ### 动量（Momentum）
 
@@ -39,19 +39,19 @@ status: published
 
 ### 持仓量（Open Interest，OI）
 
-当前尚未平仓的合约总量。成交量是「这段时间转手多少」，持仓量是「此刻还挂着多少仓」。OI 课文编写中，不要到指标目录里找空链接。
+当前尚未平仓的合约总量。成交量是「这段时间转手多少」，持仓量是「此刻还挂着多少仓」。详见[持仓量](/indicators/open-interest)。价与仓的对照见[价格 + OI](/combinations/price-oi)。
 
 ### 资金费率（Funding Rate）
 
-永续合约按周期在多空之间收费的比率。费率为正时，多头支付空头；为负时，空头支付多头。资金费（Funding Payment）是实际划转的金额。课文尚未发布。
+永续合约按周期在多空之间收费的比率。费率为正时，多头支付空头；为负时，空头支付多头。资金费（Funding Payment）是实际划转的金额。详见[资金费率](/indicators/funding-rate)。与持仓量对照见[Funding + OI](/combinations/funding-oi)。
 
 ### 多空比（Long/Short Ratio，LSR）
 
-多头相对空头的比值。不同交易所、不同接口的口径不同：账户数比、持仓量比、大户账户比、大户持仓比。没有口径的多空比无法解释。课文尚未发布。
+多头相对空头的比值。不同交易所、不同接口的口径不同：账户数比、持仓量比、大户账户比、大户持仓比。没有口径的多空比无法解释。详见[多空比](/indicators/long-short-ratio)。
 
 ### 累计成交量差（Cumulative Volume Delta，CVD）
 
-把主动买成交量减主动卖成交量后累加。反映的是主动成交方向的累积，不是普通成交量，也不是持仓量。课文尚未发布。
+把主动买成交量减主动卖成交量后累加。反映的是主动成交方向的累积，不是普通成交量，也不是持仓量。详见[CVD](/indicators/cvd)。
 
 ### 主动买 / 主动卖（Taker Buy / Taker Sell）
 

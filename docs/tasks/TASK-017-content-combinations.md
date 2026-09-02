@@ -77,11 +77,11 @@ CVD 文末：阶段 2 已开，可链 [趋势 + 动量](/combinations/trend-mome
 插图：`![…示意图](/images/concept/….svg)`，alt 含「示意图」。不要插 vis-101–107。
 
 ## Acceptance Criteria
-- [ ] 七篇 published，结构完整
-- [ ] CVD 文末可点 trend-momentum
-- [ ] 无未发布 404 链接
-- [ ] 示意图标明示意图
-- [ ] HANDOFF
+- [x] 七篇 published，结构完整
+- [x] CVD 文末可点 trend-momentum
+- [x] 无未发布 404 链接
+- [x] 示意图标明示意图
+- [x] HANDOFF
 
 ## Status
-in-progress
+completed
