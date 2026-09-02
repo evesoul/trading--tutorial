@@ -21,10 +21,10 @@
 - [x] KDJ（TASK-009）
 - [x] Bollinger Bands（TASK-009）
 - [x] Volume（TASK-009）
-- [ ] Open Interest
-- [ ] Funding Rate
-- [ ] Long/Short Ratio
-- [ ] CVD
+- [x] Open Interest（TASK-013）
+- [x] Funding Rate（TASK-013）
+- [x] Long/Short Ratio（TASK-013）
+- [x] CVD（TASK-013）
 
 ## Part 2 — 指标组合
 - [ ] EMA + RSI

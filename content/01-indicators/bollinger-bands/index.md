@@ -169,8 +169,4 @@ visual:
 
 ## 下一步
 
-主路径的下一层是合约特有数据：持仓量（Open Interest，OI）。OI 回答「此刻还挂着多少仓」，和本篇的波动通道不是同一个问题。先修会用到 [成交量](/indicators/volume)，以免把转手和增减仓看成一件事。
-
-**OI 编写中，可先回 [怎么学](/course)。**
-
-请不要寻找尚未发布的持仓量课文链接。现阶段可以把主路径八篇再走一遍：K 线 → MA → EMA → RSI → Volume → MACD → KDJ → 布林带。每篇用一句话复述它在回答的问题。
+下一篇进入合约特有数据：[持仓量](/indicators/open-interest)（Open Interest，OI）。OI 回答「此刻还挂着多少仓」，和本篇的波动通道不是同一个问题。先修会用到 [成交量](/indicators/volume)，以免把转手和增减仓看成一件事。

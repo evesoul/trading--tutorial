@@ -2,6 +2,9 @@
 
 ## 2026-09-02
 
+- TASK-013 / 014 / 015 合约数据层课文、示意图与课程页四步完成。
+- TASK-015 `/course` 增加合约数据层四步；未发布只标编写中。
+- 启动 Sprint 004：持仓量 / 资金费率 / 多空比 / CVD。
 - 提交 Sprint 003（本地，不推送）。
 - TASK-012 QA 终审 APPROVE：Code / Content / Visual 均 PASS。
 - 导学主路径改为八篇（到布林带），与 `/course` 一致。
