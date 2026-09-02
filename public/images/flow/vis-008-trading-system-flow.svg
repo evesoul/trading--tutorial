@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 1180" role="img" aria-labelledby="title desc">
+  <title id="title">交易系统流程示意图</title>
+  <desc id="desc">教学流程图。从交易理念到复盘优化，并给出不交易出口。不是盈利保证，也不是真实行情。</desc>
+  <rect width="880" height="1180" fill="#f8fafc"/>
+  <rect width="880" height="64" fill="#ffffff"/>
+  <line x1="0" y1="64" x2="880" y2="64" stroke="#e2e8f0"/>
+  <text x="28" y="40" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#0f172a">交易系统流程示意图</text>
+  <rect x="740" y="19" width="112" height="26" rx="4" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="796" y="37" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#c2410c">示意图</text>
+
+  <text x="440" y="86" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#64748b">矩形 = 步骤　　菱形 = 判断　　灰色 = 不交易出口</text>
+  <rect x="240" y="100" width="400" height="48" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="440.0" y="129.0" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#0f172a">1. 明确交易理念</text>
+
+  <line x1="440" y1="148" x2="440" y2="168" stroke="#334155" stroke-width="1.6"/>
+  <rect x="240" y="168" width="400" height="48" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="440.0" y="197.0" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#0f172a">2. 判断市场环境（趋势 / 震荡）</text>
+
+  <line x1="440" y1="216" x2="440" y2="236" stroke="#334155" stroke-width="1.6"/>
+  <polygon points="440,242.0 620.0,286 440,330.0 260.0,286" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="440" y="282" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#1e3a8a">3. 当前环境</text>
+  <text x="440" y="300" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#1e3a8a">允许交易？</text>
+
+  <line x1="620" y1="286" x2="700" y2="286" stroke="#64748b" stroke-width="1.4"/>
+  <text x="658" y="276" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#64748b">否</text>
+  <rect x="700" y="262" width="150" height="48" rx="8" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="775.0" y="291.0" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#475569">观望 / 不交易</text>
+
+  <text x="440" y="346" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#1d4ed8">是</text>
+  <line x1="440" y1="330" x2="440" y2="368" stroke="#334155" stroke-width="1.6"/>
+  <rect x="240" y="368" width="400" height="48" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="440.0" y="397.0" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#0f172a">4. 识别趋势方向</text>
+
+  <line x1="440" y1="416" x2="440" y2="436" stroke="#334155" stroke-width="1.6"/>
+  <polygon points="440,442.0 620.0,486 440,530.0 260.0,486" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="440" y="482" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#1e3a8a">5. 入场规则</text>
+  <text x="440" y="500" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#1e3a8a">是否同时满足？</text>
+
+  <line x1="620" y1="486" x2="700" y2="486" stroke="#64748b" stroke-width="1.4"/>
+  <text x="658" y="476" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#64748b">否</text>
+  <rect x="700" y="462" width="150" height="48" rx="8" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="775.0" y="491.0" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#475569">观望 / 不交易</text>
+
+  <text x="440" y="546" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#1d4ed8">是</text>
+  <line x1="440" y1="530" x2="440" y2="568" stroke="#334155" stroke-width="1.6"/>
+  <rect x="240" y="568" width="400" height="48" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="440.0" y="597.0" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#0f172a">6. 按单笔风险上限计算仓位</text>
+
+  <line x1="440" y1="616" x2="440" y2="636" stroke="#334155" stroke-width="1.6"/>
+  <rect x="240" y="636" width="400" height="48" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="440.0" y="665.0" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#0f172a">7. 预设止损与止盈</text>
+
+  <line x1="440" y1="684" x2="440" y2="704" stroke="#334155" stroke-width="1.6"/>
+  <rect x="240" y="704" width="400" height="48" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="440.0" y="733.0" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#0f172a">8. 执行并监控</text>
+
+  <line x1="440" y1="752" x2="440" y2="772" stroke="#334155" stroke-width="1.6"/>
+  <rect x="240" y="772" width="400" height="48" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="440.0" y="801.0" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#0f172a">9. 按规则出场</text>
+
+  <line x1="440" y1="820" x2="440" y2="840" stroke="#334155" stroke-width="1.6"/>
+  <rect x="240" y="840" width="400" height="48" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="440.0" y="869.0" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#0f172a">10. 记录交易日志</text>
+
+  <line x1="440" y1="888" x2="440" y2="908" stroke="#334155" stroke-width="1.6"/>
+  <rect x="240" y="908" width="400" height="48" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="440.0" y="937.0" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#0f172a">11. 复盘与回测</text>
+
+  <line x1="440" y1="956" x2="440" y2="976" stroke="#334155" stroke-width="1.6"/>
+  <rect x="240" y="976" width="400" height="56" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="440.0" y="1009.0" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#0f172a">12. 优化规则（不保证下一笔更好）</text>
+
+  <path d="M240 1004 C 120 1004, 120 192, 240 192" fill="none" stroke="#7c3aed" stroke-width="1.6" stroke-dasharray="5 4"/>
+  <text x="108" y="600" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#7c3aed">回到环境判断</text>
+  <rect x="48" y="1060" width="784" height="72" rx="8" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="440" y="1088" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" fill="#9a3412">这是教育用检查清单，不是自动跟单策略。永续合约有爆仓风险，仓位由亏损上限反推。</text>
+  <text x="440" y="1110" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" fill="#9a3412">不满足规则时，默认动作是不交易。</text>
+
+  <rect x="0" y="1140" width="880" height="40" fill="#f1f5f9"/>
+  <text x="440" y="1165" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#64748b">示意图 · 教学抽象几何 · 非真实行情 · 不构成交易建议</text>
+
+</svg>

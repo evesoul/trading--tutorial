@@ -1,0 +1,24 @@
+---
+description: Multi-agent 目录边界与完成标准
+alwaysApply: true
+---
+
+# Agent 边界
+
+按 AGENTS.md 分工，未经任务授权不修改其他 Agent 核心目录。
+
+| Agent | 目录 |
+|---|---|
+| Product | `docs/product/` |
+| Knowledge | `docs/knowledge/` |
+| Content | `content/` |
+| Strategy | `docs/strategy/` |
+| Visual | `public/images/`、`docs/visual/` |
+| Nuxt | `pages/`、`components/`、`composables/`、`server/` |
+| UI | `components/ui/` |
+| QA | `tests/`、`docs/qa/` |
+
+重要决策写入项目文件，不要只留在聊天里。完成任务必须留下 HANDOFF：完成内容、修改文件、测试结果、已知问题、下一步。
+
+禁止：一定、必然、100%准确、稳赚、必赚、无风险、保证盈利。
+本项目是交易教育网站，不是信号、荐股、喊单或自动交易系统。

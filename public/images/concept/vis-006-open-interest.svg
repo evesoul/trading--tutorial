@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" role="img" aria-labelledby="title desc">
+  <title id="title">持仓量与价格示意图</title>
+  <desc id="desc">教学示意图。四个象限对照价格涨跌与持仓量升降。OI 只说明仓位增减，不能直接读出谁在赚钱。不是真实行情。</desc>
+  <rect width="960" height="640" fill="#f8fafc"/>
+  <rect width="960" height="64" fill="#ffffff"/>
+  <line x1="0" y1="64" x2="960" y2="64" stroke="#e2e8f0"/>
+  <text x="28" y="40" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#0f172a">持仓量与价格示意图</text>
+  <rect x="820" y="19" width="112" height="26" rx="4" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="876" y="37" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#c2410c">示意图</text>
+
+    <rect x="48" y="84" width="428" height="230" rx="8" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="48" y="84" width="8" height="230" rx="4" fill="#16a34a"/>
+  <text x="72" y="112" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="15" font-weight="700" fill="#0f172a">1. 价涨 + OI 升</text>
+  <text x="72" y="132" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#64748b">上：价格　下：持仓量 OI</text>
+  <polyline points="80,240 140,220 200,200 260,178 320,160 400,148" fill="none" stroke="#0f172a" stroke-width="2.4" stroke-linecap="round"/>
+  <polyline points="80,280 140,270 200,258 260,242 320,228 400,214" fill="none" stroke="#7c3aed" stroke-width="2.4" stroke-linecap="round"/>
+  <text x="72" y="294" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#334155">可能有新仓加入上涨方向。只是观察，不是多头必胜。</text>
+
+    <rect x="484" y="84" width="428" height="230" rx="8" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="484" y="84" width="8" height="230" rx="4" fill="#ca8a04"/>
+  <text x="508" y="112" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="15" font-weight="700" fill="#0f172a">2. 价涨 + OI 降</text>
+  <text x="508" y="132" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#64748b">上：价格　下：持仓量 OI</text>
+  <polyline points="516,240 576,220 636,200 696,180 756,164 844,150" fill="none" stroke="#0f172a" stroke-width="2.4" stroke-linecap="round"/>
+  <polyline points="516,214 576,226 636,238 696,250 756,264 844,278" fill="none" stroke="#7c3aed" stroke-width="2.4" stroke-linecap="round"/>
+  <text x="508" y="294" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#334155">价格涨但仓位减少，可能是旧仓离场（含空头回补）。</text>
+
+    <rect x="48" y="326" width="428" height="230" rx="8" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="48" y="326" width="8" height="230" rx="4" fill="#dc2626"/>
+  <text x="72" y="354" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="15" font-weight="700" fill="#0f172a">3. 价跌 + OI 升</text>
+  <text x="72" y="374" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#64748b">上：价格　下：持仓量 OI</text>
+  <polyline points="80,360 140,378 200,396 260,414 320,430 400,444" fill="none" stroke="#0f172a" stroke-width="2.4" stroke-linecap="round"/>
+  <polyline points="80,470 140,458 200,446 260,432 320,418 400,404" fill="none" stroke="#7c3aed" stroke-width="2.4" stroke-linecap="round"/>
+  <text x="72" y="536" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#334155">可能有新仓加入下跌方向。不能读成空头已经赢了。</text>
+
+    <rect x="484" y="326" width="428" height="230" rx="8" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="484" y="326" width="8" height="230" rx="4" fill="#64748b"/>
+  <text x="508" y="354" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="15" font-weight="700" fill="#0f172a">4. 价跌 + OI 降</text>
+  <text x="508" y="374" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#64748b">上：价格　下：持仓量 OI</text>
+  <polyline points="516,360 576,378 636,396 696,414 756,430 844,444" fill="none" stroke="#0f172a" stroke-width="2.4" stroke-linecap="round"/>
+  <polyline points="516,404 576,416 636,428 696,440 756,454 844,468" fill="none" stroke="#7c3aed" stroke-width="2.4" stroke-linecap="round"/>
+  <text x="508" y="536" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#334155">价格跌且仓位减少，可能是旧仓离场（含多头减仓）。</text>
+
+  <rect x="80" y="568" width="14" height="3" fill="#0f172a"/>
+  <text x="100" y="572" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#334155">价格</text>
+  <rect x="160" y="568" width="14" height="3" fill="#7c3aed"/>
+  <text x="180" y="572" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#334155">持仓量 OI（未平仓合约数量，不是成交量）</text>
+  <text x="480" y="598" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" fill="#334155">四象限是观察框架。同一组合在不同品种、不同时段含义会变化。</text>
+
+  <rect x="0" y="600" width="960" height="40" fill="#f1f5f9"/>
+  <text x="480" y="625" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#64748b">示意图 · 教学抽象几何 · 非真实行情 · 不构成交易建议</text>
+
+</svg>

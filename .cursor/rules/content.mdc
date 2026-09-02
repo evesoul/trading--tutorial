@@ -1,0 +1,20 @@
+---
+description: 教程正文结构与语言要求
+globs: content/**/*.md
+alwaysApply: false
+---
+
+# Content 规范
+
+文章结构：
+学习目标 → 概念 → 原理 → 怎么看 → 怎么使用 → 案例 → 常见错误 → 局限性 → 总结 → 下一步
+
+Front Matter 至少包含：title、description、part、category、level、order、slug。
+可选：indicator、learning、visual、status。
+
+语言：短句、类比、步骤、表格。面向零基础。专业术语首次出现必须解释。
+
+一个概念解决一个问题。使用正反案例。解释局限性和市场环境差异。
+
+需要图表时创建 Visual Task，不伪造行情图片。
+完成后检查 Front Matter、链接、图片。

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+  <title id="title">K 线结构示意图</title>
+  <desc id="desc">教学示意图。分别画出阳线和阴线，标注开盘价、最高价、最低价、收盘价、实体与上下影线。不是真实行情。</desc>
+  <rect width="960" height="560" fill="#f8fafc"/>
+  <rect width="960" height="64" fill="#ffffff"/>
+  <line x1="0" y1="64" x2="960" y2="64" stroke="#e2e8f0"/>
+  <text x="28" y="40" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#0f172a">K 线结构示意图</text>
+  <rect x="820" y="19" width="112" height="26" rx="4" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="876" y="37" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#c2410c">示意图</text>
+
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#334155"/>
+    </marker>
+  </defs>
+  <text x="240" y="96" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="15" font-weight="600" fill="#15803d">阳线：收盘价高于开盘价</text>
+  <text x="720" y="96" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="15" font-weight="600" fill="#b91c1c">阴线：收盘价低于开盘价</text>
+  <line x1="280" y1="128" x2="280" y2="432" stroke="#16a34a" stroke-width="3"/>
+  <rect x="248" y="176" width="64" height="164" rx="2" fill="#16a34a"/>
+  <line x1="280" y1="128" x2="118" y2="128" stroke="#334155" stroke-width="1.2" marker-end="url(#arr)"/>
+  <text x="112" y="124" text-anchor="end" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" fill="#0f172a">最高价 High</text>
+  <line x1="248" y1="176" x2="118" y2="176" stroke="#334155" stroke-width="1.2" marker-end="url(#arr)"/>
+  <text x="112" y="180" text-anchor="end" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" fill="#0f172a">收盘价 Close</text>
+  <line x1="248" y1="340" x2="118" y2="340" stroke="#334155" stroke-width="1.2" marker-end="url(#arr)"/>
+  <text x="112" y="344" text-anchor="end" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" fill="#0f172a">开盘价 Open</text>
+  <line x1="280" y1="432" x2="118" y2="432" stroke="#334155" stroke-width="1.2" marker-end="url(#arr)"/>
+  <text x="112" y="436" text-anchor="end" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" fill="#0f172a">最低价 Low</text>
+  <line x1="336" y1="128" x2="336" y2="176" stroke="#15803d" stroke-width="1.4"/>
+  <line x1="332" y1="128" x2="340" y2="128" stroke="#15803d"/>
+  <line x1="332" y1="176" x2="340" y2="176" stroke="#15803d"/>
+  <text x="344" y="156" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#15803d">上影线</text>
+  <line x1="352" y1="176" x2="352" y2="340" stroke="#15803d" stroke-width="1.4"/>
+  <line x1="348" y1="176" x2="356" y2="176" stroke="#15803d"/>
+  <line x1="348" y1="340" x2="356" y2="340" stroke="#15803d"/>
+  <text x="360" y="266" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#15803d">实体</text>
+  <line x1="336" y1="340" x2="336" y2="432" stroke="#15803d" stroke-width="1.4"/>
+  <line x1="332" y1="340" x2="340" y2="340" stroke="#15803d"/>
+  <line x1="332" y1="432" x2="340" y2="432" stroke="#15803d"/>
+  <text x="344" y="394" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#15803d">下影线</text>
+  <line x1="720" y1="128" x2="720" y2="432" stroke="#dc2626" stroke-width="3"/>
+  <rect x="688" y="156" width="64" height="196" rx="2" fill="#dc2626"/>
+  <line x1="720" y1="128" x2="858" y2="128" stroke="#334155" stroke-width="1.2" marker-end="url(#arr)"/>
+  <text x="864" y="124" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" fill="#0f172a">最高价 High</text>
+  <line x1="752" y1="156" x2="858" y2="156" stroke="#334155" stroke-width="1.2" marker-end="url(#arr)"/>
+  <text x="864" y="160" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" fill="#0f172a">开盘价 Open</text>
+  <line x1="752" y1="352" x2="858" y2="352" stroke="#334155" stroke-width="1.2" marker-end="url(#arr)"/>
+  <text x="864" y="356" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" fill="#0f172a">收盘价 Close</text>
+  <line x1="720" y1="432" x2="858" y2="432" stroke="#334155" stroke-width="1.2" marker-end="url(#arr)"/>
+  <text x="864" y="436" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" fill="#0f172a">最低价 Low</text>
+  <line x1="664" y1="128" x2="664" y2="156" stroke="#b91c1c" stroke-width="1.4"/>
+  <line x1="660" y1="128" x2="668" y2="128" stroke="#b91c1c"/>
+  <line x1="660" y1="156" x2="668" y2="156" stroke="#b91c1c"/>
+  <text x="598" y="146" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#b91c1c">上影线</text>
+  <line x1="648" y1="156" x2="648" y2="352" stroke="#b91c1c" stroke-width="1.4"/>
+  <line x1="644" y1="156" x2="652" y2="156" stroke="#b91c1c"/>
+  <line x1="644" y1="352" x2="652" y2="352" stroke="#b91c1c"/>
+  <text x="598" y="262" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#b91c1c">实体</text>
+  <line x1="664" y1="352" x2="664" y2="432" stroke="#b91c1c" stroke-width="1.4"/>
+  <line x1="660" y1="352" x2="668" y2="352" stroke="#b91c1c"/>
+  <line x1="660" y1="432" x2="668" y2="432" stroke="#b91c1c"/>
+  <text x="598" y="400" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#b91c1c">下影线</text>
+  <text x="480" y="468" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" fill="#334155">一根 K 线 = 一段时间的 OHLC（开、高、低、收）。颜色按常见加密交易所：绿阳 / 红阴。</text>
+
+  <rect x="0" y="520" width="960" height="40" fill="#f1f5f9"/>
+  <text x="480" y="545" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#64748b">示意图 · 教学抽象几何 · 非真实行情 · 不构成交易建议</text>
+
+</svg>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+  <title id="title">EMA 与趋势位置示意图</title>
+  <desc id="desc">教学示意图。三段抽象 K 线对照价格在 EMA 上方、来回穿越、以及均线下方。不是真实行情。</desc>
+  <rect width="960" height="560" fill="#f8fafc"/>
+  <rect width="960" height="64" fill="#ffffff"/>
+  <line x1="0" y1="64" x2="960" y2="64" stroke="#e2e8f0"/>
+  <text x="28" y="40" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#0f172a">EMA 与趋势位置示意图</text>
+  <rect x="820" y="19" width="112" height="26" rx="4" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="876" y="37" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#c2410c">示意图</text>
+
+  <rect x="48" y="84" width="288" height="368" rx="8" fill="#f0fdf4" stroke="#bbf7d0"/>
+  <rect x="336" y="84" width="288" height="368" rx="8" fill="#fffbeb" stroke="#fde68a"/>
+  <rect x="624" y="84" width="288" height="368" rx="8" fill="#fef2f2" stroke="#fecaca"/>
+  <text x="192" y="108" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#15803d">上升段：价格多在 EMA 上方</text>
+  <text x="480" y="108" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#a16207">震荡段：价格来回穿越</text>
+  <text x="768" y="108" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#b91c1c">下降段：价格多在 EMA 下方</text>
+  <line x1="80" y1="348" x2="80" y2="378" stroke="#16a34a" stroke-width="2"/><rect x="71" y="348" width="18" height="22" fill="#16a34a"/>
+  <line x1="126" y1="322" x2="126" y2="360" stroke="#16a34a" stroke-width="2"/><rect x="117" y="322" width="18" height="26" fill="#16a34a"/>
+  <line x1="172" y1="292" x2="172" y2="336" stroke="#16a34a" stroke-width="2"/><rect x="163" y="292" width="18" height="28" fill="#16a34a"/>
+  <line x1="218" y1="260" x2="218" y2="308" stroke="#16a34a" stroke-width="2"/><rect x="209" y="260" width="18" height="32" fill="#16a34a"/>
+  <line x1="264" y1="232" x2="264" y2="278" stroke="#16a34a" stroke-width="2"/><rect x="255" y="232" width="18" height="28" fill="#16a34a"/>
+  <line x1="310" y1="214" x2="310" y2="256" stroke="#16a34a" stroke-width="2"/><rect x="301" y="214" width="18" height="24" fill="#16a34a"/>
+  <line x1="372" y1="208" x2="372" y2="262" stroke="#dc2626" stroke-width="2"/><rect x="363" y="220" width="18" height="28" fill="#dc2626"/>
+  <line x1="418" y1="200" x2="418" y2="258" stroke="#16a34a" stroke-width="2"/><rect x="409" y="218" width="18" height="26" fill="#16a34a"/>
+  <line x1="464" y1="210" x2="464" y2="268" stroke="#dc2626" stroke-width="2"/><rect x="455" y="222" width="18" height="30" fill="#dc2626"/>
+  <line x1="510" y1="206" x2="510" y2="264" stroke="#16a34a" stroke-width="2"/><rect x="501" y="224" width="18" height="26" fill="#16a34a"/>
+  <line x1="556" y1="214" x2="556" y2="270" stroke="#dc2626" stroke-width="2"/><rect x="547" y="228" width="18" height="26" fill="#dc2626"/>
+  <line x1="602" y1="208" x2="602" y2="266" stroke="#16a34a" stroke-width="2"/><rect x="593" y="220" width="18" height="28" fill="#16a34a"/>
+  <line x1="664" y1="232" x2="664" y2="292" stroke="#dc2626" stroke-width="2"/><rect x="655" y="240" width="18" height="38" fill="#dc2626"/>
+  <line x1="710" y1="260" x2="710" y2="322" stroke="#dc2626" stroke-width="2"/><rect x="701" y="272" width="18" height="36" fill="#dc2626"/>
+  <line x1="756" y1="292" x2="756" y2="354" stroke="#dc2626" stroke-width="2"/><rect x="747" y="302" width="18" height="38" fill="#dc2626"/>
+  <line x1="802" y1="324" x2="802" y2="384" stroke="#dc2626" stroke-width="2"/><rect x="793" y="334" width="18" height="36" fill="#dc2626"/>
+  <line x1="848" y1="352" x2="848" y2="408" stroke="#dc2626" stroke-width="2"/><rect x="839" y="362" width="18" height="34" fill="#dc2626"/>
+  <polyline points="80,362 126,340 172,314 218,284 264,254 310,236 372,242 418,236 464,244 510,240 556,248 602,242 664,268 710,298 756,330 802,360 848,386"
+    fill="none" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="848" cy="386" r="4" fill="#7c3aed"/>
+  <text x="862" y="390" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#7c3aed">EMA</text>
+  <text x="192" y="436" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#475569">EMA 上行，价格在均线一侧</text>
+  <text x="480" y="436" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#475569">EMA 走平，穿越变多</text>
+  <text x="768" y="436" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#475569">EMA 下行，价格在均线另一侧</text>
+  <text x="480" y="478" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" fill="#334155">EMA 描述价格相对位置，会滞后。这三段是对照，不是一套连续盈利剧本。</text>
+
+  <rect x="0" y="520" width="960" height="40" fill="#f1f5f9"/>
+  <text x="480" y="545" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#64748b">示意图 · 教学抽象几何 · 非真实行情 · 不构成交易建议</text>
+
+</svg>

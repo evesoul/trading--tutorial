@@ -1,0 +1,15 @@
+---
+description: Nuxt / Vue / TypeScript 工程约定
+globs: "{pages,components,composables,server,types}/**/*.{ts,vue}"
+alwaysApply: false
+---
+
+# Nuxt 约定
+
+- TypeScript strict，禁止 `any`
+- Composition API + `<script setup>`
+- 内容与 UI 解耦：教程正文来自 Nuxt Content，不得写死在 Vue
+- 数据与展示解耦：查询放 composable，展示放 component
+- 架构：Content → Composable → Component → Page
+- UI 组件放 `components/ui/`
+- 完成前执行：`npm run lint`、`npm run typecheck`、`npm run build`
