@@ -27,15 +27,14 @@
 - [x] CVD（TASK-013）
 
 ## Part 2 — 指标组合
-- [ ] EMA + RSI
-- [ ] EMA + MACD
-- [ ] EMA + Volume
-- [ ] Price + Volume
-- [ ] Price + OI
-- [ ] OI + Volume
-- [ ] Funding + OI
-- [ ] RSI + MACD
-- [ ] 多指标共振
+主题页（配对是文内案例，不是一级路由）：
+- [ ] 趋势 + 动量（TASK-017）
+- [ ] 趋势 + 成交量（TASK-017）
+- [ ] RSI + MACD（TASK-017）
+- [ ] 价格 + 持仓量（TASK-017）
+- [ ] 持仓量 + 成交量（TASK-017）
+- [ ] 资金费率 + 持仓量（TASK-017）
+- [ ] 多指标共振（TASK-017）
 
 ## Part 3 — Trading System
 - [ ] 什么是交易系统
