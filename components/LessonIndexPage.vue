@@ -28,7 +28,7 @@ const emptyCopy: Record<LessonCategory, {
   },
   'trading-system': {
     title: '交易系统课尚未开放',
-    description: '系统课是第三阶段：先有看图能力，再练习设计自己的规则。案例不是荐股或跟单对象。',
+    description: '系统课是第三阶段：把观察写成可检查的规则，不是跟单策略。现在还没有正文，先回到怎么学。',
     to: '/course',
     action: '回到怎么学',
   },
@@ -44,7 +44,7 @@ const leads: Record<LessonCategory, string> = {
   introduction: '先认路，再进入指标。',
   indicators: '阶段 1：先搞清楚每个指标在回答什么问题。推荐先按 K 线 → MA → EMA → RSI → 成交量 → MACD → KDJ → 布林带读，再进入合约数据层：持仓量 → 资金费率 → 多空比 → 累计成交量差。',
   combinations: '阶段 2：用来对照多个指标，不构成交易信号。',
-  'trading-system': '阶段 3：把观察写成可重复的规则。正文尚未开放。',
+  'trading-system': '阶段 3：把观察写成可检查的规则，不是跟单策略。',
   glossary: '查一个词，然后回到课文。术语页不占主路径。',
 }
 

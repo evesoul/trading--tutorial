@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useSeoMeta({
   title: '交易系统',
-  description: '阶段 3 交易系统。正文尚未开放，先回到怎么学。',
+  description: '阶段 3 交易系统：把观察写成可检查的规则，不是跟单策略。',
 })
 </script>
 

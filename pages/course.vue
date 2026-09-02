@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { COMBINATION_PATH_SLUGS, CONTRACT_PATH_SLUGS, MAIN_PATH_SLUGS, nextReason, plannedLessonTitle } from '../components/ui/courseMeta'
+import { COMBINATION_PATH_SLUGS, CONTRACT_PATH_SLUGS, MAIN_PATH_SLUGS, SYSTEM_PATH_SLUGS, nextReason, plannedLessonTitle } from '../components/ui/courseMeta'
 import type { LessonNeighbor } from '../components/ui/courseMeta'
 
 const { fetchLessons, resolvePublishedPath } = useCourse()
@@ -32,12 +32,14 @@ const { data: pathBundle } = await useAsyncData('course-paths', async () => {
     mainPath: await toSteps(MAIN_PATH_SLUGS),
     contractPath: await toSteps(CONTRACT_PATH_SLUGS),
     combinationPath: await toSteps(COMBINATION_PATH_SLUGS),
+    systemPath: await toSteps(SYSTEM_PATH_SLUGS),
   }
 })
 
 const mainPath = computed(() => pathBundle.value?.mainPath ?? [])
 const contractPath = computed(() => pathBundle.value?.contractPath ?? [])
 const combinationPath = computed(() => pathBundle.value?.combinationPath ?? [])
+const systemPath = computed(() => pathBundle.value?.systemPath ?? [])
 
 const startPath = computed(() =>
   mainPath.value.find(step => step.path)?.path ?? '/indicators',
@@ -45,7 +47,7 @@ const startPath = computed(() =>
 
 useSeoMeta({
   title: '怎么学',
-  description: '先认识本站边界和风险，再按主路径从 K 线读到布林带，然后进入合约数据层，再进入指标组合七步。未发布的课只标编写中。',
+  description: '先认识本站边界和风险，再按主路径从 K 线读到布林带，然后进入合约数据层，再进入指标组合七步，最后进入交易系统。未发布的课只标编写中。',
 })
 </script>
 
@@ -70,7 +72,7 @@ useSeoMeta({
     <section aria-labelledby="map-heading">
       <h2 id="map-heading">三阶段地图</h2>
       <p class="lede">
-        阶段 2 用来对照多个指标，不构成交易信号。阶段 3 的正文还没写；交易系统目录可以打开，空页会把你带回已开放的课。
+        阶段 2 用来对照多个指标，不构成交易信号。阶段 3 把观察写成可检查的规则，不是跟单策略；后半（回测 / 案例）仍在编写。
       </p>
       <UiStageMap />
     </section>
@@ -110,6 +112,17 @@ useSeoMeta({
       <UiPathSteps
         :steps="combinationPath"
         label="指标组合"
+      />
+    </section>
+
+    <section aria-labelledby="system-path-heading">
+      <h2 id="system-path-heading">交易系统</h2>
+      <p class="lede">
+        阶段 3 十五步：什么是交易系统 → 市场环境 → 方向判断 → 入场规则 → 出场规则 → 止损 → 止盈 → 仓位管理 → 风险管理 → 交易频率 → 交易日志 → 回测 → 数据统计 → 系统优化 → 完整交易系统案例。把观察写成可检查的规则，不是跟单策略。已发布的可以点进去；未发布只标编写中，不会链到空地址。后半（回测 / 案例）仍在编写。
+      </p>
+      <UiPathSteps
+        :steps="systemPath"
+        label="交易系统"
       />
     </section>
   </section>

@@ -38,10 +38,10 @@ what-is-a-trading-system → market-regime → direction → entry-rules → exi
 - 未发布仍走 `resolvePublishedPath`，不生成死链。
 
 ## Acceptance Criteria
-- [ ] `/course` 可见系统路径
-- [ ] 未发布只标编写中
-- [ ] 发布后可点 `/trading-system/{slug}`
-- [ ] 后七步未发布无死链
+- [x] `/course` 可见系统路径
+- [x] 未发布只标编写中
+- [x] 发布后可点 `/trading-system/{slug}`
+- [x] 后七步未发布无死链
 
 ## Status
-in-progress
+completed

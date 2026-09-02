@@ -17,7 +17,7 @@ multi-indicator → what-is-a-trading-system → market-regime → direction →
 |---|---|---|---|
 | TASK-021 | Content Agent | `content/` | in-progress |
 | TASK-022 | Visual Agent | `docs/visual/` `public/images/` | in-progress |
-| TASK-023 | UI Agent | `components/ui/` `pages/course.vue` `components/LessonIndexPage.vue` | in-progress |
+| TASK-023 | UI Agent | `components/ui/` `pages/course.vue` `components/LessonIndexPage.vue` | completed |
 
 ## 依赖
 - 策略模板：`docs/strategy/system-template.md`、`position-sizing.md`、`risk-management.md`（只引用边界，本轮不写风险全文）

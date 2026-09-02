@@ -76,6 +76,24 @@ export const COMBINATION_PATH_SLUGS = [
   'multi-indicator',
 ] as const
 
+export const SYSTEM_PATH_SLUGS = [
+  'what-is-a-trading-system',
+  'market-regime',
+  'direction',
+  'entry-rules',
+  'exit-rules',
+  'stop-loss',
+  'take-profit',
+  'position-sizing',
+  'risk-management',
+  'trade-frequency',
+  'trading-journal',
+  'backtesting',
+  'statistics',
+  'system-optimization',
+  'case-study',
+] as const
+
 const PLANNED_TITLES: Record<string, string> = {
   introduction: '怎么学这门课',
   kline: 'K 线',
@@ -134,6 +152,21 @@ const NEXT_REASONS: Record<string, string> = {
   'oi-volume': '仓和量常被当成一回事，这里专门拆开存量与流量。',
   'funding-oi': '有了仓位规模，再看谁在为持仓付费、市场是否拥挤。',
   'multi-indicator': '收束：多个问题得到相近答案，不是条件叠得越多越可靠。',
+  'what-is-a-trading-system': '先建立理念、规则和记录，打破「找一个准指标」的预期。',
+  'market-regime': '同一观察在趋势和震荡里读法不同，先定环境再谈方向。',
+  direction: '只回答偏多、偏空或不交易，不把入场细节混进来。',
+  'entry-rules': '环境和方向清楚之后，再写哪些观察同时满足才允许开仓。',
+  'exit-rules': '先有「何时离开」的框架，再拆止损和止盈。',
+  'stop-loss': '永续合约有爆仓风险，止损规则要早于止盈和加仓。',
+  'take-profit': '和止损成对：目标是可检查的规则，不是尽量拿到最多。',
+  'position-sizing': '有了止损定义，再谈单笔亏损是否可承受。',
+  'risk-management': '从单笔仓位升到账户层：杠杆、保证金和禁止交易条件。',
+  'trade-frequency': '有了风险边界，再看频率如何影响手续费、滑点和情绪。',
+  'trading-journal': '没有记录就谈不上优化，先把执行过程写下来。',
+  backtesting: '回测用来检验规则是否可执行，不是寻找曲线最好的参数。',
+  statistics: '胜率只是其中一个数字，还要看回撤、盈亏比、样本和成本。',
+  'system-optimization': '有了统计之后才谈调整，并单独写过拟合风险。',
+  'case-study': '用一份教学案例把前面的规则串起来，说明过程，不证明有效。',
 }
 
 export function plannedLessonTitle(slug: string): string {
