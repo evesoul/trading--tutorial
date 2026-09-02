@@ -16,7 +16,7 @@ position-sizing → risk-management → trade-frequency → trading-journal → 
 | Task | Owner | 目录 | 状态 |
 |---|---|---|---|
 | TASK-025 | Content Agent | `content/` | in-progress |
-| TASK-026 | Visual Agent | `docs/visual/` `public/images/` | in-progress |
+| TASK-026 | Visual Agent | `docs/visual/` `public/images/` | completed |
 | TASK-027 | UI Agent | `components/ui/` `pages/course.vue` | completed |
 
 ## 依赖

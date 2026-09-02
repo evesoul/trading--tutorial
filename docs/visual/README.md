@@ -137,6 +137,8 @@ UI Agent 在 Vue 中：
 | [vis-016](specs/vis-016-multi-indicator.md) | 问题槽不是指标堆叠 | schematic | delivered | `/images/concept/vis-016-multi-indicator.svg` |
 | [vis-017](specs/vis-017-market-regime.md) | 市场环境三态 | schematic | delivered | `/images/concept/vis-017-market-regime.svg` |
 | [vis-018](specs/vis-018-stop-loss.md) | 止损与强平区分 | schematic | delivered | `/images/concept/vis-018-stop-loss.svg` |
+| [vis-019](specs/vis-019-backtest.md) | 回测不能只看胜率 | schematic | delivered | `/images/concept/vis-019-backtest.svg` |
+| [vis-020](specs/vis-020-case-study.md) | 交易系统案例是作业纸 | schematic | delivered | `/images/concept/vis-020-case-study.svg` |
 
 ### 真实行情图（仅 spec，待采集）
 
@@ -160,6 +162,7 @@ docs/visual/
   HANDOFF-SPRINT-004.md
   HANDOFF-SPRINT-005.md
   HANDOFF-SPRINT-006.md
+  HANDOFF-SPRINT-007.md
   specs/
     vis-001-kline-ohlc.md
     vis-002-ema-trend.md
@@ -179,6 +182,8 @@ docs/visual/
     vis-016-multi-indicator.md
     vis-017-market-regime.md
     vis-018-stop-loss.md
+    vis-019-backtest.md
+    vis-020-case-study.md
     vis-101-kline-real.md
     vis-102-ema-real.md
     vis-103-macd-real.md

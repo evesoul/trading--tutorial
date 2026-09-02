@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 760" role="img" aria-labelledby="title desc">
+  <title id="title">回测不能只看胜率示意图</title>
+  <desc id="desc">教学示意图。回测要同时看见交易次数、盈亏比、回撤、成本（手续费、资金费、滑点）。单独一个胜率格子不够。回测不是成绩单，不证明以后会赚钱。无权益曲线。不是真实行情，不是买卖信号。</desc>
+  <rect width="960" height="760" fill="#f8fafc"/>
+  <rect width="960" height="64" fill="#ffffff"/>
+  <line x1="0" y1="64" x2="960" y2="64" stroke="#e2e8f0"/>
+  <text x="28" y="40" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#0f172a">回测不能只看胜率示意图</text>
+  <rect x="820" y="19" width="112" height="26" rx="4" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="876" y="37" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#c2410c">示意图</text>
+
+  <rect x="48" y="76" width="864" height="52" rx="8" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="480" y="98" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#9a3412">单独一个胜率格子不够。回测不是成绩单。</text>
+  <text x="480" y="118" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#9a3412">要同时看见次数、盈亏比、回撤、成本。不证明以后会赚钱。</text>
+
+  <rect x="48" y="144" width="424" height="276" rx="8" fill="#ffffff" stroke="#fecaca"/>
+  <rect x="48" y="144" width="424" height="36" rx="8" fill="#fef2f2"/>
+  <rect x="48" y="164" width="424" height="16" fill="#fef2f2"/>
+  <text x="260" y="168" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="700" fill="#991b1b">只报胜率 · 不合格</text>
+
+  <rect x="68" y="196" width="384" height="72" rx="8" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="260" y="226" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#9a3412">单独一格 · 看起来像成绩</text>
+  <text x="260" y="250" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="18" font-weight="700" fill="#c2410c">胜率</text>
+
+  <rect x="68" y="280" width="184" height="44" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4 3"/>
+  <text x="160" y="307" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#94a3b8">交易次数 · 空着</text>
+  <rect x="268" y="280" width="184" height="44" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4 3"/>
+  <text x="360" y="307" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#94a3b8">盈亏比 · 空着</text>
+  <rect x="68" y="332" width="184" height="44" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4 3"/>
+  <text x="160" y="359" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#94a3b8">回撤 · 空着</text>
+  <rect x="268" y="332" width="184" height="44" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4 3"/>
+  <text x="360" y="359" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#94a3b8">成本 · 空着</text>
+
+  <text x="260" y="400" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#991b1b">手续费 / 资金费 / 滑点都没写，这不是回测卡片。</text>
+
+  <rect x="488" y="144" width="424" height="276" rx="8" fill="#ffffff" stroke="#bbf7d0"/>
+  <rect x="488" y="144" width="424" height="36" rx="8" fill="#f0fdf4"/>
+  <rect x="488" y="164" width="424" height="16" fill="#f0fdf4"/>
+  <text x="700" y="168" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="700" fill="#166534">一组数字一起看 · 检查清单</text>
+
+  <rect x="508" y="196" width="184" height="68" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="600" y="222" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="700" fill="#0f172a">交易次数</text>
+  <text x="600" y="244" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#475569">有多少笔符合规则</text>
+  <rect x="708" y="196" width="184" height="68" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="800" y="222" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="700" fill="#0f172a">盈亏比</text>
+  <text x="800" y="244" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#475569">赢的平均有多大</text>
+  <rect x="508" y="272" width="184" height="68" rx="6" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="600" y="298" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="700" fill="#0f172a">回撤</text>
+  <text x="600" y="320" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#475569">从高点下来多少</text>
+  <rect x="708" y="272" width="184" height="68" rx="6" fill="#fffbeb" stroke="#fde68a"/>
+  <text x="800" y="298" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="700" fill="#92400e">胜率</text>
+  <text x="800" y="320" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#92400e">只是其中一格</text>
+
+  <rect x="508" y="348" width="384" height="52" rx="6" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="700" y="368" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="700" fill="#1e40af">成本必须分开写 · 漏计会高估</text>
+  <rect x="524" y="376" width="72" height="18" rx="4" fill="#dbeafe"/>
+  <text x="560" y="389" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="10" font-weight="600" fill="#1e3a8a">手续费</text>
+  <rect x="604" y="376" width="72" height="18" rx="4" fill="#dbeafe"/>
+  <text x="640" y="389" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="10" font-weight="600" fill="#1e3a8a">资金费</text>
+  <rect x="684" y="376" width="72" height="18" rx="4" fill="#dbeafe"/>
+  <text x="720" y="389" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="10" font-weight="600" fill="#1e3a8a">滑点</text>
+  <text x="820" y="389" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="10" fill="#334155">永续至少这三项</text>
+
+  <rect x="48" y="436" width="864" height="116" rx="8" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="480" y="460" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="700" fill="#334155">虚构算术：胜率高也可以粗算更差 · 不是策略成绩</text>
+  <text x="480" y="478" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#64748b">未计手续费 / 资金费 / 滑点。加上成本后两边都可能变号。不能外推。</text>
+
+  <rect x="68" y="490" width="400" height="48" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="268" y="510" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" fill="#334155">对照 A · 胜率更高</text>
+  <text x="268" y="528" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#475569">小赢大亏时，粗算也可以更差</text>
+  <rect x="492" y="490" width="400" height="48" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="692" y="510" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" fill="#334155">对照 B · 胜率更低</text>
+  <text x="692" y="528" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="11" fill="#475569">盈亏比不同，所以不能只比胜率</text>
+
+  <rect x="48" y="568" width="864" height="72" rx="8" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="480" y="594" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#9a3412">回测检查规则在这段样本里的样子，不是寻找更好看的数字。</text>
+  <text x="480" y="616" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#9a3412">不画权益曲线，也不比较「优化前后更赚钱」。历史观察不能代表未来。</text>
+
+  <text x="160" y="664" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#334155">空着的格子 = 展示不合格</text>
+  <text x="480" y="664" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#334155">完整清单 = 一起看，不是打分</text>
+  <text x="800" y="664" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#334155">胜率既不能单独夸，也不能单独否</text>
+  <text x="480" y="688" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#475569">次数过少时，其余数字也不稳。本图无品种、无区间、无收益数字。</text>
+
+  <rect x="0" y="720" width="960" height="40" fill="#f1f5f9"/>
+  <text x="480" y="745" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#64748b">示意图 · 教学抽象几何 · 非真实行情 · 不构成交易建议</text>
+</svg>
