@@ -40,4 +40,4 @@ Visual Agent
 - [x] 未重画 vis-008，无虚假盈利图
 
 ## Status
-review
+completed

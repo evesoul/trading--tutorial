@@ -16,7 +16,7 @@ multi-indicator → what-is-a-trading-system → market-regime → direction →
 | Task | Owner | 目录 | 状态 |
 |---|---|---|---|
 | TASK-021 | Content Agent | `content/` | in-progress |
-| TASK-022 | Visual Agent | `docs/visual/` `public/images/` | in-progress |
+| TASK-022 | Visual Agent | `docs/visual/` `public/images/` | completed |
 | TASK-023 | UI Agent | `components/ui/` `pages/course.vue` `components/LessonIndexPage.vue` | completed |
 
 ## 依赖
