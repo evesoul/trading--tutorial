@@ -70,11 +70,11 @@ Content Agent
 插图 alt 含「示意图」。不要插 vis-101–107。不要贴虚构绩效表。
 
 ## Acceptance Criteria
-- [ ] 七篇 published
-- [ ] 仓位文末可点 risk-management
-- [ ] 案例文末回 /course，无死链
-- [ ] 无违禁词，无虚假成绩
-- [ ] HANDOFF
+- [x] 七篇 published
+- [x] 仓位文末可点 risk-management
+- [x] 案例文末回 /course，无死链
+- [x] 无违禁词，无虚假成绩
+- [x] HANDOFF
 
 ## Status
-in-progress
+completed
