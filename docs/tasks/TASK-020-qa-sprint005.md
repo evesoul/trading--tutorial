@@ -28,4 +28,4 @@ QA Agent
 `docs/qa/QA-RESULT-SPRINT-005.md`；Status → review
 
 ## Status
-in-progress
+completed

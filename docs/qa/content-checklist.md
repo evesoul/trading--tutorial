@@ -1,7 +1,7 @@
 # Content QA Checklist
 
-Sprint 004 终审（2026-09-02）已核。对象：OI / 资金费率 / 多空比 / CVD；抽检布林带文末与导学。  
-Sprint 001–003（导学 + K 线 / MA / EMA / RSI / Volume / MACD / KDJ / 布林带 + 术语六组）结论仍成立。
+Sprint 005 终审（2026-09-03）已核。对象：七篇组合课；抽检 CVD 文末与 `/course` 三段路径。  
+Sprint 001–004（导学 + 12 篇指标 + 术语六组）结论仍成立。
 
 ## 基础
 - [x] 标题清晰
@@ -10,7 +10,7 @@ Sprint 001–003（导学 + K 线 / MA / EMA / RSI / Volume / MACD / KDJ / 布�
 - [x] 专业术语有解释
 - [x] 有总结
 
-四篇均为：学习目标 → 概念 → 原理 → 怎么看 → 怎么使用 → 正反案例 → 常见错误 → 局限性 → 总结 → 下一步。
+七篇均为：学习目标 → 概念 → 观察步骤 → 示意图 → 正反案例 → 常见错误 → 局限性 → 总结 → 下一步。
 
 ## 知识
 - [x] 指标定义正确
@@ -19,7 +19,7 @@ Sprint 001–003（导学 + K 线 / MA / EMA / RSI / Volume / MACD / KDJ / 布�
 - [x] 使用场景明确
 - [x] 局限性明确
 
-术语对齐：OI ≠ Volume ≠ CVD；资金费率 ≠ 资金费；多空比先标口径。
+组合用来对照，不是叠加信号。金叉 / 超买 / 背离 / 量价齐升是观察。Funding + OI 不是反向喊单。多指标共振写明不是指标越多越准确。
 
 ## 交易
 - [x] 没有收益保证
@@ -28,8 +28,7 @@ Sprint 001–003（导学 + K 线 / MA / EMA / RSI / Volume / MACD / KDJ / 布�
 - [x] 没有把指标描述成确定性信号
 - [x] 有适当风险说明
 
-检索无：一定 / 必然 / 100%准确 / 稳赚 / 必赚 / 无风险 / 保证盈利。  
-四象限 / 极端费率 / Funding + OI / 背离均为观察，不是反向喊单。
+检索无：一定 / 必然 / 100%准确 / 稳赚 / 必赚 / 无风险 / 保证盈利。
 
 ## 图表
 - [x] 图片存在
@@ -38,7 +37,7 @@ Sprint 001–003（导学 + K 线 / MA / EMA / RSI / Volume / MACD / KDJ / 布�
 - [x] 有 alt
 - [x] 有解释
 
-OI vis-006、Funding vis-007、LSR vis-011、CVD vis-012；alt 均含「示意图」。vis-011 alt / 图内标口径。未插 vis-101–107。
+vis-013 / 014 / 015 / 016 文件存在；课文 alt 含「示意图」。vis-016 否定「越多越准确」。未插 vis-101–107。
 
 ## 学习路径
 - [x] 有上一篇
@@ -46,5 +45,5 @@ OI vis-006、Funding vis-007、LSR vis-011、CVD vis-012；alt 均含「示意�
 - [x] 相关知识有链接
 - [x] 学习顺序合理
 
-布林带 → OI 可点。CVD `learning.next: trend-momentum` 未发布，不生成 `/combinations/trend-momentum`，文末回 `/course`。  
-`/course` 主路径 8 + 合约数据层 4 可点。
+CVD → 趋势 + 动量可点。`multi-indicator` `learning.next: what-is-a-trading-system` 未发布，不生成 `/trading-system/what-is-a-trading-system`，文末回 `/course`。  
+`/course` 主路径 8 + 合约数据层 4 + 指标组合 7 可点。

@@ -24,7 +24,7 @@ cvd → trend-momentum → trend-volume → rsi-macd → price-oi → oi-volume 
 - 发布课序以 `docs/product/learning-path.md` 为准（`rsi-macd` 是第 3 篇）
 - Visual 并行出组合示意图；课文可先复用 vis-002–007
 - UI 加「指标组合」七步，未发布显示编写中
-- QA（TASK-020，in-progress）
+- QA（TASK-020，completed，APPROVE）
 
 ## 明确不做
 - 阶段 3 正文

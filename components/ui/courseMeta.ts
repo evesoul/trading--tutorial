@@ -97,6 +97,21 @@ const PLANNED_TITLES: Record<string, string> = {
   'oi-volume': '持仓量 + 成交量',
   'funding-oi': '资金费率 + 持仓量',
   'multi-indicator': '多指标共振',
+  'what-is-a-trading-system': '什么是交易系统',
+  'market-regime': '市场环境',
+  direction: '方向判断',
+  'entry-rules': '入场规则',
+  'exit-rules': '出场规则',
+  'stop-loss': '止损',
+  'take-profit': '止盈',
+  'position-sizing': '仓位管理',
+  'risk-management': '风险管理',
+  'trade-frequency': '交易频率',
+  'trading-journal': '交易日志',
+  backtesting: '回测',
+  statistics: '数据统计',
+  'system-optimization': '系统优化',
+  'case-study': '完整交易系统案例',
 }
 
 const NEXT_REASONS: Record<string, string> = {
