@@ -23,7 +23,7 @@ position-sizing → risk-management → trade-frequency → trading-journal → 
 - `docs/strategy/risk-management.md`、`backtest.md`、`system-template.md`
 - 发布课序以 `docs/product/learning-path.md` 为准
 - UI 路径 15 步已在课程页；本轮去掉「后半仍在编写」
-- QA 三篇齐后再开 TASK-028
+- QA（TASK-028，in-progress）
 
 ## 明确不做
 - 真实行情采集
