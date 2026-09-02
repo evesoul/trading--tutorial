@@ -80,6 +80,13 @@ const PLANNED_TITLES: Record<string, string> = {
   'funding-rate': '资金费率',
   'long-short-ratio': '多空比',
   cvd: '累计成交量差',
+  'trend-momentum': '趋势 + 动量',
+  'trend-volume': '趋势 + 成交量',
+  'rsi-macd': 'RSI + MACD',
+  'price-oi': '价格 + 持仓量',
+  'oi-volume': '持仓量 + 成交量',
+  'funding-oi': '资金费率 + 持仓量',
+  'multi-indicator': '多指标共振',
 }
 
 const NEXT_REASONS: Record<string, string> = {

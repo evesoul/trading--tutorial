@@ -24,7 +24,7 @@ CVD 之后阶段 2 未写：文末回 `/course`，不链空组合页。
 - OI / Funding 示意图已有 vis-006 / vis-007
 - Visual 并行补多空比、CVD
 - UI 加「合约数据层」四步，未发布显示编写中
-- QA（TASK-016）等三份完成后派出
+- QA（TASK-016，completed，APPROVE）
 
 ## 明确不做
 - 阶段 2 / 3 正文

@@ -1,7 +1,7 @@
 # Content QA Checklist
 
-Sprint 003 终审（2026-09-02）已核。对象：Volume / MACD / KDJ / 布林带 + 术语六组；抽检 RSI 文末与导学。  
-Sprint 001/002（导学 + K 线 / MA / EMA / RSI）结论仍成立。
+Sprint 004 终审（2026-09-02）已核。对象：OI / 资金费率 / 多空比 / CVD；抽检布林带文末与导学。  
+Sprint 001–003（导学 + K 线 / MA / EMA / RSI / Volume / MACD / KDJ / 布林带 + 术语六组）结论仍成立。
 
 ## 基础
 - [x] 标题清晰
@@ -19,7 +19,7 @@ Sprint 001/002（导学 + K 线 / MA / EMA / RSI）结论仍成立。
 - [x] 使用场景明确
 - [x] 局限性明确
 
-术语对齐：MA = SMA；KDJ 称 K 值；强平作正式名。
+术语对齐：OI ≠ Volume ≠ CVD；资金费率 ≠ 资金费；多空比先标口径。
 
 ## 交易
 - [x] 没有收益保证
@@ -29,7 +29,7 @@ Sprint 001/002（导学 + K 线 / MA / EMA / RSI）结论仍成立。
 - [x] 有适当风险说明
 
 检索无：一定 / 必然 / 100%准确 / 稳赚 / 必赚 / 无风险 / 保证盈利。  
-金叉 / 开口收口 / 超买 / 背离均为观察，不是开仓指令。
+四象限 / 极端费率 / Funding + OI / 背离均为观察，不是反向喊单。
 
 ## 图表
 - [x] 图片存在
@@ -38,7 +38,7 @@ Sprint 001/002（导学 + K 线 / MA / EMA / RSI）结论仍成立。
 - [x] 有 alt
 - [x] 有解释
 
-Volume vis-005、MACD vis-003、KDJ vis-009、布林带 vis-010；alt 均含「示意图」。vis-009 无「K 线」线名。未插 vis-101–107。
+OI vis-006、Funding vis-007、LSR vis-011、CVD vis-012；alt 均含「示意图」。vis-011 alt / 图内标口径。未插 vis-101–107。
 
 ## 学习路径
 - [x] 有上一篇
@@ -46,6 +46,5 @@ Volume vis-005、MACD vis-003、KDJ vis-009、布林带 vis-010；alt 均含「�
 - [x] 相关知识有链接
 - [x] 学习顺序合理
 
-RSI → Volume 可点。布林带 `learning.next: open-interest` 未发布，不生成 `/indicators/open-interest`。  
-`/glossary` 六组 published；HANDOFF draft + exclude，不进列表。  
-导学正文已改为八篇主路径（到布林带）。
+布林带 → OI 可点。CVD `learning.next: trend-momentum` 未发布，不生成 `/combinations/trend-momentum`，文末回 `/course`。  
+`/course` 主路径 8 + 合约数据层 4 可点。
