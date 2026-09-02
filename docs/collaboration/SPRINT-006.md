@@ -24,7 +24,7 @@ multi-indicator → what-is-a-trading-system → market-regime → direction →
 - 发布课序以 `docs/product/learning-path.md` 为准
 - vis-008 已有系统流程；Visual 补环境 / 止损对照
 - UI 加阶段 3 路径，未发布显示编写中
-- QA（TASK-024，in-progress）
+- QA（TASK-024，completed，APPROVE）
 
 ## 明确不做
 - 阶段 3 后七篇正文
