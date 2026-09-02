@@ -40,10 +40,10 @@ Visual Agent
 `rsi-macd` / `price-oi` / `funding-oi` 可复用 vis-003/004、vis-006、vis-007，本任务不出第四象限假行情、不出费率反向喊单图。
 
 ## Acceptance Criteria
-- [ ] 四张 SVG 图内有「示意图」与「非真实行情」
-- [ ] vis-016 写明不是指标越多越准确
-- [ ] spec 字段齐全，README 可检索
-- [ ] 未重画 vis-001–012，无虚假盈利图
+- [x] 四张 SVG 图内有「示意图」与「非真实行情」
+- [x] vis-016 写明不是指标越多越准确
+- [x] spec 字段齐全，README 可检索
+- [x] 未重画 vis-001–012，无虚假盈利图
 
 ## Status
-in-progress
+completed

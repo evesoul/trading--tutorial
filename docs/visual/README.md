@@ -131,6 +131,10 @@ UI Agent 在 Vue 中：
 | [vis-010](specs/vis-010-bollinger-bands.md) | 布林带中轨与开口收口 | schematic | delivered | `/images/concept/vis-010-bollinger-bands.svg` |
 | [vis-011](specs/vis-011-long-short-ratio.md) | 多空比必须先标口径 | schematic | delivered | `/images/concept/vis-011-long-short-ratio.svg` |
 | [vis-012](specs/vis-012-cvd.md) | CVD 与成交量区分 | schematic | delivered | `/images/concept/vis-012-cvd.svg` |
+| [vis-013](specs/vis-013-trend-momentum.md) | 趋势与动量对照 | schematic | delivered | `/images/concept/vis-013-trend-momentum.svg` |
+| [vis-014](specs/vis-014-trend-volume.md) | 价量是否同步 | schematic | delivered | `/images/concept/vis-014-trend-volume.svg` |
+| [vis-015](specs/vis-015-oi-volume.md) | 持仓量与成交量区分 | schematic | delivered | `/images/concept/vis-015-oi-volume.svg` |
+| [vis-016](specs/vis-016-multi-indicator.md) | 问题槽不是指标堆叠 | schematic | delivered | `/images/concept/vis-016-multi-indicator.svg` |
 
 ### 真实行情图（仅 spec，待采集）
 
@@ -152,6 +156,7 @@ docs/visual/
   HANDOFF.md
   HANDOFF-SPRINT-003.md
   HANDOFF-SPRINT-004.md
+  HANDOFF-SPRINT-005.md
   specs/
     vis-001-kline-ohlc.md
     vis-002-ema-trend.md
@@ -165,6 +170,10 @@ docs/visual/
     vis-010-bollinger-bands.md
     vis-011-long-short-ratio.md
     vis-012-cvd.md
+    vis-013-trend-momentum.md
+    vis-014-trend-volume.md
+    vis-015-oi-volume.md
+    vis-016-multi-indicator.md
     vis-101-kline-real.md
     vis-102-ema-real.md
     vis-103-macd-real.md
