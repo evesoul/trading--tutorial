@@ -13,6 +13,22 @@ export const REAL_CHART_IDS = [
   'vis-112',
   'vis-113',
   'vis-114',
+  'vis-115',
+  'vis-116',
+  'vis-117',
+  'vis-118',
+  'vis-119',
+  'vis-120',
+  'vis-121',
+  'vis-122',
+  'vis-123',
+  'vis-124',
+  'vis-125',
+  'vis-126',
+  'vis-127',
+  'vis-128',
+  'vis-129',
+  'vis-130',
 ] as const
 
 export type RealChartId = (typeof REAL_CHART_IDS)[number]
@@ -86,6 +102,8 @@ export interface ChartPayload {
   oiUnit?: string
   fundingUnit?: string
   atrUnit?: string
+  lsrUnit?: string
+  cvdUnit?: string
   candles: ChartCandle[]
   overlays?: {
     ema20?: Array<number | null>
@@ -93,6 +111,7 @@ export interface ChartPayload {
     bbUpper?: Array<number | null>
     bbMid?: Array<number | null>
     bbLower?: Array<number | null>
+    emaHigher?: Array<number | null>
   }
   atr?: Array<number | null>
   markers?: ChartSwingMarker[]
@@ -101,6 +120,10 @@ export interface ChartPayload {
   oi?: Array<number | null>
   oiContracts?: Array<number | null>
   funding?: Array<number | null>
+  lsrAccounts?: Array<number | null>
+  lsrTopPositions?: Array<number | null>
+  cvd?: Array<number | null>
+  delta?: Array<number | null>
   panels: string[]
   parameters?: Record<string, string | number>
   drawTools?: boolean
@@ -122,6 +145,22 @@ export const REAL_CHART_SNAPSHOTS: Record<RealChartId, string> = {
   'vis-112': '/images/indicator/vis-112-bollinger-real.svg',
   'vis-113': '/images/combination/vis-113-trend-momentum-real.svg',
   'vis-114': '/images/combination/vis-114-alignment-fail-real.svg',
+  'vis-115': '/images/indicator/vis-115-lsr-real.svg',
+  'vis-116': '/images/indicator/vis-116-cvd-real.svg',
+  'vis-117': '/images/indicator/vis-117-cascade-real.svg',
+  'vis-118': '/images/system/vis-118-case-timeline-real.svg',
+  'vis-119': '/images/combination/vis-119-trend-volume-real.svg',
+  'vis-120': '/images/combination/vis-120-price-oi-real.svg',
+  'vis-121': '/images/combination/vis-121-oi-volume-real.svg',
+  'vis-122': '/images/combination/vis-122-funding-oi-real.svg',
+  'vis-123': '/images/combination/vis-123-rsi-macd-real.svg',
+  'vis-124': '/images/system/vis-124-regime-real.svg',
+  'vis-125': '/images/system/vis-125-direction-real.svg',
+  'vis-126': '/images/system/vis-126-mtf-real.svg',
+  'vis-127': '/images/system/vis-127-entry-real.svg',
+  'vis-128': '/images/system/vis-128-stop-real.svg',
+  'vis-129': '/images/system/vis-129-exit-real.svg',
+  'vis-130': '/images/system/vis-130-take-profit-real.svg',
 }
 
 export function isRealChartId(value: string): value is RealChartId {

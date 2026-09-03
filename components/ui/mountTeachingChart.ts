@@ -34,6 +34,10 @@ const DEA = '#d97706'
 const RSI = '#1a4d56'
 const OI = '#0f172a'
 const ATR = '#0f766e'
+const LSR_ACC = '#1d4ed8'
+const LSR_POS = '#c2410c'
+const CVD = '#7c3aed'
+const EMA_HIGHER = '#0f766e'
 const ZERO = '#94a3b8'
 
 export interface TeachingChartHandle {
@@ -132,6 +136,12 @@ export function formatChartReadout(param: MouseEventParams, series: SeriesMap): 
     parts.push(`EMA20 ${formatPrice(emaPoint.value)}`)
   }
 
+  const emaHigherSeries = series.get('emaHigher')
+  const emaHigherPoint = emaHigherSeries ? param.seriesData.get(emaHigherSeries) : undefined
+  if (isValuePoint(emaHigherPoint)) {
+    parts.push(`日线 EMA20 ${formatPrice(emaHigherPoint.value)}`)
+  }
+
   const smaSeries = series.get('sma20')
   const smaPoint = smaSeries ? param.seriesData.get(smaSeries) : undefined
   if (isValuePoint(smaPoint)) {
@@ -190,6 +200,24 @@ export function formatChartReadout(param: MouseEventParams, series: SeriesMap): 
     parts.push(`费率 ${formatFunding(fundingPoint.value)}`)
   }
 
+  const lsrAccSeries = series.get('lsrAccounts')
+  const lsrAccPoint = lsrAccSeries ? param.seriesData.get(lsrAccSeries) : undefined
+  if (isValuePoint(lsrAccPoint)) {
+    parts.push(`全员账户比 ${lsrAccPoint.value.toFixed(3)}`)
+  }
+
+  const lsrPosSeries = series.get('lsrTopPositions')
+  const lsrPosPoint = lsrPosSeries ? param.seriesData.get(lsrPosSeries) : undefined
+  if (isValuePoint(lsrPosPoint)) {
+    parts.push(`大户持仓比 ${lsrPosPoint.value.toFixed(3)}`)
+  }
+
+  const cvdSeries = series.get('cvd')
+  const cvdPoint = cvdSeries ? param.seriesData.get(cvdSeries) : undefined
+  if (isValuePoint(cvdPoint)) {
+    parts.push(`CVD ${compactNumber(cvdPoint.value)} USDT`)
+  }
+
   return parts.join(' · ')
 }
 
@@ -200,7 +228,7 @@ export function mountTeachingChart(
 ): TeachingChartHandle {
   const extraPanes = payload.panels.filter(panel => panel !== 'ohlc' && panel !== 'ema').length
   const hasSubpane = extraPanes > 0
-  const height = extraPanes >= 2 ? 620 : extraPanes === 1 ? 500 : 360
+  const height = extraPanes >= 3 ? 740 : extraPanes >= 2 ? 620 : extraPanes === 1 ? 500 : 360
   const times = payload.candles.map(bar => bar.time)
 
   const chart: IChartApi = createChart(host, {
@@ -281,6 +309,19 @@ export function mountTeachingChart(
     }, 0)
     ema.setData(linePoints(times, payload.overlays.ema20))
     series.set('ema20', ema)
+  }
+
+  if (payload.overlays?.emaHigher) {
+    const higher = chart.addSeries(LineSeries, {
+      color: EMA_HIGHER,
+      lineWidth: 2,
+      lineStyle: LineStyle.Dashed,
+      lastValueVisible: true,
+      priceLineVisible: false,
+      title: '日线 EMA20',
+    }, 0)
+    higher.setData(linePoints(times, payload.overlays.emaHigher))
+    series.set('emaHigher', higher)
   }
 
   if (payload.overlays?.sma20) {
@@ -451,6 +492,57 @@ export function mountTeachingChart(
     series.set('atr', atr)
   }
 
+  if (payload.panels.includes('lsr') && payload.lsrAccounts && payload.lsrTopPositions) {
+    const pane = takePane()
+    const accounts = chart.addSeries(LineSeries, {
+      color: LSR_ACC,
+      lineWidth: 2,
+      lastValueVisible: true,
+      priceLineVisible: false,
+      title: '全员账户比',
+    }, pane)
+    const positions = chart.addSeries(LineSeries, {
+      color: LSR_POS,
+      lineWidth: 2,
+      lastValueVisible: true,
+      priceLineVisible: false,
+      title: '大户持仓比',
+    }, pane)
+    accounts.setData(linePoints(times, payload.lsrAccounts))
+    positions.setData(linePoints(times, payload.lsrTopPositions))
+    accounts.createPriceLine({
+      price: 1,
+      color: ZERO,
+      lineWidth: 1,
+      lineStyle: LineStyle.Dotted,
+      axisLabelVisible: true,
+      title: '1',
+    })
+    series.set('lsrAccounts', accounts)
+    series.set('lsrTopPositions', positions)
+  }
+
+  if (payload.panels.includes('cvd') && payload.cvd) {
+    const cvd = chart.addSeries(LineSeries, {
+      color: CVD,
+      lineWidth: 2,
+      lastValueVisible: true,
+      priceLineVisible: false,
+      title: 'CVD USDT',
+      priceFormat: { type: 'custom', formatter: compactAxis, minMove: 1 },
+    }, takePane())
+    cvd.setData(linePoints(times, payload.cvd))
+    cvd.createPriceLine({
+      price: 0,
+      color: ZERO,
+      lineWidth: 1,
+      lineStyle: LineStyle.Dotted,
+      axisLabelVisible: true,
+      title: '零轴',
+    })
+    series.set('cvd', cvd)
+  }
+
   if (payload.panels.includes('funding') && payload.funding) {
     const funding = chart.addSeries(HistogramSeries, {
       lastValueVisible: true,
@@ -492,6 +584,9 @@ export function mountTeachingChart(
   }
   if (panes[2]) {
     panes[2].setStretchFactor(1)
+  }
+  if (panes[3]) {
+    panes[3].setStretchFactor(1)
   }
 
   chart.timeScale().fitContent()

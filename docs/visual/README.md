@@ -15,7 +15,7 @@
 7. 指标交叉、超买超卖、量价配合都是观察工具，图注不得写成确定性买卖信号。
 8. 永续合约有爆仓风险；图中涉及杠杆、仓位时只讲风险约束，不鼓励高杠杆。
 
-优先级：**真实数据图表 > 教学示意图 > 流程图 > 装饰图**。vis-101–107 已从 Binance Vision 历史归档采集冻结窗；vis-108–112 是单概念窗（复用 vis-101 K 线）。vis-113 / vis-114 是组合教学窗，不是交易终端。
+优先级：**真实数据图表 > 教学示意图 > 流程图 > 装饰图**。vis-101–107 已从 Binance Vision 历史归档采集冻结窗；vis-108–130 复用 vis-101 同一段 K 线（OI / LSR / CVD / 费率 / 已收盘日线 EMA 在其上对齐）。阶段 2 七篇组合、阶段 3 读图格各有单磁带教学窗，不是交易终端。
 
 ## 图表分类
 
@@ -24,10 +24,10 @@
 | `concept/` | `schematic` | 用抽象几何讲清一个结构或关系 | `public/images/concept/` |
 | `flow/` | `flow` | 步骤、判断、循环 | `public/images/flow/` |
 | `indicator/` | `real-chart` | 单指标真实行情教学窗 | JSON 在 `public/data/charts/`，快照在 `public/images/indicator/` |
-| `combination/` | `real-chart` | 多指标对照的真实行情 | vis-113 / vis-114 已交付；其余主题仍用示意图 |
-| `system/` | `real-chart` / `flow` | 交易系统案例配图 | 流程已交付；实盘案例待采集 |
+| `combination/` | `real-chart` | 多指标对照的真实行情 | vis-113 / vis-114 / vis-119–123 已交付；不是交易终端 |
+| `system/` | `real-chart` / `flow` | 交易系统读图与流程 | vis-008 流程 + vis-118 / vis-124–130 冻结窗；不填成绩 |
 
-`indicator/` 现有 vis-101–110 的 SVG 快照，徽章写「真实行情」。课文用 `::real-chart{id="vis-101"}`，不要用 markdown 图片，以免被标成示意图。
+`indicator/` 现有 vis-101–117 的 SVG 快照（缺 vis-113 / vis-114，它们在 `combination/`），徽章写「真实行情」。课文用 `::real-chart{id="vis-101"}`，不要用 markdown 图片，以免被标成示意图。
 
 ## 视觉语言
 
@@ -172,6 +172,22 @@ UI Agent 在 Vue 中：
 | [vis-112](specs/vis-112-bollinger-real.md) | 布林带真实行情教学窗 | real-chart | delivered | BTCUSDT 4h · 复用 vis-101，SMA20 ± 2σ |
 | [vis-113](specs/vis-113-trend-momentum-real.md) | 趋势 + 动量真实行情教学窗 | real-chart | delivered | BTCUSDT 4h · 复用 vis-101，EMA + RSI |
 | [vis-114](specs/vis-114-alignment-fail-real.md) | 对齐后仍失败教学窗 | real-chart | delivered | BTCUSDT 4h · 复用 vis-101，三槽对齐后折返 |
+| [vis-115](specs/vis-115-lsr-real.md) | 多空比真实行情教学窗 | real-chart | delivered | BTCUSDT 4h · 复用 vis-101，全员账户比 vs 大户持仓比 |
+| [vis-116](specs/vis-116-cvd-real.md) | CVD 真实行情教学窗 | real-chart | delivered | BTCUSDT 4h · 复用 vis-101，taker quote Delta |
+| [vis-117](specs/vis-117-cascade-real.md) | 清算瀑布读图教学窗 | real-chart | delivered | BTCUSDT 4h · 复用 vis-101，量 / OI / CVD，无强平逐笔 |
+| [vis-118](specs/vis-118-case-timeline-real.md) | 案例执行时间线教学窗 | real-chart | delivered | BTCUSDT 4h · 复用 vis-101，不填成绩 |
+| [vis-119](specs/vis-119-trend-volume-real.md) | 趋势 + 成交量教学窗 | real-chart | delivered | BTCUSDT 4h · 复用 vis-101，EMA + 成交额 |
+| [vis-120](specs/vis-120-price-oi-real.md) | 价格 + OI 教学窗 | real-chart | delivered | BTCUSDT 4h · 复用 vis-101 / vis-117 OI |
+| [vis-121](specs/vis-121-oi-volume-real.md) | OI + Volume 教学窗 | real-chart | delivered | BTCUSDT 4h · 放量加仓 / 减仓 / 换手 |
+| [vis-122](specs/vis-122-funding-oi-real.md) | Funding + OI 教学窗 | real-chart | delivered | BTCUSDT 4h · 8h 费率沿用，不是反向喊单 |
+| [vis-123](specs/vis-123-rsi-macd-real.md) | RSI + MACD 教学窗 | real-chart | delivered | BTCUSDT 4h · 两把尺同向，不叠 KDJ |
+| [vis-124](specs/vis-124-regime-real.md) | 市场环境教学窗 | real-chart | delivered | BTCUSDT 4h · 趋势 / 波动放大 / 来回穿越 |
+| [vis-125](specs/vis-125-direction-real.md) | 方向判断教学窗 | real-chart | delivered | BTCUSDT 4h · 偏多标签与不交易 |
+| [vis-126](specs/vis-126-mtf-real.md) | 多周期教学窗 | real-chart | delivered | BTCUSDT 4h · 已收盘日线 EMA，打架则空仓 |
+| [vis-127](specs/vis-127-entry-real.md) | 入场规则教学窗 | real-chart | delivered | BTCUSDT 4h · 前提成立、触发未到，无成交 |
+| [vis-128](specs/vis-128-stop-real.md) | 止损教学窗 | real-chart | delivered | BTCUSDT 4h · 1.5×ATR 占位，不画强平 |
+| [vis-129](specs/vis-129-exit-real.md) | 出场规则教学窗 | real-chart | delivered | BTCUSDT 4h · 四扇门占位，目标先到 |
+| [vis-130](specs/vis-130-take-profit-real.md) | 止盈教学窗 | real-chart | delivered | BTCUSDT 4h · 2R 到站后仍继续走 |
 
 ## 目录
 
@@ -229,11 +245,31 @@ docs/visual/
     vis-108-trendlines-real.md
     vis-109-market-structure-real.md
     vis-110-atr-real.md
+    vis-111-ma-real.md
+    vis-112-bollinger-real.md
+    vis-113-trend-momentum-real.md
+    vis-114-alignment-fail-real.md
+    vis-115-lsr-real.md
+    vis-116-cvd-real.md
+    vis-117-cascade-real.md
+    vis-118-case-timeline-real.md
+    vis-119-trend-volume-real.md
+    vis-120-price-oi-real.md
+    vis-121-oi-volume-real.md
+    vis-122-funding-oi-real.md
+    vis-123-rsi-macd-real.md
+    vis-124-regime-real.md
+    vis-125-direction-real.md
+    vis-126-mtf-real.md
+    vis-127-entry-real.md
+    vis-128-stop-real.md
+    vis-129-exit-real.md
+    vis-130-take-profit-real.md
 
 public/images/
   concept/          # 示意图 SVG
   flow/             # 流程图 SVG
-  indicator/        # vis-101–110 SVG 快照（真实行情徽章）
-  combination/      # 预留
-  system/           # 预留
+  indicator/        # vis-101–112、vis-115–117 SVG 快照（真实行情徽章）
+  combination/      # vis-113 / vis-114 / vis-119–123
+  system/           # vis-118、vis-124–130
 ```
