@@ -12,10 +12,12 @@
     "preview": "nuxt preview",
     "lint": "eslint .",
     "typecheck": "nuxt typecheck",
+    "capture:charts": "node scripts/capture-real-charts.mjs",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
     "@nuxt/content": "^3.16.0",
+    "lightweight-charts": "^5.2.1",
     "nuxt": "^4.5.2",
     "vue": "^3.5.42",
     "vue-router": "^5.3.1"

@@ -7,7 +7,7 @@ teaching_question: 用户看完应理解：实盘成交量高低差很大，量�
 symbol: BTCUSDT
 timeframe: 4h
 source: binance-usdm-perp
-period: pending-capture | intended-window: 2024-10-01T00:00:00Z/2024-10-31T23:59:59Z
+period: 2024-10-01T00:00:00Z/2024-10-19T04:00:00Z
 annotations:
   - label: 成交量单位
     meaning: 图注写明是张还是 USDT
@@ -17,8 +17,9 @@ annotations:
     meaning: 对照 vis-005
   - label: 异常放量
     meaning: 若窗口内有，只标注「相对放量」，不解释为庄家
-status: spec
-asset: null
+status: delivered
+asset: /images/indicator/vis-105-volume-real.svg
+data: /data/charts/vis-105.json
 ---
 
 # vis-105 Volume 真实行情教学窗
@@ -33,3 +34,11 @@ asset: null
 ## 禁止
 
 不要按想要的故事去改柱子高度。
+
+## 采集结果
+
+- 来源：Binance Vision 月度 USDT-M 4h K 线。成交量口径为 quote_volume（USDT）。
+- 实际窗口：2024-10-01 00:00 → 2024-10-19 04:00 UTC，110 根。
+- JSON：`public/data/charts/vis-105.json`
+- 静态快照：`public/images/indicator/vis-105-volume-real.svg`
+- 课文：`::real-chart{id="vis-105"}`

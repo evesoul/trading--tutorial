@@ -15,7 +15,7 @@
 7. 指标交叉、超买超卖、量价配合都是观察工具，图注不得写成确定性买卖信号。
 8. 永续合约有爆仓风险；图中涉及杠杆、仓位时只讲风险约束，不鼓励高杠杆。
 
-优先级：**真实数据图表 > 教学示意图 > 流程图 > 装饰图**。第一批尚未接入行情源，因此实盘图只写 spec，不生成假 K 线。
+优先级：**真实数据图表 > 教学示意图 > 流程图 > 装饰图**。vis-101–107 已从 Binance Vision 历史归档采集冻结窗；组合课实盘窗（vis-108+）仍未开。
 
 ## 图表分类
 
@@ -23,11 +23,11 @@
 |---|---|---|---|
 | `concept/` | `schematic` | 用抽象几何讲清一个结构或关系 | `public/images/concept/` |
 | `flow/` | `flow` | 步骤、判断、循环 | `public/images/flow/` |
-| `indicator/` | `real-chart` | 单指标真实行情教学窗 | 待采集后放入 `public/images/indicator/` |
+| `indicator/` | `real-chart` | 单指标真实行情教学窗 | JSON 在 `public/data/charts/`，快照在 `public/images/indicator/` |
 | `combination/` | `real-chart` | 多指标对照的真实行情 | 待采集后放入 `public/images/combination/` |
 | `system/` | `real-chart` / `flow` | 交易系统案例配图 | 流程已交付；实盘案例待采集 |
 
-第一批不创建 `indicator/`、`combination/` 占位图，避免被误当成实盘。
+`indicator/` 现有 vis-101–107 的 SVG 快照，徽章写「真实行情」。课文用 `::real-chart{id="vis-101"}`，不要用 markdown 图片，以免被标成示意图。
 
 ## 视觉语言
 
@@ -111,6 +111,7 @@ UI Agent 在 Vue 中：
 - `alt` / 图题必须带「示意图」或实盘四字段，二者不可混用。
 - 用 `id`（如 `vis-001`）检索本 README 与 `specs/`。
 - `status: spec` 的真实行情图：正文只描述将要看什么，不要插入假图。
+- 已交付实盘窗用 `::real-chart{id="vis-10x"}`，组件页脚必须出现 symbol / timeframe / source / period。
 - 需要新图时创建 Visual Task，不要在 `content/` 里手绘假行情。
 
 ## Spec 索引
@@ -140,17 +141,17 @@ UI Agent 在 Vue 中：
 | [vis-019](specs/vis-019-backtest.md) | 回测不能只看胜率 | schematic | delivered | `/images/concept/vis-019-backtest.svg` |
 | [vis-020](specs/vis-020-case-study.md) | 交易系统案例是作业纸 | schematic | delivered | `/images/concept/vis-020-case-study.svg` |
 
-### 真实行情图（仅 spec，待采集）
+### 真实行情图（已交付冻结窗）
 
-| id | title | type | status | 计划采集 |
+| id | title | type | status | 实际窗口 |
 |---|---|---|---|---|
-| [vis-101](specs/vis-101-kline-real.md) | K 线真实行情教学窗 | real-chart | spec | BTCUSDT 4h · Binance USDT-M |
-| [vis-102](specs/vis-102-ema-real.md) | EMA 真实行情教学窗 | real-chart | spec | BTCUSDT 4h · Binance USDT-M |
-| [vis-103](specs/vis-103-macd-real.md) | MACD 真实行情教学窗 | real-chart | spec | BTCUSDT 4h · Binance USDT-M |
-| [vis-104](specs/vis-104-rsi-real.md) | RSI 真实行情教学窗 | real-chart | spec | BTCUSDT 4h · Binance USDT-M |
-| [vis-105](specs/vis-105-volume-real.md) | Volume 真实行情教学窗 | real-chart | spec | BTCUSDT 4h · Binance USDT-M |
-| [vis-106](specs/vis-106-oi-real.md) | Open Interest 真实行情教学窗 | real-chart | spec | BTCUSDT 4h · Binance USDT-M |
-| [vis-107](specs/vis-107-funding-real.md) | Funding Rate 真实行情教学窗 | real-chart | spec | BTCUSDT 8h funding · Binance USDT-M |
+| [vis-101](specs/vis-101-kline-real.md) | K 线真实行情教学窗 | real-chart | delivered | BTCUSDT 4h · 2024-10-12 → 2024-10-30 UTC |
+| [vis-102](specs/vis-102-ema-real.md) | EMA 真实行情教学窗 | real-chart | delivered | BTCUSDT 4h · 2024-09-15 → 2024-10-03 UTC |
+| [vis-103](specs/vis-103-macd-real.md) | MACD 真实行情教学窗 | real-chart | delivered | BTCUSDT 4h · 2024-08-19 → 2024-09-06 UTC |
+| [vis-104](specs/vis-104-rsi-real.md) | RSI 真实行情教学窗 | real-chart | delivered | BTCUSDT 4h · 2024-07-01 → 2024-07-19 UTC |
+| [vis-105](specs/vis-105-volume-real.md) | Volume 真实行情教学窗 | real-chart | delivered | BTCUSDT 4h · 2024-10-01 → 2024-10-19 UTC |
+| [vis-106](specs/vis-106-oi-real.md) | Open Interest 真实行情教学窗 | real-chart | delivered | BTCUSDT 4h · 2024-10-11 → 2024-10-29 UTC |
+| [vis-107](specs/vis-107-funding-real.md) | Funding Rate 真实行情教学窗 | real-chart | delivered | BTCUSDT 8h · 2024-08-07 → 2024-09-05 UTC |
 
 ## 目录
 
@@ -163,6 +164,7 @@ docs/visual/
   HANDOFF-SPRINT-005.md
   HANDOFF-SPRINT-006.md
   HANDOFF-SPRINT-007.md
+  HANDOFF-SPRINT-008.md
   specs/
     vis-001-kline-ohlc.md
     vis-002-ema-trend.md
@@ -195,7 +197,7 @@ docs/visual/
 public/images/
   concept/          # 示意图 SVG
   flow/             # 流程图 SVG
-  indicator/        # 预留：真实行情截图（本批不放假图）
+  indicator/        # vis-101–107 SVG 快照（真实行情徽章）
   combination/      # 预留
   system/           # 预留
 ```

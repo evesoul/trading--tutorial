@@ -7,7 +7,7 @@ teaching_question: 用户看完应理解：实盘里 RSI 进入超买或超卖�
 symbol: BTCUSDT
 timeframe: 4h
 source: binance-usdm-perp
-period: pending-capture | intended-window: 2024-07-01T00:00:00Z/2024-09-30T23:59:59Z
+period: 2024-07-01T00:00:00Z/2024-07-19T04:00:00Z
 annotations:
   - label: RSI(14)
     meaning: 与知识库默认常见参数一致
@@ -17,8 +17,9 @@ annotations:
     meaning: 超卖观察区上沿
   - label: 高位停留
     meaning: RSI 留在高位而价格未立刻转跌的一段
-status: spec
-asset: null
+status: delivered
+asset: /images/indicator/vis-104-rsi-real.svg
+data: /data/charts/vis-104.json
 ---
 
 # vis-104 RSI 真实行情教学窗
@@ -34,3 +35,11 @@ asset: null
 ## 禁止
 
 不要用示意图的平滑 RSI 曲线代替实盘。
+
+## 采集结果
+
+- 来源：Binance Vision 月度 USDT-M 4h K 线，窗口内计算 RSI(14)。
+- 实际窗口：2024-07-01 00:00 → 2024-07-19 04:00 UTC，110 根。
+- JSON：`public/data/charts/vis-104.json`
+- 静态快照：`public/images/indicator/vis-104-rsi-real.svg`
+- 课文：`::real-chart{id="vis-104"}`

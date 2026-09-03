@@ -7,7 +7,7 @@ teaching_question: 用户看完应理解：实盘交叉会滞后、也可能连�
 symbol: BTCUSDT
 timeframe: 4h
 source: binance-usdm-perp
-period: pending-capture | intended-window: 2024-08-01T00:00:00Z/2024-10-31T23:59:59Z
+period: 2024-08-19T08:00:00Z/2024-09-06T12:00:00Z
 annotations:
   - label: 金叉
     meaning: 真实 DIF 上穿 DEA 的时刻，只作标注不写成买入
@@ -17,8 +17,9 @@ annotations:
     meaning: 两条线靠近，动量变化的观察
   - label: 零轴
     meaning: 必须画出，便于对照柱子正负
-status: spec
-asset: null
+status: delivered
+asset: /images/indicator/vis-103-macd-real.svg
+data: /data/charts/vis-103.json
 ---
 
 # vis-103 MACD 真实行情教学窗
@@ -34,3 +35,11 @@ asset: null
 ## 禁止
 
 不要把 vis-003 的平滑交叉图改个标题当真实行情。
+
+## 采集结果
+
+- 来源：Binance Vision 月度 USDT-M 4h K 线，窗口内计算 MACD 12/26/9。
+- 实际窗口：2024-08-19 08:00 → 2024-09-06 12:00 UTC，110 根。
+- JSON：`public/data/charts/vis-103.json`
+- 静态快照：`public/images/indicator/vis-103-macd-real.svg`
+- 课文：`::real-chart{id="vis-103"}`

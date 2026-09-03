@@ -7,7 +7,7 @@ teaching_question: 用户看完应理解：实盘里价格相对 EMA 的位置�
 symbol: BTCUSDT
 timeframe: 4h
 source: binance-usdm-perp
-period: pending-capture | intended-window: 2024-09-01T00:00:00Z/2024-11-30T23:59:59Z
+period: 2024-09-15T16:00:00Z/2024-10-03T20:00:00Z
 annotations:
   - label: EMA(20)
     meaning: 先用单一周期，避免多均线干扰入门
@@ -17,8 +17,9 @@ annotations:
     meaning: 对照 vis-002 震荡段
   - label: 价格在均线下方
     meaning: 对照 vis-002 下降段
-status: spec
-asset: null
+status: delivered
+asset: /images/indicator/vis-102-ema-real.svg
+data: /data/charts/vis-102.json
 ---
 
 # vis-102 EMA 真实行情教学窗
@@ -34,3 +35,11 @@ asset: null
 ## 禁止
 
 不要手绘平滑均线冒充实盘。未采集前不插假图。
+
+## 采集结果
+
+- 来源：Binance Vision 月度 USDT-M 4h K 线，窗口内计算 EMA(20)。
+- 实际窗口：2024-09-15 16:00 → 2024-10-03 20:00 UTC，110 根。
+- JSON：`public/data/charts/vis-102.json`
+- 静态快照：`public/images/indicator/vis-102-ema-real.svg`
+- 课文：`::real-chart{id="vis-102"}`

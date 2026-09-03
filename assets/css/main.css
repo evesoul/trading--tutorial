@@ -747,6 +747,92 @@ p {
   color: var(--ink-soft);
 }
 
+/* Teaching windows: real-chart, never the schematic caption */
+.teaching-chart {
+  width: min(100%, var(--width-figure));
+  margin: 1.5rem auto 1.75rem;
+  padding: 0.9rem 0.9rem 1rem;
+  background: var(--sheet);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.teaching-chart__head {
+  margin: 0 0 0.55rem;
+}
+
+.teaching-chart__title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.teaching-chart__badge {
+  flex: none;
+  padding: 0.15rem 0.55rem;
+  border-radius: 6px;
+  background: var(--brand);
+  color: var(--sheet);
+  font-size: 0.78rem;
+  font-weight: 650;
+}
+
+.teaching-chart__meta,
+.teaching-chart__readout,
+.teaching-chart__question,
+.teaching-chart__foot,
+.teaching-chart__units {
+  margin: 0.35rem 0 0;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+}
+
+.teaching-chart__readout {
+  min-height: 2.6em;
+  padding: 0.35rem 0.5rem;
+  background: #f6f0e6;
+  border-radius: 8px;
+  color: var(--ink);
+}
+
+.teaching-chart__question {
+  color: var(--ink);
+  font-size: 0.92rem;
+}
+
+.teaching-chart__canvas {
+  width: 100%;
+  min-height: 360px;
+  margin-top: 0.55rem;
+  background: #fffdf8;
+}
+
+.teaching-chart__fallback {
+  display: block;
+  width: 100%;
+  margin: 0.55rem 0 0;
+  background: #fffdf8;
+  border: 0;
+  border-radius: 0;
+}
+
+.lesson-prose .teaching-chart img {
+  width: 100%;
+  margin: 0.55rem 0 0;
+  border: 0;
+}
+
+.teaching-chart__units {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+}
+
+.teaching-chart__error {
+  color: var(--ink-soft);
+}
+
 /* Footer */
 
 .site-footer {

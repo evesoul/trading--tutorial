@@ -7,7 +7,7 @@ teaching_question: 用户看完应理解：实盘费率大多在零轴附近小�
 symbol: BTCUSDT
 timeframe: 8h
 source: binance-usdm-perp
-period: pending-capture | intended-window: 2024-08-01T00:00:00Z/2024-11-30T23:59:59Z
+period: 2024-08-07T00:00:00Z/2024-09-05T16:00:00Z
 annotations:
   - label: 结算间隔
     meaning: Binance BTCUSDT 永续常见 8h，若窗口内出现特殊间隔需注明
@@ -17,8 +17,9 @@ annotations:
     meaning: 空头支付多头
   - label: 相对极值
     meaning: 相对该窗口的高/低，不标成「反转信号」
-status: spec
-asset: null
+status: delivered
+asset: /images/indicator/vis-107-funding-real.svg
+data: /data/charts/vis-107.json
 ---
 
 # vis-107 Funding Rate 真实行情教学窗
@@ -34,3 +35,12 @@ asset: null
 ## 禁止
 
 不要手绘平滑费率曲线冒充实盘。不要把「费率转负」标成做空建议。
+
+## 采集结果
+
+- 来源：Binance Vision 月度 fundingRate + 同期 8h K 线。
+- 单位：小数费率，`0.0001 = 0.01%`。
+- 实际窗口：2024-08-07 00:00 → 2024-09-05 16:00 UTC，8h，90 根。
+- JSON：`public/data/charts/vis-107.json`
+- 静态快照：`public/images/indicator/vis-107-funding-real.svg`
+- 课文：`::real-chart{id="vis-107"}`

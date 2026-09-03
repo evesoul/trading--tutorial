@@ -7,7 +7,7 @@ teaching_question: 用户看完应理解：实盘 K 线大小不一、影线不�
 symbol: BTCUSDT
 timeframe: 4h
 source: binance-usdm-perp
-period: pending-capture | intended-window: 2024-10-01T00:00:00Z/2024-10-31T23:59:59Z
+period: 2024-10-12T00:00:00Z/2024-10-30T04:00:00Z
 annotations:
   - label: 连续阳线
     meaning: 收盘高于开盘的若干根，用于对照结构，不解释为趋势信号
@@ -15,8 +15,9 @@ annotations:
     meaning: 说明最高价可以远离实体
   - label: 带长下影的阳线
     meaning: 说明最低价可以远离实体
-status: spec
-asset: null
+status: delivered
+asset: /images/indicator/vis-101-kline-real.svg
+data: /data/charts/vis-101.json
 ---
 
 # vis-101 K 线真实行情教学窗
@@ -32,6 +33,10 @@ asset: null
 
 不要用 vis-001 的几何蜡烛冒充本图。未采集前 Content 只引用本 spec，不插假图。
 
-## 采集后
+## 采集结果
 
-截图放入 `public/images/indicator/vis-101-kline-real.png`（或后续图表组件出图），把本文件 `status` 改为 `delivered`，并改写 `period` 为实际起止。
+- 来源：Binance Vision `data.binance.vision` 月度 USDT-M K 线，不是直播接口。
+- 实际窗口：2024-10-12 00:00 → 2024-10-30 04:00 UTC，4h，110 根。
+- JSON：`public/data/charts/vis-101.json`
+- 静态快照：`public/images/indicator/vis-101-kline-real.svg`（徽章为「真实行情」）
+- 课文：`::real-chart{id="vis-101"}`
