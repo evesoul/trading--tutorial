@@ -1,6 +1,6 @@
 # Code QA Checklist
 
-Sprint 007 终审（2026-09-03）已核。
+Sprint 013 / TASK-039 终审（2026-09-03）已核。
 
 ## TypeScript
 - [x] 无 any
@@ -19,7 +19,7 @@ Sprint 007 终审（2026-09-03）已核。
 - [x] SSR 正常
 - [ ] 无明显 hydration 问题
 
-`content.config.ts` exclude `HANDOFF.md` 与 `HANDOFF-*.md`。build 解析 41 个 lessons。Hydration 未在 Cursor 浏览器 MCP 中点完；Chrome CDP 首屏与 SSR 一致。不据此 FAIL Code。
+`content.config.ts` exclude `HANDOFF.md` 与 `HANDOFF-*.md`。build 解析 51 个 lessons。Hydration 未在 Cursor 浏览器 MCP 中点完；Chrome CDP 首屏与 SSR 一致。不据此 FAIL Code。
 
 ## UI
 - [x] Desktop
@@ -28,8 +28,8 @@ Sprint 007 终审（2026-09-03）已核。
 - [ ] 键盘操作
 - [x] focus 状态
 
-Desktop 1280：`/course` 三十四步均可点；vis-008 / 019 / 020 示意图宽 680。  
-Mobile 390：CDP 鼠标点开/关菜单，面板高 798px，`z-index: 45`，页头无 `backdrop-filter`。Tablet 与键盘未做独立点选。
+Desktop 1280：`/course` 四十三步均可点；示意图宽 680。  
+Mobile 390：CDP 鼠标点开/关菜单，`z-index: 45`，页头无 `backdrop-filter`。Tablet 与键盘未做独立点选。
 
 ## Build
 - [x] lint
@@ -42,4 +42,4 @@ Mobile 390：CDP 鼠标点开/关菜单，面板高 798px，`z-index: 45`，页�
 - [x] 图片路径
 - [x] Content slug
 
-`tests/check-sprint007-links.mjs` 与 `tests/check-sprint007-visual.mjs` 通过。仓位可点 `/trading-system/risk-management`。案例回 `/course`。系统十五步均可点。
+`tests/check-task-039-content.mjs`、`tests/check-task-039-links.mjs`、`tests/check-sprint007-links.mjs`、`tests/check-sprint007-visual.mjs` 通过。主路径不含 KDJ。系统二十步均可点。仓位下一篇是成本对照 R。

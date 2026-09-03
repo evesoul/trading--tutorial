@@ -4,7 +4,7 @@ description: 用收盘价在最近高低区间里的位置观察动能；K 值�
 part: 1
 category: indicators
 level: beginner
-order: 8
+order: 11
 slug: kdj
 status: published
 indicator:
@@ -14,7 +14,7 @@ learning:
   prerequisites:
     - rsi
   next:
-    - bollinger-bands
+    - open-interest
 visual:
   cover: /images/concept/vis-009-kdj.svg
   charts:
@@ -22,6 +22,8 @@ visual:
 ---
 
 # KDJ
+
+本篇是**对照层，不是主路径**。阶段 1 主路径只保留一把 0–100 动能尺（RSI）。读完 RSI 之后，主路径下一篇是成交量，不是本篇。这里只对照刻度，不扩写成第四个振荡器，也不新开 KDJ+RSI。
 
 KDJ 是中文交易教学里对随机指标（Stochastic Oscillator）的常见画法。它与 [RSI](/indicators/rsi) 都是动量工具，但提问不同。
 
@@ -165,7 +167,7 @@ KDJ 只用 OHLC。它不是资金流向，也不是主力持仓。
 - **三条线同源**：J 值、K 值、D 值不是三重独立证据。
 - **软件名不副实**：叫 KDJ 但算法是 Slow Stochastic 且无 J 值，学习者对不上图。
 
-KDJ 比 RSI 更吵，也更早给出极端读数。更早不等于更正确。历史案例不能代表未来结果。
+KDJ 比 RSI 更吵，也更早给出极端读数。更早不等于更正确。本篇是对照层，不是主路径。历史案例不能代表未来结果。
 
 ## 总结
 
@@ -179,6 +181,6 @@ KDJ 比 RSI 更吵，也更早给出极端读数。更早不等于更正确。�
 
 ## 下一步
 
-下一篇换一个维度，看波动而不是动能：[布林带](/indicators/bollinger-bands)。
+下一篇进入合约特有数据：[持仓量](/indicators/open-interest)（Open Interest，OI）。OI 回答「此刻还挂着多少仓」，和本篇的动能位置不是同一个问题。先修会用到 [成交量](/indicators/volume)，以免把转手和增减仓看成一件事。
 
-布林带的中轨是均线，上下轨是均线加减若干倍标准差。先修是 [MA](/indicators/ma)。读完后，你会同时有「中枢」和「最近波动有多大」两层信息，碰轨仍然不是反向指令。
+主路径若还没读完 ATR 和布林带，建议先回到 [ATR](/indicators/atr) → [布林带](/indicators/bollinger-bands)，再进合约数据层。

@@ -28,7 +28,7 @@ export function getLessonPath(category: LessonCategory, slug: string): string {
     case 'glossary':
       return '/glossary'
     case 'introduction':
-      return '/course'
+      return slug === 'introduction' || slug === '' ? '/course' : `/course/${slug}`
   }
 }
 

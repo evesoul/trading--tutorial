@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">多周期：高周期定场，低周期只找触发示意图</title>
+  <desc id="desc">教学示意图。三格：4H 已收盘环境仍在；15m 金叉只是回撤不是改方向；两周期打架则空仓或等对齐。不是真实行情，不构成交易建议。</desc>
+  <rect width="1200" height="800" fill="#f8fafc"/>
+  <rect width="1200" height="72" fill="#ffffff"/>
+  <line x1="0" y1="72" x2="1200" y2="72" stroke="#e2e8f0"/>
+  <text x="32" y="46" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="700" fill="#0f172a">多周期：高周期定场，低周期只找触发</text>
+  <rect x="1048" y="21" width="120" height="30" rx="4" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="1108" y="42" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#c2410c">示意图</text>
+
+  <rect x="28" y="88" width="1144" height="40" rx="8" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="600" y="114" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#9a3412">决策周期写环境与方向 · 执行周期只找触发 · 打架则空仓，不换周期讲故事</text>
+
+  <rect x="28" y="144" width="372" height="500" rx="8" fill="#eff6ff" stroke="#bfdbfe"/>
+  <rect x="414" y="144" width="372" height="500" rx="8" fill="#fffbeb" stroke="#fde68a"/>
+  <rect x="800" y="144" width="372" height="500" rx="8" fill="#f1f5f9" stroke="#cbd5e1"/>
+
+  <text x="214" y="176" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#1e40af">4H 环境仍在</text>
+  <text x="214" y="200" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#475569">决策周期 · 已收盘偏空</text>
+
+  <text x="600" y="176" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#a16207">15m 出现触发观察</text>
+  <text x="600" y="200" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#475569">执行周期 · 只回答有没有触发</text>
+
+  <text x="986" y="176" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#334155">打架 → 走不交易</text>
+  <text x="986" y="200" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#475569">互相否定时，不现场发明</text>
+
+  <line x1="68" y1="248" x2="68" y2="500" stroke="#cbd5e1" stroke-width="1.4"/>
+  <line x1="68" y1="500" x2="360" y2="500" stroke="#cbd5e1" stroke-width="1.4"/>
+  <line x1="108" y1="300" x2="108" y2="470" stroke="#dc2626" stroke-width="2"/>
+  <rect x="99" y="320" width="18" height="120" fill="#dc2626"/>
+  <line x1="168" y1="280" x2="168" y2="430" stroke="#dc2626" stroke-width="2"/>
+  <rect x="159" y="298" width="18" height="108" fill="#dc2626"/>
+  <line x1="228" y1="332" x2="228" y2="456" stroke="#dc2626" stroke-width="2"/>
+  <rect x="219" y="350" width="18" height="86" fill="#dc2626"/>
+  <line x1="288" y1="368" x2="288" y2="488" stroke="#dc2626" stroke-width="2"/>
+  <rect x="279" y="388" width="18" height="80" fill="#dc2626"/>
+  <polyline points="108,320 168,298 228,350 288,388" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linejoin="round"/>
+  <circle cx="288" cy="388" r="5" fill="#2563eb"/>
+  <text x="214" y="528" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">抽象阴线走低 · 不是某品种 K 线</text>
+  <rect x="68" y="548" width="292" height="76" rx="6" fill="#ffffff" stroke="#bfdbfe"/>
+  <text x="214" y="576" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#1e40af">环境句仍有效</text>
+  <text x="214" y="600" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">下一根 4H 收盘前，不改方向</text>
+
+  <line x1="454" y1="248" x2="454" y2="500" stroke="#e7e5e4" stroke-width="1.4"/>
+  <line x1="454" y1="500" x2="746" y2="500" stroke="#e7e5e4" stroke-width="1.4"/>
+  <line x1="494" y1="360" x2="494" y2="470" stroke="#dc2626" stroke-width="2"/>
+  <rect x="485" y="380" width="18" height="70" fill="#dc2626"/>
+  <line x1="546" y1="340" x2="546" y2="448" stroke="#dc2626" stroke-width="2"/>
+  <rect x="537" y="356" width="18" height="72" fill="#dc2626"/>
+  <line x1="598" y1="300" x2="598" y2="420" stroke="#16a34a" stroke-width="2"/>
+  <rect x="589" y="328" width="18" height="70" fill="#16a34a"/>
+  <line x1="650" y1="268" x2="650" y2="392" stroke="#16a34a" stroke-width="2"/>
+  <rect x="641" y="292" width="18" height="76" fill="#16a34a"/>
+  <line x1="702" y1="248" x2="702" y2="360" stroke="#16a34a" stroke-width="2"/>
+  <rect x="693" y="268" width="18" height="70" fill="#16a34a"/>
+  <polyline points="494,420 546,400 650,292 702,268" fill="none" stroke="#d97706" stroke-width="2.2" stroke-linejoin="round"/>
+  <polyline points="494,456 546,428 598,360 702,300" fill="none" stroke="#7c3aed" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="720" y="262" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#7c3aed">交叉观察</text>
+  <text x="600" y="528" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">局部阳线抬升 · 仍是回撤画面</text>
+  <rect x="454" y="548" width="292" height="76" rx="6" fill="#ffffff" stroke="#fde68a"/>
+  <text x="600" y="576" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#a16207">回撤，不是改方向</text>
+  <text x="600" y="600" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">不负责把 4H 改成偏多</text>
+
+  <rect x="828" y="232" width="316" height="56" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="986" y="266" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">4H 偏空仍在　对上　15m 金叉观察</text>
+  <text x="986" y="316" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#64748b">事先只能从下面选</text>
+  <rect x="828" y="332" width="316" height="88" rx="6" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="986" y="364" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#475569">不交易</text>
+  <text x="986" y="388" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">记日志，等下一根决策周期收盘</text>
+  <text x="986" y="410" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">或等对齐后再找触发</text>
+  <rect x="828" y="436" width="316" height="120" rx="6" fill="#fef2f2" stroke="#fecaca"/>
+  <text x="986" y="464" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#991b1b">禁止现场发明</text>
+  <text x="986" y="490" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#7f1d1d">切到更能讲通的周期</text>
+  <text x="986" y="514" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#7f1d1d">用第三根周期当裁判</text>
+  <text x="986" y="538" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#7f1d1d">未收盘低周期推翻已收盘高周期</text>
+  <rect x="828" y="572" width="316" height="52" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="986" y="604" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#334155">默认出口：空仓</text>
+
+  <text x="600" y="668" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="15" fill="#334155">4H 趋势 + 15m 震荡可以同时成立，讨论的不是同一段路。未收盘的低周期新高，不能推翻已收盘的高周期结构。</text>
+  <text x="600" y="694" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="15" fill="#334155">只写死一层决策 + 一层执行。不要画成三层周期同时点亮的共振仪表盘。</text>
+  <text x="600" y="720" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#64748b">抽象几何，不是真实行情。金叉、交叉只是观察，不是开多或开空指令。</text>
+
+  <rect x="0" y="760" width="1200" height="40" fill="#f1f5f9"/>
+  <text x="600" y="786" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#64748b">教学抽象 · 非真实行情 · 不构成交易建议</text>
+</svg>

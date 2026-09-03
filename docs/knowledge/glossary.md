@@ -77,6 +77,12 @@
 
 维持仓位不被强平所需的最低保证金。账户权益跌到维持保证金附近时，交易所会按规则强制减仓或平仓。
 
+### 风险限额（Risk Limit）与仓位档位（Position Tier）
+
+交易所按仓位**名义价值**分段规定保证金要求的规则。名义做大，可能升入更高档，**维持保证金率可能升高**，预估强平价靠近标记价。有的档位还会压低可用杠杆展示。
+
+这是大仓位的风险参数，不是「做大了更稳」。屏幕上怎么读见 [perp-screen.md](./perp-screen.md)；机制见 [perpetual-futures.md](./perpetual-futures.md)。
+
 ### 仓位名义价值（Notional Value）
 
 仓位规模用报价货币衡量的价值。教学近似：
@@ -128,6 +134,12 @@
 
 强平是机制结果，不是技术指标信号。杠杆越高、波动越大、保证金越薄，越容易被强平。
 
+强平单通常以市价进入订单簿；薄盘里会插针，并可能引发**清算瀑布（Liquidation Cascade）**。见 [liquidation-cascade.md](./indicators/liquidation-cascade.md)。
+
+### 保险基金（Insurance Fund）与自动减仓（Auto-Deleveraging，ADL）
+
+穿仓（亏损超过该仓保证金）时，交易所可能先用**保险基金**填补，使对手方不必立刻被强制减仓。保险基金仍不够时，可能触发 **ADL**：按规则减少盈利且杠杆较高的对手仓位。二者都是结算机制，不提供交易时机。详见 [perpetual-futures.md](./perpetual-futures.md)。
+
 ### 破产价格（Bankruptcy Price）
 
 权益理论上被亏到零附近的价格。强平通常在到达破产价之前、按维持保证金触发，具体以交易所规则为准。
@@ -154,6 +166,12 @@
 在一段可见推进里，用至少两个摆动低点（上升）或两个摆动高点（下降）连成的斜线。第三点是回测观察，不是对未来的保证。手连结构不是均线：均线每根重算。
 
 详见 [trendlines.md](./indicators/trendlines.md)。
+
+### 摆动结构（Market Structure / Swing Structure）
+
+把相邻的**摆动高点（Swing High）**与**摆动低点（Swing Low）**排成序列，用来看这段是在抬高还是压低。常用 **HH / HL**（更高高点 / 更高低点）描述上升结构，**LH / LL**（更低高点 / 更低低点）描述下降结构。推进不是自动延续，回撤不是自动反转。
+
+斜线与水平区域怎么画，见趋势线篇；摆动序列与假突破怎么记，见 [market-structure.md](./indicators/market-structure.md)。
 
 ### 图表周期（Timeframe）
 
@@ -188,9 +206,17 @@
 
 详见 [trendlines.md](./indicators/trendlines.md)。
 
+### 假突破（False Breakout）
+
+影线越过支撑 / 阻力或前高 / 前低所在区域，收盘回到区内。教学上记「到过，未收盘离开」，不是反转指令，也不鉴定庄家诱多诱空。细节见 [market-structure.md](./indicators/market-structure.md)；区域怎么画见 [trendlines.md](./indicators/trendlines.md)。
+
 ### 波动率（Volatility）
 
 价格变动幅度的大小。波动率高不等于方向明确；波动率低也不等于即将突破。布林带带宽常用来观察波动率的扩张与收缩。
+
+### 真实波幅（True Range，TR）与平均真实波幅（Average True Range，ATR）
+
+**真实波幅**取三者最大：本根高−低、|高−前收|、|低−前收|。**ATR** 是对最近 N 根 TR 的平滑，测量近期普通波动宽度，**不给方向**。ATR 是尺子；布林带是通道。详见 [atr.md](./indicators/atr.md) 与 [bollinger-bands.md](./indicators/bollinger-bands.md)。
 
 ### 流动性（Liquidity）
 
@@ -307,9 +333,29 @@
 
 单笔亏损占权益的上限、总敞口上限等规则。它解决的是「错了能活下来」，不是提高胜率的保证。
 
+### 热度（Account Heat）
+
+当前所有未平仓计划风险之和（按 R 或权益百分比加总，并考虑品种是否同向、是否都跟 BTC）。多笔各 1% 且高度相关时，账户风险不是 1%。热度碰到上限时的动作（先平、先减、或禁止开新仓）由系统事先写死。本知识库只立定义；规则展开归 Strategy。
+
+### 决策周期（Decision Timeframe）与执行周期（Execution Timeframe）
+
+事先写死的两层图表周期：高周期（决策周期）定环境与方向，低周期（执行周期）只找触发。两周期打架时，默认不交易或等对齐，不要切到「更能讲通」的周期。未收盘的低周期不能推翻已收盘的高周期。细则留给多周期课。
+
 ---
 
-## 7. 不再使用或限制使用的说法
+## 7. 订单用语
+
+### 只减仓（Reduce-Only）
+
+这笔单最多减小已有仓位，不会在平仓方向上开出反向新仓。认错离场、止损常用。它不保证成交，也不阻止强平。详见 [order-types.md](./order-types.md)。
+
+### 只做 maker（Post-Only）
+
+只挂到订单簿当 maker；若下单瞬间会变成 taker，通常撤单或不接受。用来避免吃单，不用来保证成交。详见 [order-types.md](./order-types.md)。
+
+---
+
+## 8. 不再使用或限制使用的说法
 
 | 避免写成 | 原因 | 改写 |
 |---|---|---|

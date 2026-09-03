@@ -29,6 +29,10 @@ status: published
 
 看收盘价在最近 N 根高低区间中的相对位置，再平滑得到 K 值、D 值，并衍生 J 值。请写 **K 值**，不要把指标的 K 叫成 K 线。详见[KDJ](/indicators/kdj)。
 
+### 平均真实波幅（Average True Range，ATR）
+
+对最近 N 根真实波幅做平滑后的宽度尺子，单位与价格相同。不给方向，也不是开仓指令。与布林带对照：ATR 是尺子，布林带是通道。详见[ATR 与波动](/indicators/atr)。
+
 ### 布林带（Bollinger Bands，BB）
 
 中轨为均线（本站默认 SMA），上下轨为均线加减若干倍标准差，用来观察波动率与价格相对位置。详见[布林带](/indicators/bollinger-bands)。
@@ -52,6 +56,10 @@ status: published
 ### 累计成交量差（Cumulative Volume Delta，CVD）
 
 把主动买成交量减主动卖成交量后累加。反映的是主动成交方向的累积，不是普通成交量，也不是持仓量。详见[CVD](/indicators/cvd)。
+
+### 清算瀑布（Liquidation Cascade）
+
+强平单多为被动市价打进薄盘，价格插针并可能连锁。瀑布进行中，成交量、持仓量、CVD、多空比默认暂时不可解释方向。详见[清算瀑布怎么读图](/indicators/liquidation-cascade)。
 
 ### 主动买 / 主动卖（Taker Buy / Taker Sell）
 

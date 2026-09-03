@@ -15,7 +15,7 @@
 7. 指标交叉、超买超卖、量价配合都是观察工具，图注不得写成确定性买卖信号。
 8. 永续合约有爆仓风险；图中涉及杠杆、仓位时只讲风险约束，不鼓励高杠杆。
 
-优先级：**真实数据图表 > 教学示意图 > 流程图 > 装饰图**。vis-101–107 已从 Binance Vision 历史归档采集冻结窗；vis-108 是单概念价格结构窗（复用 vis-101 K 线），不是组合课。组合课实盘窗仍未开。
+优先级：**真实数据图表 > 教学示意图 > 流程图 > 装饰图**。vis-101–107 已从 Binance Vision 历史归档采集冻结窗；vis-108–112 是单概念窗（复用 vis-101 K 线）。vis-113 / vis-114 是组合教学窗，不是交易终端。
 
 ## 图表分类
 
@@ -24,10 +24,10 @@
 | `concept/` | `schematic` | 用抽象几何讲清一个结构或关系 | `public/images/concept/` |
 | `flow/` | `flow` | 步骤、判断、循环 | `public/images/flow/` |
 | `indicator/` | `real-chart` | 单指标真实行情教学窗 | JSON 在 `public/data/charts/`，快照在 `public/images/indicator/` |
-| `combination/` | `real-chart` | 多指标对照的真实行情 | 待采集后放入 `public/images/combination/` |
+| `combination/` | `real-chart` | 多指标对照的真实行情 | vis-113 / vis-114 已交付；其余主题仍用示意图 |
 | `system/` | `real-chart` / `flow` | 交易系统案例配图 | 流程已交付；实盘案例待采集 |
 
-`indicator/` 现有 vis-101–107 的 SVG 快照，徽章写「真实行情」。课文用 `::real-chart{id="vis-101"}`，不要用 markdown 图片，以免被标成示意图。
+`indicator/` 现有 vis-101–110 的 SVG 快照，徽章写「真实行情」。课文用 `::real-chart{id="vis-101"}`，不要用 markdown 图片，以免被标成示意图。
 
 ## 视觉语言
 
@@ -144,6 +144,15 @@ UI Agent 在 Vue 中：
 | [vis-019](specs/vis-019-backtest.md) | 回测不能只看胜率 | schematic | delivered | `/images/concept/vis-019-backtest.svg` |
 | [vis-020](specs/vis-020-case-study.md) | 交易系统案例是作业纸 | schematic | delivered | `/images/concept/vis-020-case-study.svg` |
 | [vis-021](specs/vis-021-trendlines.md) | 趋势线与支撑阻力 | schematic | delivered | `/images/concept/vis-021-trendlines.svg` |
+| [vis-022](specs/vis-022-market-structure.md) | 摆动结构与假突破 | schematic | delivered | `/images/concept/vis-022-market-structure.svg` |
+| [vis-023](specs/vis-023-atr.md) | ATR 与波动尺子 | schematic | delivered | `/images/concept/vis-023-atr.svg` |
+| [vis-024](specs/vis-024-order-types.md) | 订单类型与成交 | schematic | delivered | `/images/concept/vis-024-order-types.svg` |
+| [vis-025](specs/vis-025-multi-timeframe.md) | 多周期：高周期定场 | schematic | delivered | `/images/concept/vis-025-multi-timeframe.svg` |
+| [vis-026](specs/vis-026-cost-vs-r.md) | 成本对照 R | schematic | delivered | `/images/concept/vis-026-cost-vs-r.svg` |
+| [vis-027](specs/vis-027-liquidation-cascade.md) | 清算瀑布失真 | schematic | delivered | `/images/concept/vis-027-liquidation-cascade.svg` |
+| [vis-028](specs/vis-028-execution-bias.md) | 执行偏差：偏差 → 日志 → 动作 | schematic | delivered | `/images/concept/vis-028-execution-bias.svg` |
+| [vis-029](specs/vis-029-account-heat.md) | 账户热度：同向风险加总 | schematic | delivered | `/images/concept/vis-029-account-heat.svg` |
+| [vis-030](specs/vis-030-perp-screen.md) | 交易所屏幕字段 | schematic | delivered | `/images/concept/vis-030-perp-screen.svg` |
 
 ### 真实行情图（已交付冻结窗）
 
@@ -157,6 +166,12 @@ UI Agent 在 Vue 中：
 | [vis-106](specs/vis-106-oi-real.md) | Open Interest 真实行情教学窗 | real-chart | delivered | BTCUSDT 4h · 2024-10-11 → 2024-10-29 UTC |
 | [vis-107](specs/vis-107-funding-real.md) | Funding Rate 真实行情教学窗 | real-chart | delivered | BTCUSDT 8h · 2024-08-07 → 2024-09-05 UTC |
 | [vis-108](specs/vis-108-trendlines-real.md) | 趋势线与支撑阻力教学窗 | real-chart | delivered | BTCUSDT 4h · 2024-10-12 → 2024-10-30 UTC（复用 vis-101，单概念） |
+| [vis-109](specs/vis-109-market-structure-real.md) | 摆动结构真实行情教学窗 | real-chart | delivered | BTCUSDT 4h · 2024-10-12 → 2024-10-30 UTC（复用 vis-101，单概念） |
+| [vis-110](specs/vis-110-atr-real.md) | ATR 真实行情教学窗 | real-chart | delivered | BTCUSDT 4h · 2024-10-12 → 2024-10-30 UTC（复用 vis-101，Wilder 14） |
+| [vis-111](specs/vis-111-ma-real.md) | MA 真实行情教学窗 | real-chart | delivered | BTCUSDT 4h · 复用 vis-101，SMA20 |
+| [vis-112](specs/vis-112-bollinger-real.md) | 布林带真实行情教学窗 | real-chart | delivered | BTCUSDT 4h · 复用 vis-101，SMA20 ± 2σ |
+| [vis-113](specs/vis-113-trend-momentum-real.md) | 趋势 + 动量真实行情教学窗 | real-chart | delivered | BTCUSDT 4h · 复用 vis-101，EMA + RSI |
+| [vis-114](specs/vis-114-alignment-fail-real.md) | 对齐后仍失败教学窗 | real-chart | delivered | BTCUSDT 4h · 复用 vis-101，三槽对齐后折返 |
 
 ## 目录
 
@@ -164,6 +179,9 @@ UI Agent 在 Vue 中：
 docs/visual/
   README.md
   HANDOFF.md
+  HANDOFF-TASK-034.md
+  HANDOFF-TASK-036.md
+  HANDOFF-TASK-037.md
   HANDOFF-SPRINT-003.md
   HANDOFF-SPRINT-004.md
   HANDOFF-SPRINT-005.md
@@ -192,6 +210,15 @@ docs/visual/
     vis-019-backtest.md
     vis-020-case-study.md
     vis-021-trendlines.md
+    vis-022-market-structure.md
+    vis-023-atr.md
+    vis-024-order-types.md
+    vis-025-multi-timeframe.md
+    vis-026-cost-vs-r.md
+    vis-027-liquidation-cascade.md
+    vis-028-execution-bias.md
+    vis-029-account-heat.md
+    vis-030-perp-screen.md
     vis-101-kline-real.md
     vis-102-ema-real.md
     vis-103-macd-real.md
@@ -200,11 +227,13 @@ docs/visual/
     vis-106-oi-real.md
     vis-107-funding-real.md
     vis-108-trendlines-real.md
+    vis-109-market-structure-real.md
+    vis-110-atr-real.md
 
 public/images/
   concept/          # 示意图 SVG
   flow/             # 流程图 SVG
-  indicator/        # vis-101–108 SVG 快照（真实行情徽章）
+  indicator/        # vis-101–110 SVG 快照（真实行情徽章）
   combination/      # 预留
   system/           # 预留
 ```

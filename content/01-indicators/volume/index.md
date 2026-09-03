@@ -4,7 +4,7 @@ description: 用成交量观察这段时间转手了多少；放量缩量是参�
 part: 1
 category: indicators
 level: beginner
-order: 6
+order: 7
 slug: volume
 status: published
 indicator:
@@ -14,7 +14,7 @@ learning:
   prerequisites:
     - kline
   next:
-    - macd
+    - atr
 visual:
   cover: /images/concept/vis-005-volume.svg
   charts:
@@ -160,7 +160,7 @@ visual:
 - **聚合图**：多交易所简单相加，重复或口径不一。
 - **只看颜色**：颜色来自价格，不是买卖方向。
 - **低流动性品种**：几笔单就能造成「放量」。
-- **新闻与强平时段**：巨量可能来自连锁平仓，不代表新的共识方向。
+- **新闻与强平时段**：巨量可能来自连锁平仓，不代表新的共识方向。读法见 [清算瀑布怎么读图](/indicators/liquidation-cascade)。
 
 成交量擅长补充「忙不忙」，不擅长单独给出方向。历史案例不能代表未来结果。
 
@@ -176,6 +176,6 @@ visual:
 
 ## 下一步
 
-下一篇回到均线派生的动量图：[MACD](/indicators/macd)。
+下一篇用尺子量普通波动有多宽：[ATR 与波动](/indicators/atr)。
 
-MACD 用两条 [EMA](/indicators/ema) 的差，画出快慢趋势离多远、这个距离本身在不在扩大。先修是 EMA。量能和 MACD 回答的不是同一个问题：一个看转手，一个看均线差。
+ATR 测的是近期高低波幅的典型宽度，不给方向。量能看转手，ATR 看普通一根大概多宽，回答的不是同一个问题。新闻或强平时段的巨量，也可能是强平连锁；读法见 [清算瀑布怎么读图](/indicators/liquidation-cascade)。本篇只先记住：巨量不等于新的共识方向。

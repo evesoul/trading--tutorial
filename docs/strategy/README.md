@@ -30,29 +30,32 @@ Strategy 可以引用 Knowledge 的术语，不重写指标定义。Content 写�
 
 ```
 Market Regime（市场环境）
+→ Multi-Timeframe（多周期）
 → Direction（方向）
+→ Order / Execution（订单与成交）
 → Setup（交易前提）
 → Entry（入场触发）
 → Stop Loss（止损）
 → Take Profit（止盈）
 → Position Size（仓位）
+→ Cost vs R（成本对照 R）
+→ Heat（账户热度）
 → Exit（离场）
 → Review（复盘）
 ```
 
+填写完整系统时，仍使用 [system-template.md](./system-template.md) 的 **12 节编号**。多周期、订单、成本、热度写进填写说明，不新增编号。框架文件：[multi-timeframe.md](./multi-timeframe.md)、[execution.md](./execution.md)、[cost-vs-r.md](./cost-vs-r.md)；热度细则在 [risk-management.md](./risk-management.md)。总纲见 `docs/product/curriculum-upgrade.md`。
+
 含义：
 
-1. **市场环境**：先判断当前更像趋势、震荡、高波动还是低波动。同一套观察在不同环境里含义不同。
-2. **方向**：只在已经选定的环境里，规则化地给出偏多、偏空或空仓。
-3. **交易前提**：结构、位置、指标分工已经对齐，但还没有触发。
-4. **入场触发**：明确到“此时可以按规则执行”的条件。前提不等于触发。
-5. **止损**：先规定错了怎么退出，再谈仓位。
-6. **止盈**：规定对了怎么减仓或离场。
-7. **仓位**：由单笔风险和止损距离反推，不由“感觉有把握”决定。
-8. **离场**：包括止损、止盈、时间离场、规则失效离场。
-9. **复盘**：检查有没有遵守规则，而不是只看赚亏。
-
-填写完整系统时，使用 [system-template.md](./system-template.md)。模板仍保持原有 12 节，并对照上表。
+1. **市场环境**：先判断当前更像趋势、震荡、高波动还是低波动。
+2. **多周期**：高周期定场，低周期触发；打架则空仓。
+3. **方向**：只在已经选定的环境里，规则化地给出偏多、偏空或空仓。
+4. **订单与成交**：规则如何变成可能成交的单；未成交怎么算。
+5. **交易前提 / 入场触发**：前提不等于触发。
+6. **止损 / 止盈 / 离场**：先认错，再谈目标；含时间与失效。
+7. **仓位 / 成本 / 热度**：由止损距离反推；来回成本对照 R；同向风险加总。
+8. **复盘**：先查执行，再谈改规则。
 
 ## 核心策略原则
 
@@ -95,18 +98,12 @@ Market Regime（市场环境）
 | [system-template.md](./system-template.md) | 完整交易系统填写模板（保留 12 节） |
 | [risk-management.md](./risk-management.md) | 账户风险、单笔风险、爆仓、禁止交易条件 |
 | [position-sizing.md](./position-sizing.md) | 由止损距离反推仓位；杠杆不等于仓位 |
-| [backtest.md](./backtest.md) | 样本、胜率、盈亏比、Profit Factor、回撤、连亏、成本、滑点 |
+| [backtest.md](./backtest.md) | 样本、胜率、盈亏比、Profit Factor、回撤、连亏、成本、滑点；样本外与滚动前进 |
+| [execution.md](./execution.md) | 订单类型、成交、部分成交、最新价止损 vs 标记价强平 |
+| [multi-timeframe.md](./multi-timeframe.md) | 决策周期与执行周期；打架则空仓 |
+| [cost-vs-r.md](./cost-vs-r.md) | 手续费 / 资金费 / 滑点对照 1R |
 
-Part 3 建议教学顺序：
-
-1. 什么是交易系统，为什么要按链路写规则
-2. 市场环境与方向
-3. 交易前提、入场、止损、止盈、离场
-4. 风险管理
-5. 仓位管理
-6. 回测与统计
-7. 复盘与优化
-8. 用模板写一个完整案例（案例是教学对象，不是推荐策略）
+Part 3 发布课序以 `docs/product/learning-path.md` 为准（二十篇）。教学顺序：理念 → 环境 → 多周期 → 方向 → 订单 → 进出场 → 仓位 → 成本 → 风险 → 热度 → 频率 → 执行偏差 → 日志 → 回测 → 统计 → 优化 → 案例。
 
 ## 给 Content Agent 的使用方式
 
@@ -121,7 +118,9 @@ Part 3 建议教学顺序：
 7. 需要图表时创建 Visual Task，真实行情图必须记录 symbol、timeframe、source、period。示意图必须标明“示意图”。
 8. 不要用虚构数据证明某组合能赚钱。
 
-更细的转写注意写在各组合文件末尾，以及 [HANDOFF.md](./HANDOFF.md)。
+系统课转写：多周期读 [multi-timeframe.md](./multi-timeframe.md)，订单读 [execution.md](./execution.md)，成本读 [cost-vs-r.md](./cost-vs-r.md)，热度与执行偏差读 [risk-management.md](./risk-management.md)。对应 Content 任务为 TASK-035 / 036 / 037。
+
+更细的转写注意写在各文件末尾，以及 [HANDOFF.md](./HANDOFF.md)。
 
 ## 目录文件
 
@@ -133,6 +132,9 @@ docs/strategy/
 ├── risk-management.md
 ├── position-sizing.md
 ├── backtest.md
+├── execution.md
+├── multi-timeframe.md
+├── cost-vs-r.md
 └── combinations/
     ├── trend-momentum.md
     ├── trend-volume.md

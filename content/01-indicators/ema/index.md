@@ -4,7 +4,7 @@ description: 对比 SMA 的均等权重，理解 EMA 为什么更贴近期价格
 part: 1
 category: indicators
 level: beginner
-order: 4
+order: 5
 slug: ema
 status: published
 indicator:
@@ -26,7 +26,7 @@ visual:
 
 指数均线（Exponential Moving Average，EMA）也是一条由历史价格平滑出来的线。它和上一篇的 **MA（默认 SMA）** 同属均线家族，算法不同。本站不把 EMA 简称成「MA」，以免读成权重相同。
 
-先修：[MA 移动平均线](/indicators/ma)。若还没手算过 SMA，建议先回去看 5 根收盘价那张表。
+先修：[MA 移动平均线](/indicators/ma)。若还没手算过 SMA，建议先回去看 5 根收盘价那张表。默认读图顺序仍是先结构，再均线；穿过 EMA 不等于摆动结构已被破坏。
 
 ## 学习目标
 

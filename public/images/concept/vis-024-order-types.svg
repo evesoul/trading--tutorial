@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 740" role="img" aria-labelledby="title desc">
+  <title id="title">订单类型与成交示意图</title>
+  <desc id="desc">教学示意图。四格对照市价、限价、止损单、只减仓。最新价止损与标记价强平可以不同步。没有买卖按钮，不是下单面板。</desc>
+  <rect width="1200" height="740" fill="#f8fafc"/>
+  <rect width="1200" height="72" fill="#ffffff"/>
+  <line x1="0" y1="72" x2="1200" y2="72" stroke="#e2e8f0"/>
+  <text x="32" y="46" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="700" fill="#0f172a">订单类型与成交示意图</text>
+  <rect x="1048" y="22" width="120" height="30" rx="4" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="1108" y="43" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#c2410c">示意图</text>
+
+  <rect x="28" y="88" width="1144" height="40" rx="8" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="600" y="114" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#9a3412">规则成立不等于单已成交。计划价不等于成交价。</text>
+
+  <rect x="28" y="144" width="276" height="248" rx="8" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="166" y="176" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="16" font-weight="600" fill="#1e40af">市价</text>
+  <text x="166" y="208" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">立刻吃对手价</text>
+  <text x="166" y="232" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">承诺：尽快成交</text>
+  <text x="166" y="256" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#475569">放弃：成交价</text>
+  <text x="166" y="292" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#1d4ed8">滑点由盘口决定</text>
+  <text x="166" y="324" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#64748b">薄盘里可以远离看见的价</text>
+  <text x="166" y="356" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#64748b">要成交，价格让给盘口</text>
+
+  <rect x="320" y="144" width="276" height="248" rx="8" fill="#ecfdf5" stroke="#a7f3d0"/>
+  <text x="458" y="176" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="16" font-weight="600" fill="#0f766e">限价</text>
+  <text x="458" y="208" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">你出的价（或更好）</text>
+  <text x="458" y="232" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">承诺：价格边界</text>
+  <text x="458" y="256" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#475569">放弃：成交本身</text>
+  <text x="458" y="292" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#0f766e">可能一直不成交</text>
+  <text x="458" y="324" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#64748b">未成交视为未入场</text>
+  <text x="458" y="356" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#64748b">要价格，成交让给盘口</text>
+
+  <rect x="612" y="144" width="276" height="248" rx="8" fill="#fff7ed" stroke="#fed7aa"/>
+  <text x="750" y="176" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="16" font-weight="600" fill="#c2410c">止损单</text>
+  <text x="750" y="208" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">触发后才变成订单</text>
+  <text x="750" y="232" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">止损市价：要离场</text>
+  <text x="750" y="256" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">止损限价：要守价</text>
+  <text x="750" y="292" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#c2410c">触发不等于成交</text>
+  <text x="750" y="324" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#64748b">限价止损可能穿价不成交</text>
+  <text x="750" y="356" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#64748b">薄盘里接近市价扫货</text>
+
+  <rect x="904" y="144" width="268" height="248" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="1038" y="176" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="16" font-weight="600" fill="#0f172a">只减仓</text>
+  <text x="1038" y="208" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">最多减小已有仓位</text>
+  <text x="1038" y="232" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">避免平仓单开出新仓</text>
+  <text x="1038" y="268" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#475569">不保证成交</text>
+  <text x="1038" y="292" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#475569">不降低强平风险</text>
+  <text x="1038" y="324" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#64748b">只做 maker：不成交则撤</text>
+  <text x="1038" y="356" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#64748b">GTC 挂着 / IOC 剩撤 / FOK 全或无</text>
+
+  <rect x="28" y="408" width="1144" height="172" rx="8" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="48" y="436" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="16" font-weight="600" fill="#334155">最新价止损 与 标记价强平：可以不同步</text>
+
+  <line x1="80" y1="468" x2="720" y2="468" stroke="#94a3b8" stroke-width="2"/>
+  <text x="48" y="474" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#64748b">价</text>
+
+  <line x1="80" y1="500" x2="560" y2="500" stroke="#2563eb" stroke-width="2.4" stroke-dasharray="7 5"/>
+  <circle cx="560" cy="500" r="6" fill="#2563eb"/>
+  <text x="80" y="524" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#1d4ed8">最新价止损线</text>
+  <text x="240" y="524" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#475569">不少止损单按它触发</text>
+
+  <line x1="80" y1="548" x2="480" y2="548" stroke="#dc2626" stroke-width="2.4"/>
+  <circle cx="480" cy="548" r="6" fill="#dc2626"/>
+  <text x="80" y="572" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#b91c1c">标记价强平线</text>
+  <text x="240" y="572" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#475569">强平不等待你的止损成交</text>
+
+  <rect x="760" y="456" width="388" height="108" rx="8" fill="#fef2f2" stroke="#fecaca"/>
+  <text x="954" y="488" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#991b1b">止损尚未成交，也可能先被强平</text>
+  <text x="954" y="516" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">只在最新价挂很近的限价止损</text>
+  <text x="954" y="540" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">再配高杠杆：两套触发容易脱节</text>
+
+  <text x="600" y="612" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="15" fill="#334155">部分成交、未成交须事先写：视为未入场，或按已成交部分重算。没有买卖按钮。</text>
+  <text x="600" y="638" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="15" fill="#334155">名称因所而异。本站不鼓励高杠杆。示例只教写法，不是下单指令。</text>
+
+  <rect x="0" y="700" width="1200" height="40" fill="#f1f5f9"/>
+  <text x="600" y="726" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#64748b">教学抽象 · 非真实行情 · 不构成交易建议</text>
+</svg>

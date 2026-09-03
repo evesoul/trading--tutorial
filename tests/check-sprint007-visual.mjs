@@ -134,41 +134,50 @@ const chrome = spawn(chromeBin, [
   stdio: 'ignore',
 })
 
-const expectedHrefs = [
-  '/indicators/kline',
-  '/indicators/ma',
-  '/indicators/ema',
-  '/indicators/rsi',
-  '/indicators/volume',
-  '/indicators/macd',
-  '/indicators/kdj',
-  '/indicators/bollinger-bands',
-  '/indicators/open-interest',
-  '/indicators/funding-rate',
-  '/indicators/long-short-ratio',
-  '/indicators/cvd',
-  '/combinations/trend-momentum',
-  '/combinations/trend-volume',
-  '/combinations/rsi-macd',
-  '/combinations/price-oi',
-  '/combinations/oi-volume',
-  '/combinations/funding-oi',
-  '/combinations/multi-indicator',
-  '/trading-system/what-is-a-trading-system',
-  '/trading-system/market-regime',
-  '/trading-system/direction',
-  '/trading-system/entry-rules',
-  '/trading-system/exit-rules',
-  '/trading-system/stop-loss',
-  '/trading-system/take-profit',
-  '/trading-system/position-sizing',
-  '/trading-system/risk-management',
-  '/trading-system/trade-frequency',
-  '/trading-system/trading-journal',
-  '/trading-system/backtesting',
-  '/trading-system/statistics',
-  '/trading-system/system-optimization',
-  '/trading-system/case-study',
+const expectedSteps = [
+  { label: '导学 1', href: '/course' },
+  { label: '导学 2', href: '/course/perp-screen' },
+  { label: '主路径 1', href: '/indicators/kline' },
+  { label: '主路径 2', href: '/indicators/trendlines' },
+  { label: '主路径 3', href: '/indicators/market-structure' },
+  { label: '主路径 4', href: '/indicators/ma' },
+  { label: '主路径 5', href: '/indicators/ema' },
+  { label: '主路径 6', href: '/indicators/rsi' },
+  { label: '主路径 7', href: '/indicators/volume' },
+  { label: '主路径 8', href: '/indicators/atr' },
+  { label: '主路径 9', href: '/indicators/bollinger-bands' },
+  { label: '合约数据层 1', href: '/indicators/open-interest' },
+  { label: '合约数据层 2', href: '/indicators/funding-rate' },
+  { label: '合约数据层 3', href: '/indicators/long-short-ratio' },
+  { label: '合约数据层 4', href: '/indicators/cvd' },
+  { label: '合约数据层 5', href: '/indicators/liquidation-cascade' },
+  { label: '指标组合 1', href: '/combinations/trend-momentum' },
+  { label: '指标组合 2', href: '/combinations/trend-volume' },
+  { label: '指标组合 3', href: '/combinations/rsi-macd' },
+  { label: '指标组合 4', href: '/combinations/price-oi' },
+  { label: '指标组合 5', href: '/combinations/oi-volume' },
+  { label: '指标组合 6', href: '/combinations/funding-oi' },
+  { label: '指标组合 7', href: '/combinations/multi-indicator' },
+  { label: '交易系统 1', href: '/trading-system/what-is-a-trading-system' },
+  { label: '交易系统 2', href: '/trading-system/market-regime' },
+  { label: '交易系统 3', href: '/trading-system/multi-timeframe' },
+  { label: '交易系统 4', href: '/trading-system/direction' },
+  { label: '交易系统 5', href: '/trading-system/order-types' },
+  { label: '交易系统 6', href: '/trading-system/entry-rules' },
+  { label: '交易系统 7', href: '/trading-system/exit-rules' },
+  { label: '交易系统 8', href: '/trading-system/stop-loss' },
+  { label: '交易系统 9', href: '/trading-system/take-profit' },
+  { label: '交易系统 10', href: '/trading-system/position-sizing' },
+  { label: '交易系统 11', href: '/trading-system/cost-vs-r' },
+  { label: '交易系统 12', href: '/trading-system/risk-management' },
+  { label: '交易系统 13', href: '/trading-system/account-heat' },
+  { label: '交易系统 14', href: '/trading-system/trade-frequency' },
+  { label: '交易系统 15', href: '/trading-system/execution-bias' },
+  { label: '交易系统 16', href: '/trading-system/trading-journal' },
+  { label: '交易系统 17', href: '/trading-system/backtesting' },
+  { label: '交易系统 18', href: '/trading-system/statistics' },
+  { label: '交易系统 19', href: '/trading-system/system-optimization' },
+  { label: '交易系统 20', href: '/trading-system/case-study' },
 ]
 
 let cdp
@@ -207,17 +216,17 @@ try {
     return {
       items,
       hasHandoff: html.includes('HANDOFF'),
-      hasUnfinishedCopy: html.includes('后半仍在编写'),
+      hasUnfinishedCopy: html.includes('后半仍在编写') || html.includes('仍待后续'),
       writingTitles: items.filter(item => item.writing).map(item => item.title),
       stepCount: items.length,
     }
   })()`)
 
-  if (course.stepCount !== 34) {
-    fail(`/course 路径步数是 ${course.stepCount}，应为 8 + 4 + 7 + 15`)
+  if (course.stepCount !== expectedSteps.length) {
+    fail(`/course 路径步数是 ${course.stepCount}，应为 2 + 9 + 5 + 7 + 20`)
   }
   else {
-    ok('/course 路径步数 34（主路径 8 + 合约层 4 + 组合 7 + 系统 15）')
+    ok('/course 路径步数 43（导学 2 + 主路径 9 + 合约层 5 + 组合 7 + 系统 20）')
   }
   if (course.hasHandoff) {
     fail('/course 列出 HANDOFF')
@@ -228,41 +237,42 @@ try {
   else {
     ok('/course 不再写「后半仍在编写」')
   }
-  if (course.writingTitles.length) {
-    fail(`/course 仍有编写中步骤：${course.writingTitles.join(', ')}`)
-  }
 
-  for (const [i, href] of expectedHrefs.entries()) {
+  for (const [i, expected] of expectedSteps.entries()) {
     const step = course.items[i]
-    let expectedLabel
-    if (i < 8) {
-      expectedLabel = `主路径 ${i + 1}`
+    if (!step || step.label !== expected.label) {
+      fail(`/course 第 ${i + 1} 步标签异常：${JSON.stringify(step)} 期望 ${expected.label}`)
+      continue
     }
-    else if (i < 12) {
-      expectedLabel = `合约数据层 ${i - 7}`
+    if (expected.optional) {
+      if (step.writing && step.href) {
+        fail(`/course 第 ${i + 1} 步编写中仍带链接：${JSON.stringify(step)}`)
+      }
+      else if (!step.writing && step.href !== expected.href) {
+        fail(`/course 第 ${i + 1} 步应为可点 ${expected.href}，实际 ${JSON.stringify(step)}`)
+      }
+      else {
+        ok(`/course 第 ${i + 1} 步 ${step.label} ${step.title} → ${step.href ?? '编写中'}`)
+      }
+      continue
     }
-    else if (i < 19) {
-      expectedLabel = `指标组合 ${i - 11}`
+    if (step.writing || step.href !== expected.href) {
+      fail(`/course 第 ${i + 1} 步应为可点 ${expected.href}，实际 ${JSON.stringify(step)}`)
     }
     else {
-      expectedLabel = `交易系统 ${i - 18}`
-    }
-    if (!step || step.href !== href || step.writing) {
-      fail(`/course 第 ${i + 1} 步应为可点 ${href}，实际 ${JSON.stringify(step)}`)
-    }
-    else if (step.label !== expectedLabel) {
-      fail(`/course 第 ${i + 1} 步标签异常：${JSON.stringify(step)} 期望 ${expectedLabel}`)
-    }
-    else {
-      ok(`/course 第 ${i + 1} 步 ${step.label} ${step.title} → ${href}`)
+      ok(`/course 第 ${i + 1} 步 ${step.label} ${step.title} → ${expected.href}`)
     }
   }
   await screenshot(cdp, 'desktop-course.png')
 
-  const walkHrefs = [
-    ...expectedHrefs.slice(0, 8),
-    ...expectedHrefs.slice(19),
-  ]
+  const walkHrefs = expectedSteps
+    .filter(step =>
+      step.label.startsWith('导学')
+      || step.label.startsWith('主路径')
+      || step.label.startsWith('合约')
+      || step.label.startsWith('交易系统')
+    )
+    .map(step => step.href)
   for (const href of walkHrefs) {
     await goto(cdp, href)
     const page = await cdp.evaluate(`(() => ({
@@ -283,25 +293,25 @@ try {
   await goto(cdp, '/trading-system/position-sizing')
   const sizing = await cdp.evaluate(`(() => {
     const html = document.documentElement.outerHTML
-    const link = document.querySelector('a[href="/trading-system/risk-management"]')
+    const link = document.querySelector('a[href="/trading-system/cost-vs-r"]')
     const nextLinks = [...document.querySelectorAll('.lesson-pager a')].map(a => a.getAttribute('href'))
     return {
-      hasHref: html.includes('href="/trading-system/risk-management"'),
+      hasHref: html.includes('href="/trading-system/cost-vs-r"'),
       linkText: link?.textContent?.trim() ?? '',
       nextLinks,
     }
   })()`)
-  if (!sizing.hasHref) {
-    fail('仓位页不可点 /trading-system/risk-management')
+  if (!sizing.hasHref && !sizing.nextLinks.includes('/trading-system/cost-vs-r')) {
+    fail(`仓位页不可点 /trading-system/cost-vs-r：${JSON.stringify(sizing)}`)
   }
   else {
-    ok(`仓位可点 risk-management（${sizing.linkText || '有 href'}）`)
+    ok(`仓位可点 cost-vs-r（${sizing.linkText || '有 href'}）`)
   }
-  if (!sizing.nextLinks.includes('/trading-system/risk-management')) {
-    fail(`仓位页脚未链到 risk-management：${JSON.stringify(sizing.nextLinks)}`)
+  if (!sizing.nextLinks.includes('/trading-system/cost-vs-r')) {
+    fail(`仓位页脚未链到 cost-vs-r：${JSON.stringify(sizing.nextLinks)}`)
   }
   else {
-    ok('仓位页脚下一篇是 risk-management')
+    ok('仓位页脚下一篇是 cost-vs-r')
   }
   await screenshot(cdp, 'desktop-position-sizing.png')
 

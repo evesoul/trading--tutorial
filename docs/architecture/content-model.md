@@ -29,7 +29,7 @@ status:
 ```
 
 part:
-- 0 = 导学（映射到 `/course`，不新建 `/introduction`）
+- 0 = 导学（`slug: introduction` 映射到 `/course`；其余 introduction slug 映射到 `/course/{slug}`。不新建 `/introduction`）
 - 1 = 指标基础
 - 2 = 指标组合
 - 3 = 交易系统

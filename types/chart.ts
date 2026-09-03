@@ -7,6 +7,12 @@ export const REAL_CHART_IDS = [
   'vis-106',
   'vis-107',
   'vis-108',
+  'vis-109',
+  'vis-110',
+  'vis-111',
+  'vis-112',
+  'vis-113',
+  'vis-114',
 ] as const
 
 export type RealChartId = (typeof REAL_CHART_IDS)[number]
@@ -56,6 +62,13 @@ export interface ChartLevelGuide {
 
 export type ChartGuide = ChartTrendlineGuide | ChartLevelGuide
 
+export interface ChartSwingMarker {
+  time: number
+  price: number
+  label: string
+  position: 'aboveBar' | 'belowBar'
+}
+
 export type DrawMode = 'idle' | 'level' | 'trendline'
 
 export interface ChartPayload {
@@ -72,10 +85,17 @@ export interface ChartPayload {
   volumeUnit?: string
   oiUnit?: string
   fundingUnit?: string
+  atrUnit?: string
   candles: ChartCandle[]
   overlays?: {
     ema20?: Array<number | null>
+    sma20?: Array<number | null>
+    bbUpper?: Array<number | null>
+    bbMid?: Array<number | null>
+    bbLower?: Array<number | null>
   }
+  atr?: Array<number | null>
+  markers?: ChartSwingMarker[]
   macd?: ChartMacd
   rsi?: Array<number | null>
   oi?: Array<number | null>
@@ -96,6 +116,12 @@ export const REAL_CHART_SNAPSHOTS: Record<RealChartId, string> = {
   'vis-106': '/images/indicator/vis-106-oi-real.svg',
   'vis-107': '/images/indicator/vis-107-funding-real.svg',
   'vis-108': '/images/indicator/vis-108-trendlines-real.svg',
+  'vis-109': '/images/indicator/vis-109-market-structure-real.svg',
+  'vis-110': '/images/indicator/vis-110-atr-real.svg',
+  'vis-111': '/images/indicator/vis-111-ma-real.svg',
+  'vis-112': '/images/indicator/vis-112-bollinger-real.svg',
+  'vis-113': '/images/combination/vis-113-trend-momentum-real.svg',
+  'vis-114': '/images/combination/vis-114-alignment-fail-real.svg',
 }
 
 export function isRealChartId(value: string): value is RealChartId {

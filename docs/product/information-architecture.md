@@ -58,8 +58,8 @@
 
 1. 渲染 `content/00-introduction/` 导学（或等价查询），而不是在 Vue 里写死长文
 2. 三阶段地图，链到 `/indicators`、`/combinations`、`/trading-system`
-3. **推荐起点**固定为导学 → K 线，避免 12 个指标并列成「选课超市」
-4. 标出阶段 2 / 3 在 MVP 期间为「框架已规划、正文后续开放」
+3. **推荐起点**固定为导学 → 交易所屏幕 → K 线，避免指标目录变成选课超市
+4. 阶段 1 目录：主路径置顶；KDJ 标对照层；合约层含清算瀑布
 5. 风险锚点 `#risk`
 
 不承担：单篇正文排版（那是文章页）。
@@ -72,7 +72,7 @@
 
 1. 按 `part: 1` + `order` 列出指标文
 2. 每张卡片：标题、一句话 description、level、先修
-3. 主路径 4 篇（K 线 / MA / EMA / RSI）视觉上优先
+3. 主路径（K 线 → 趋势线 → 摆动结构 → MA → EMA → RSI → Volume → ATR → 布林带）视觉上优先；KDJ 标对照层
 4. 未发布（无文件或 `status: draft` 且未开放）显示「编写中」，可点进则进草稿策略由 Nuxt 定；产品建议 MVP 只公开 `published`
 
 不承担：组合或系统目录。
@@ -94,14 +94,14 @@
 ### `/combinations` 与 `/combinations/[...slug]`
 
 职责同指标目录 / 文章，数据源换为 `part: 2`。  
-MVP：目录可存在，空状态文案指向阶段 1，不假装已有完整组合课。
+阶段 2 七篇已发布。不新开振荡器配对。空状态仅用于未发布 slug。
 
 组合文必须在页头提示：组合用于对照观察，不构成交易信号。
 
 ### `/trading-system` 与 `/trading-system/[...slug]`
 
 职责同指标目录 / 文章，数据源换为 `part: 3`。  
-MVP：空状态说明「先建立看图能力」，链回 `/course` 与 `/indicators`。
+阶段 3 已发布二十篇。未发布 slug 才显示编写中。
 
 系统文必须在页头提示：规则用于练习设计自己的系统；案例不是荐股或跟单对象。
 
@@ -123,7 +123,8 @@ MVP：空状态说明「先建立看图能力」，链回 `/course` 与 `/indica
 
 | 内容路径 | Front Matter | 页面 |
 |---|---|---|
-| `content/00-introduction/index.md` | `part: 0`，`category: introduction`，`slug: introduction` | `/course`（导学区）。**不**增加 `/introduction`。 |
+| `content/00-introduction/index.md` | `part: 0`，`category: introduction`，`slug: introduction` | `/course`（导学枢纽）。**不**增加 `/introduction`。 |
+| `content/00-introduction/{slug}/index.md` | `part: 0`，`category: introduction`，slug ≠ `introduction` | `/course/{slug}`（如 `perp-screen`） |
 | `content/01-indicators/index.md`（可选） | `category: indicators` | `/indicators` 的引言段落；没有则用页面标题 + 查询列表 |
 | `content/01-indicators/{slug}/index.md` | `part: 1` | `/indicators/{slug}` |
 | `content/02-combinations/index.md`（可选） | `category: combinations` | `/combinations` 引言 |
@@ -161,6 +162,6 @@ part:
   3 = 交易系统
 ```
 
-`category` 已包含 `introduction`，查询导学用 `category: introduction` 或 `part: 0` 均可，二者应同时成立。
+`category` 已包含 `introduction`。列表可用 `part: 0`。取枢纽正文必须再加 `slug === 'introduction'`，不能只按 category 取第一篇。
 
-不建议在 Sprint 001 / 002 新增路由。若导学拆成多篇，再开 `/course/[...slug]`，届时更新本文件与 [page-map.md](./page-map.md)。
+Sprint 009 起使用 `/course/[...slug]` 承载 `perp-screen` 等非枢纽导学。一级导航不增加条目。

@@ -30,8 +30,9 @@ content/
 基础概念 → 单个指标 → 指标组合 → 交易逻辑 → 交易系统 → 回测 → 复盘
 
 ## 页面
-/
+ /
  /course
+ /course/[...slug]
  /indicators
  /indicators/[...slug]
  /combinations

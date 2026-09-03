@@ -4,7 +4,7 @@ description: 用两条 EMA 的差观察力度变化；金叉死叉和背离都�
 part: 1
 category: indicators
 level: beginner
-order: 7
+order: 10
 slug: macd
 status: published
 indicator:
@@ -28,7 +28,7 @@ visual:
 
 它用两条不同速度的指数均线之差，描述价格动量如何随快慢均线的**聚合（Convergence）**和**发散（Divergence）**而变化。名字里的 Divergence 指快慢均线分开；后文「顶背离」里的背离指价格与指标不同步。两个词不要混成一件事。
 
-先修：[EMA 指数移动平均线](/indicators/ema)。上一篇 [成交量](/indicators/volume) 看的是转手；本篇回到价格本身的均线差。
+先修：[EMA 指数移动平均线](/indicators/ema)。走完主路径的话，上一篇是 [布林带](/indicators/bollinger-bands)；本篇回到价格本身的均线差。本篇是主路径续，给阶段 2 组合课当先修。
 
 ## 学习目标
 

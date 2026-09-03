@@ -2,6 +2,7 @@ import {
   CandlestickSeries,
   ColorType,
   createChart,
+  createSeriesMarkers,
   CrosshairMode,
   HistogramSeries,
   LineSeries,
@@ -25,10 +26,14 @@ import { compactNumber } from '../../types/chart'
 const YANG = '#15803d'
 const YIN = '#b91c1c'
 const EMA = '#7c3aed'
+const SMA = '#1d4ed8'
+const BB = '#0f766e'
+const BB_BAND = '#64748b'
 const DIF = '#2563eb'
 const DEA = '#d97706'
 const RSI = '#1a4d56'
 const OI = '#0f172a'
+const ATR = '#0f766e'
 const ZERO = '#94a3b8'
 
 export interface TeachingChartHandle {
@@ -127,6 +132,24 @@ export function formatChartReadout(param: MouseEventParams, series: SeriesMap): 
     parts.push(`EMA20 ${formatPrice(emaPoint.value)}`)
   }
 
+  const smaSeries = series.get('sma20')
+  const smaPoint = smaSeries ? param.seriesData.get(smaSeries) : undefined
+  if (isValuePoint(smaPoint)) {
+    parts.push(`SMA20 ${formatPrice(smaPoint.value)}`)
+  }
+
+  const bbMidSeries = series.get('bbMid')
+  const bbMidPoint = bbMidSeries ? param.seriesData.get(bbMidSeries) : undefined
+  if (isValuePoint(bbMidPoint)) {
+    parts.push(`中轨 ${formatPrice(bbMidPoint.value)}`)
+  }
+
+  const atrSeries = series.get('atr')
+  const atrPoint = atrSeries ? param.seriesData.get(atrSeries) : undefined
+  if (isValuePoint(atrPoint)) {
+    parts.push(`ATR14 ${formatPrice(atrPoint.value)}`)
+  }
+
   const volumeSeries = series.get('volume')
   const volumePoint = volumeSeries ? param.seriesData.get(volumeSeries) : undefined
   if (isValuePoint(volumePoint)) {
@@ -175,8 +198,9 @@ export function mountTeachingChart(
   payload: ChartPayload,
   onReadout: (text: string) => void,
 ): TeachingChartHandle {
-  const hasSubpane = payload.panels.some(panel => panel !== 'ohlc' && panel !== 'ema')
-  const height = hasSubpane ? 500 : 360
+  const extraPanes = payload.panels.filter(panel => panel !== 'ohlc' && panel !== 'ema').length
+  const hasSubpane = extraPanes > 0
+  const height = extraPanes >= 2 ? 620 : extraPanes === 1 ? 500 : 360
   const times = payload.candles.map(bar => bar.time)
 
   const chart: IChartApi = createChart(host, {
@@ -237,6 +261,16 @@ export function mountTeachingChart(
   })))
   series.set('ohlc', candles)
 
+  if (payload.markers?.length) {
+    createSeriesMarkers(candles, payload.markers.map(marker => ({
+      time: asTime(marker.time),
+      position: marker.position,
+      color: marker.position === 'aboveBar' ? YIN : YANG,
+      shape: marker.position === 'aboveBar' ? 'arrowDown' : 'arrowUp',
+      text: marker.label,
+    })))
+  }
+
   if (payload.overlays?.ema20) {
     const ema = chart.addSeries(LineSeries, {
       color: EMA,
@@ -249,13 +283,64 @@ export function mountTeachingChart(
     series.set('ema20', ema)
   }
 
+  if (payload.overlays?.sma20) {
+    const sma = chart.addSeries(LineSeries, {
+      color: SMA,
+      lineWidth: 2,
+      lastValueVisible: true,
+      priceLineVisible: false,
+      title: 'SMA20',
+    }, 0)
+    sma.setData(linePoints(times, payload.overlays.sma20))
+    series.set('sma20', sma)
+  }
+
+  if (payload.overlays?.bbMid && payload.overlays.bbUpper && payload.overlays.bbLower) {
+    const upper = chart.addSeries(LineSeries, {
+      color: BB_BAND,
+      lineWidth: 1,
+      lineStyle: LineStyle.Dashed,
+      lastValueVisible: false,
+      priceLineVisible: false,
+      title: '上轨',
+    }, 0)
+    const mid = chart.addSeries(LineSeries, {
+      color: BB,
+      lineWidth: 2,
+      lastValueVisible: true,
+      priceLineVisible: false,
+      title: '中轨',
+    }, 0)
+    const lower = chart.addSeries(LineSeries, {
+      color: BB_BAND,
+      lineWidth: 1,
+      lineStyle: LineStyle.Dashed,
+      lastValueVisible: false,
+      priceLineVisible: false,
+      title: '下轨',
+    }, 0)
+    upper.setData(linePoints(times, payload.overlays.bbUpper))
+    mid.setData(linePoints(times, payload.overlays.bbMid))
+    lower.setData(linePoints(times, payload.overlays.bbLower))
+    series.set('bbUpper', upper)
+    series.set('bbMid', mid)
+    series.set('bbLower', lower)
+  }
+
+  let nextPane = 1
+  const takePane = () => {
+    const pane = nextPane
+    nextPane += 1
+    return pane
+  }
+
   if (payload.panels.includes('volume')) {
     const volume = chart.addSeries(HistogramSeries, {
       priceFormat: { type: 'custom', formatter: compactAxis, minMove: 1 },
       lastValueVisible: false,
       priceLineVisible: false,
       title: '成交额 USDT',
-    }, 1)
+    }, takePane())
     volume.setData(payload.candles.map(bar => ({
       time: asTime(bar.time),
       value: bar.volume,
@@ -265,25 +350,26 @@ export function mountTeachingChart(
   }
 
   if (payload.panels.includes('macd') && payload.macd) {
+    const pane = takePane()
     const dif = chart.addSeries(LineSeries, {
       color: DIF,
       lineWidth: 2,
       lastValueVisible: true,
       priceLineVisible: false,
       title: 'DIF',
-    }, 1)
+    }, pane)
     const dea = chart.addSeries(LineSeries, {
       color: DEA,
       lineWidth: 2,
       lastValueVisible: true,
       priceLineVisible: false,
       title: 'DEA',
-    }, 1)
+    }, pane)
     const hist = chart.addSeries(HistogramSeries, {
       lastValueVisible: false,
       priceLineVisible: false,
       title: '柱',
-    }, 1)
+    }, pane)
     dif.setData(linePoints(times, payload.macd.dif))
     dea.setData(linePoints(times, payload.macd.dea))
     hist.setData(times.flatMap((time, index) => {
@@ -319,7 +405,7 @@ export function mountTeachingChart(
       autoscaleInfoProvider: () => ({
         priceRange: { minValue: 15, maxValue: 85 },
       }),
-    }, 1)
+    }, takePane())
     rsi.setData(linePoints(times, payload.rsi))
     rsi.createPriceLine({
       price: 70,
@@ -348,9 +434,21 @@ export function mountTeachingChart(
       priceLineVisible: false,
       title: 'OI USDT',
       priceFormat: { type: 'custom', formatter: compactAxis, minMove: 1 },
-    }, 1)
+    }, takePane())
     oi.setData(linePoints(times, payload.oi))
     series.set('oi', oi)
+  }
+
+  if (payload.panels.includes('atr') && payload.atr) {
+    const atr = chart.addSeries(LineSeries, {
+      color: ATR,
+      lineWidth: 2,
+      lastValueVisible: true,
+      priceLineVisible: false,
+      title: 'ATR14',
+    }, takePane())
+    atr.setData(linePoints(times, payload.atr))
+    series.set('atr', atr)
   }
 
   if (payload.panels.includes('funding') && payload.funding) {
@@ -363,7 +461,7 @@ export function mountTeachingChart(
         formatter: (value: number) => formatFunding(value),
         minMove: 0.000001,
       },
-    }, 1)
+    }, takePane())
     funding.setData(times.flatMap((time, index) => {
       const value = payload.funding?.[index]
       return value == null
@@ -391,6 +489,9 @@ export function mountTeachingChart(
   }
   if (panes[1]) {
     panes[1].setStretchFactor(1)
+  }
+  if (panes[2]) {
+    panes[2].setStretchFactor(1)
   }
 
   chart.timeScale().fitContent()

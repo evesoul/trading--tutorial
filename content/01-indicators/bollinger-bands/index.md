@@ -13,23 +13,25 @@ indicator:
 learning:
   prerequisites:
     - ma
+    - atr
   next:
-    - open-interest
+    - macd
 visual:
   cover: /images/concept/vis-010-bollinger-bands.svg
   charts:
     - vis-010
+    - vis-112
 ---
 
 # 布林带
 
 布林带（Bollinger Bands，BB，也常写 BOLL）由 John Bollinger 提出。它把「均线中枢」和「价格离散程度」画在同一张主图上。
 
-先修：[MA 移动平均线](/indicators/ma)。本站中轨默认是**简单移动平均（SMA）**。单独说 MA 时，本库默认指 SMA。若软件用 EMA 作中轨，必须当作变体声明。
+先修：[MA 移动平均线](/indicators/ma)、[ATR 与波动](/indicators/atr)。本站中轨默认是**简单移动平均（SMA）**。单独说 MA 时，本库默认指 SMA。若软件用 EMA 作中轨，必须当作变体声明。
 
-上一篇 [KDJ](/indicators/kdj) 仍在看动能位置。本篇换问题：最近波动有多大，价格相对自己的中枢有多远。
+上一篇 [ATR](/indicators/atr) 是一把宽度尺子。本篇把波动画成通道：中轨加减若干倍标准差。尺子给「普通有多宽」；通道给收口、走轨、价格相对中枢的位置。不要把两套画成同一个开仓系统。
 
-示意图见下方 vis-010。三格是对照，不是一段连续行情，不要读成「收口之后就会向上」。不插 vis-101–107。
+示意图见下方 vis-010。三格是对照，不是一段连续行情，不要读成「收口之后就会向上」。真实行情另挂 vis-112，不要用示意图冒充实盘。
 
 ## 学习目标
 
@@ -96,6 +98,11 @@ visual:
 ![布林带中轨与开口收口示意图](/images/concept/vis-010-bollinger-bands.svg)
 
 上图是示意图，三格分别对照收口、开口向上走轨道、开口向下走轨道。开口方向事先未知。碰上轨不是卖点，碰下轨不是买点。
+
+下面是冻结的真实行情教学窗，复用 vis-101 同一段 BTCUSDT 4 小时窗口。中轨 SMA20，上下轨 ±2 倍标准差。历史观察不能代表未来结果，也不构成交易建议。
+
+::real-chart{id="vis-112"}
+::
 
 1. **带宽**：变窄是波动收缩，有时称收口、挤压（Squeeze）；变宽是波动扩张，有时称开口。收口之后常有较大波动，但方向事先未知，也不是每次收口都会大波动。开口收口都不是开仓指令。
 2. **价格与轨道**：触及或刺破上轨 / 下轨，表示相对中枢的延伸。趋势里价格可以沿上轨或下轨**走轨道（walking the band）**。
@@ -169,4 +176,6 @@ visual:
 
 ## 下一步
 
-下一篇进入合约特有数据：[持仓量](/indicators/open-interest)（Open Interest，OI）。OI 回答「此刻还挂着多少仓」，和本篇的波动通道不是同一个问题。先修会用到 [成交量](/indicators/volume)，以免把转手和增减仓看成一件事。
+下一篇回到均线派生的动量图：[MACD](/indicators/macd)。
+
+MACD 用两条 [EMA](/indicators/ema) 的差，画出快慢趋势离多远、这个距离本身在不在扩大。先修是 EMA。布林带看通道，MACD 看均线差，回答的不是同一个问题。

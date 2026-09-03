@@ -4,7 +4,7 @@ description: 用持仓量观察此刻还挂着多少未平仓合约；价与 OI 
 part: 1
 category: indicators
 level: beginner
-order: 10
+order: 12
 slug: open-interest
 status: published
 indicator:
@@ -26,7 +26,7 @@ visual:
 
 持仓量（Open Interest，OI，也称未平仓合约）回答「此刻还有多少仓没被平掉」。它不是从开高低收算出来的技术指标，而是交易所披露的**存量数据**。
 
-先修：[成交量](/indicators/volume)。上一篇 [布林带](/indicators/bollinger-bands) 看的是波动通道。本篇换问题：价格在动的时候，市场整体仓位是在变大、变小，还是只是转手。
+先修：[成交量](/indicators/volume)。对照层的 [KDJ](/indicators/kdj) 看的是动能位置。本篇进入合约数据层：价格在动的时候，市场整体仓位是在变大、变小，还是只是转手。
 
 先把三个容易混的词分开：
 
@@ -141,7 +141,7 @@ OI 没有类似 RSI 14 的标准参数。它是数据序列，不是振荡公式
 
 OI 给价格变动加「仓位存量」上下文。它不单独告诉你该开多还是开空。
 
-永续合约有强平（爆仓）风险。杠杆会放大亏损。高 OI 加上高杠杆拥挤，清算连锁的风险上升，但无法从 OI 单独读出杠杆。本站不鼓励高杠杆。
+永续合约有强平（爆仓）风险。杠杆会放大亏损。高 OI 加上高杠杆拥挤，清算连锁的风险上升，但无法从 OI 单独读出杠杆。瀑布进行中 OI 也可能失真，见 [清算瀑布怎么读图](/indicators/liquidation-cascade)。本站不鼓励高杠杆。
 
 ## 正反案例
 

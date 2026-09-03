@@ -65,6 +65,18 @@ status: published
 
 权益理论上被亏到零附近的价格。强平通常在到达破产价之前、按维持保证金触发，具体以交易所规则为准。
 
+### 风险限额（Risk Limit）与仓位档位（Position Tier）
+
+名义仓位变大时，交易所可能提高维持保证金比例。档位升高不是加仓许可。详见[交易所屏幕上有什么](/course/perp-screen)、[仓位管理](/trading-system/position-sizing)。
+
+### 只减仓（Reduce-Only）
+
+该单只能减少已有仓位，不能反向开出新仓。平仓、止损常用这个约束。详见[订单与成交](/trading-system/order-types)。
+
+### 只做 maker（Post-Only）
+
+只允许挂上订单簿当挂单；若会立刻成交则撤掉。用来避免吃单，不保证成交。详见[订单与成交](/trading-system/order-types)。
+
 ### 手续费与滑点（Fee / Slippage）
 
 手续费是开平仓成本。滑点是意图价格与实际成交价的差距，流动性差或行情剧烈时更明显。回测与实盘评估都要把成本算进去。历史成交不能代表未来相同的滑点。

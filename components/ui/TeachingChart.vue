@@ -200,10 +200,11 @@ const altText = computed(() => {
     <p v-if="data" class="teaching-chart__foot">
       真实行情 · {{ data.symbol }} · {{ data.timeframe }} · {{ data.source }} · {{ periodText }} · 不构成交易建议
     </p>
-    <p v-if="data?.volumeUnit || data?.oiUnit || data?.fundingUnit" class="teaching-chart__units">
+    <p v-if="data?.volumeUnit || data?.oiUnit || data?.fundingUnit || data?.atrUnit" class="teaching-chart__units">
       <span v-if="data.volumeUnit">成交量：{{ data.volumeUnit }}</span>
       <span v-if="data.oiUnit">持仓量：{{ data.oiUnit }}</span>
       <span v-if="data.fundingUnit">费率：{{ data.fundingUnit }}</span>
+      <span v-if="data.atrUnit">ATR：{{ data.atrUnit }}</span>
     </p>
   </figure>
 </template>

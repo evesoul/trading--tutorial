@@ -4,7 +4,7 @@ description: 用某一口径下的多空比值观察样本倾斜；没有口径�
 part: 1
 category: indicators
 level: beginner
-order: 12
+order: 14
 slug: long-short-ratio
 status: published
 indicator:

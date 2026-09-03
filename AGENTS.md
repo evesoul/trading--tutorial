@@ -15,18 +15,12 @@
 ## 2. 核心课程结构
 
 ### 第一部分：常用指标
-- K线
-- MA
-- EMA
-- MACD
-- RSI
-- KDJ
-- Bollinger Bands
-- Volume
-- Open Interest
-- Funding Rate
-- Long/Short Ratio
-- CVD
+主路径：K线 → 趋势线与支撑阻力 → 摆动结构与假突破 → MA → EMA → RSI → Volume → ATR → Bollinger Bands  
+主路径续：MACD  
+对照层：KDJ（不扩写，不新开第四个振荡器）  
+合约数据层：Open Interest → Funding Rate → Long/Short Ratio → CVD → 清算瀑布怎么读图
+
+发布课序以 `docs/product/learning-path.md` 为准。
 
 ### 第二部分：指标组合
 - 趋势 + 动量
@@ -34,26 +28,33 @@
 - 价格 + OI
 - OI + Volume
 - Funding + OI
-- RSI + MACD
-- EMA + Volume
+- RSI + MACD（示范两把尺问同一问题，不新开 KDJ+RSI）
+- EMA + Volume（主题内案例，不是一级路由）
 - 多指标共振
 
 ### 第三部分：建立自己的交易系统
 - 交易理念
 - 市场环境
-- 趋势识别
+- 多周期
+- 趋势识别 / 方向判断
+- 订单与成交
 - 入场规则
 - 出场规则
 - 止损
 - 止盈
 - 仓位管理
+- 成本对照 R
 - 风险管理
+- 账户热度与相关
 - 交易频率
+- 执行偏差
 - 交易日志
 - 回测
 - 数据统计
 - 系统优化
 - 完整交易系统案例
+
+阶段 0 导学含「怎么学」与「交易所屏幕上有什么」。
 
 ## 3. 技术栈
 - Nuxt

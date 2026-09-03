@@ -4,12 +4,13 @@ description: 没有记录就无法谈优化；日志先分清有没有遵守规�
 part: 3
 category: trading-system
 level: intermediate
-order: 11
+order: 16
 slug: trading-journal
 status: published
 learning:
   prerequisites:
     - what-is-a-trading-system
+    - execution-bias
   next:
     - backtesting
 visual:
@@ -24,7 +25,7 @@ visual:
 
 本站只提供交易教育，不提供买卖信号、荐股、喊单或自动交易。教学栏目只说明「记什么」，不是成绩单，不能代表未来结果。
 
-正式先修：[什么是交易系统](/trading-system/what-is-a-trading-system)。系统 = 事先写好的规则 + 事后能检查的记录。建议也已读完 [仓位管理](/trading-system/position-sizing)、[风险管理](/trading-system/risk-management)、[交易频率](/trading-system/trade-frequency)，这样栏位才有东西可填。本篇可与回测并行阅读，建议先日志后回测。
+正式先修：[什么是交易系统](/trading-system/what-is-a-trading-system)、[执行偏差](/trading-system/execution-bias)。系统 = 事先写好的规则 + 事后能检查的记录。偏差表上的每一行，都要能在日志里打勾。建议也已读完 [仓位管理](/trading-system/position-sizing)、[账户热度与相关](/trading-system/account-heat)、[交易频率](/trading-system/trade-frequency)，这样栏位才有东西可填。本篇可与回测并行阅读，建议先日志后回测。
 
 类比：菜谱负责事先，厨房笔记负责事后。没有笔记，你分不清是盐放多了，还是根本没按菜谱。改菜谱之前，先核对有没有照着做。
 
@@ -33,7 +34,7 @@ visual:
 读完本篇，你应该能：
 
 - 说出没有记录就无法谈优化
-- 列出一笔日志至少要有的栏：环境、方向、前提、触发、计划进出、实际进出、仓位、是否改规则
+- 列出一笔日志至少要有的栏：环境、方向、前提、触发、订单类型、计划价 / 成交价、资金费、热度、计划进出、实际进出、仓位、是否违规、想改规则的冲动
 - 先分「执行质量」和「规则质量」，不先看赚亏来改系统
 - 把空仓、禁止条件、补做、漏做也记下来
 - 认出「只记赢的几笔」不是日志
@@ -63,12 +64,15 @@ visual:
 
 1. **时间与对象。** 决策周期、品种（作业纸上的观察对象）、开平时间。真实行情练习时再补交易对、图表周期、数据来源、时间区间。
 2. **环境 / 方向 / 前提 / 触发。** 各用一句事先存在的规则来勾选：满足 / 不满足 / 看不清。看不清按 [市场环境](/trading-system/market-regime) 记空仓。
-3. **计划中的止损、止盈、仓位、杠杆。** 开仓前就算完，见 [止损](/trading-system/stop-loss)、[仓位管理](/trading-system/position-sizing)。
-4. **实际入场价、实际离场价、实际仓位。** 有滑点就写滑点，不要事后改成「按计划价成交」。
-5. **离场类型。** 止损、止盈、时间离场、规则失效、强平、手工干预，见 [出场规则](/trading-system/exit-rules)。
-6. **禁止条件。** 有没有亮起；亮起后做了空仓、只平不开，还是未遵守。
-7. **是否遵守规则。** 是 / 否。否的时候写哪一句被改了：补做、挪止损、加仓摊平、临时加杠杆。
-8. **当时想改系统的一句话。** 先存着，等样本足够再拿到 [系统优化](/trading-system/system-optimization) 里讨论。不要当日改菜谱。
+3. **订单类型。** 开仓 / 止损 / 止盈各用了市价、限价、止损市价还是止损限价；是否只减仓。见 [订单与成交](/trading-system/order-types)。
+4. **计划价与成交价。** 分开写，滑点 = 两者之差。不要事后改成「按计划价成交」。
+5. **计划中的止损、止盈、仓位、杠杆。** 开仓前就算完，见 [止损](/trading-system/stop-loss)、[仓位管理](/trading-system/position-sizing)。
+6. **资金费。** 持有期间收过或付过几次、金额大约多少。来回占 R 见 [成本对照 R](/trading-system/cost-vs-r)。
+7. **这笔前后的账户热度。** 开仓前加总、平仓后加总，见 [账户热度与相关](/trading-system/account-heat)。
+8. **离场类型。** 止损、止盈、时间离场、规则失效、强平、手工干预，见 [出场规则](/trading-system/exit-rules)。
+9. **禁止条件。** 有没有亮起；亮起后做了空仓、只平不开，还是未遵守。
+10. **是否违规。** 是 / 否。否的时候写哪一句被改了：追价、改周期、拖止损、为回本加仓、因共振加杠杆。违规笔不进规则成绩。见 [执行偏差](/trading-system/execution-bias)。
+11. **当时想改规则的冲动。** 先存着，等样本足够再拿到 [系统优化](/trading-system/system-optimization) 里讨论。不要当日改菜谱。冲动本身不是开仓理由。
 
 空仓也要记：日期、检查了哪根收盘、哪一条不满足、是否想补做。没有空仓记录，频率和胜率都会被「只看见下了单的日子」扭曲。
 

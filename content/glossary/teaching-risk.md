@@ -27,11 +27,19 @@ status: published
 
 ### 回测（Backtest）
 
-用历史数据按规则模拟。回测结果不能代表未来。必须记录样本区间、手续费、滑点、交易次数与回撤。系统课正文尚未开放。
+用历史数据按规则模拟。回测结果不能代表未来。必须记录样本区间、手续费、滑点、交易次数与回撤。详见[回测](/trading-system/backtesting)。
 
 ### 仓位管理（Position Sizing）
 
-单笔亏损占权益的上限、总敞口上限等规则。它解决的是「错了能活下来」，不是提高胜率的保证。
+单笔亏损占权益的上限、总敞口上限等规则。它解决的是「错了能活下来」，不是提高胜率的保证。详见[仓位管理](/trading-system/position-sizing)。
+
+### 热度（Account Heat）
+
+尚未平仓的计划风险之和。同向、或都跟 BTC 的仓位要加总，不能当成已经分散。碰到上限先平、先减或禁止开新。详见[账户热度与相关](/trading-system/account-heat)。
+
+### 决策周期（Decision Timeframe）与执行周期（Execution Timeframe）
+
+决策周期定环境和方向，执行周期只找触发。两周期事先写死；打架默认不交易或等对齐。未收盘的低周期不能推翻已收盘的高周期。详见[多周期](/trading-system/multi-timeframe)。
 
 ### 本站边界
 

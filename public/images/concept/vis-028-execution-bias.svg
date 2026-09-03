@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 860" role="img" aria-labelledby="title desc">
+  <title id="title">执行偏差：偏差、日志、事先动作示意图</title>
+  <desc id="desc">教学示意图。表格式三列：偏差、日志字段、事先动作。动作预先写好，不要灵活处理。不是成功学海报，不是真实行情。</desc>
+  <rect width="1200" height="860" fill="#f8fafc"/>
+  <rect width="1200" height="72" fill="#ffffff"/>
+  <line x1="0" y1="72" x2="1200" y2="72" stroke="#e2e8f0"/>
+  <text x="32" y="46" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="700" fill="#0f172a">执行偏差：偏差 → 日志 → 事先动作</text>
+  <rect x="1048" y="21" width="120" height="30" rx="4" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="1108" y="42" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#c2410c">示意图</text>
+
+  <rect x="28" y="88" width="1144" height="40" rx="8" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="600" y="114" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#9a3412">每条对应日志字段 + 触发后动作。预先写死。不要写「灵活处理」。不教冥想。</text>
+
+  <rect x="28" y="144" width="360" height="44" fill="#0f172a"/>
+  <rect x="388" y="144" width="280" height="44" fill="#0f172a"/>
+  <rect x="668" y="144" width="504" height="44" fill="#0f172a"/>
+  <text x="208" y="172" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#ffffff">偏差</text>
+  <text x="528" y="172" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#ffffff">日志字段</text>
+  <text x="920" y="172" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="16" font-weight="700" fill="#ffffff">事先动作</text>
+
+  <rect x="28" y="188" width="360" height="72" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="388" y="188" width="280" height="72" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="668" y="188" width="504" height="72" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="208" y="216" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#0f172a">错过触发后市价追</text>
+  <text x="208" y="240" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#64748b">条件已经过了还要跟上</text>
+  <text x="528" y="230" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">漏触发 · 是否追价</text>
+  <text x="920" y="216" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">视为条件不成立，记日志</text>
+  <text x="920" y="240" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">当天不再用同一触发</text>
+
+  <rect x="28" y="260" width="360" height="72" fill="#f8fafc" stroke="#e2e8f0"/>
+  <rect x="388" y="260" width="280" height="72" fill="#f8fafc" stroke="#e2e8f0"/>
+  <rect x="668" y="260" width="504" height="72" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="208" y="288" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#0f172a">浮盈怕还回去，提前平</text>
+  <text x="208" y="312" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#64748b">未走到止盈句就离场</text>
+  <text x="528" y="302" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">离场是否走到止盈句</text>
+  <text x="920" y="288" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">走止盈句；未到句则留下</text>
+  <text x="920" y="312" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">复盘再改句，不盘中改</text>
+
+  <rect x="28" y="332" width="360" height="72" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="388" y="332" width="280" height="72" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="668" y="332" width="504" height="72" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="208" y="360" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#0f172a">浮亏把止损往远处拖</text>
+  <text x="208" y="384" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#64748b">把单笔风险改成未知数</text>
+  <text x="528" y="374" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">止损是否被改远</text>
+  <text x="920" y="360" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">视为改规则，记违规笔</text>
+  <text x="920" y="384" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">不进规则成绩</text>
+
+  <rect x="28" y="404" width="360" height="72" fill="#f8fafc" stroke="#e2e8f0"/>
+  <rect x="388" y="404" width="280" height="72" fill="#f8fafc" stroke="#e2e8f0"/>
+  <rect x="668" y="404" width="504" height="72" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="208" y="432" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#0f172a">赢了加频率、输了加仓位</text>
+  <text x="208" y="456" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#64748b">用结果改下一次暴露</text>
+  <text x="528" y="446" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">当日笔数 · 单笔 R</text>
+  <text x="920" y="446" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">走频率 / 热度刹车</text>
+
+  <rect x="28" y="476" width="360" height="72" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="388" y="476" width="280" height="72" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="668" y="476" width="504" height="72" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="208" y="504" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#0f172a">为回本加仓、因共振加杠杆</text>
+  <text x="208" y="528" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#64748b">在更小权益上放大下一步</text>
+  <text x="528" y="518" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">加仓理由 · 杠杆是否改</text>
+  <text x="920" y="518" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">禁止条件，空仓</text>
+
+  <rect x="28" y="548" width="360" height="72" fill="#f8fafc" stroke="#e2e8f0"/>
+  <rect x="388" y="548" width="280" height="72" fill="#f8fafc" stroke="#e2e8f0"/>
+  <rect x="668" y="548" width="504" height="72" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="208" y="576" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#0f172a">把「看对」当成身份，不肯止损</text>
+  <text x="208" y="600" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#64748b">用副图否决已经写下的止损</text>
+  <text x="528" y="590" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">止损触及是否已走</text>
+  <text x="920" y="576" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">触及即走</text>
+  <text x="920" y="600" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">否决止损的副图理由无效</text>
+
+  <rect x="28" y="620" width="360" height="72" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="388" y="620" width="280" height="72" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="668" y="620" width="504" height="72" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="208" y="648" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#0f172a">切到更能讲通的周期</text>
+  <text x="208" y="672" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#64748b">盘中换尺子来迁就画面</text>
+  <text x="528" y="662" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">周期是否与第 3 节一致</text>
+  <text x="920" y="648" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">视为换系统，停机</text>
+  <text x="920" y="672" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#334155">不进原规则成绩</text>
+
+  <text x="600" y="722" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="15" fill="#334155">正例：错过一笔后按句子空仓。漏掉和守规则可以同时发生。</text>
+  <text x="600" y="748" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="15" fill="#334155">反例：刚错过就市价追，再把止损收到「亏一点没关系」。</text>
+  <text x="600" y="774" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#64748b">触发后的动作只有：空仓、只平不开、或转到复盘作业。本表不是性格测试，也不是收益承诺。</text>
+
+  <rect x="0" y="820" width="1200" height="40" fill="#f1f5f9"/>
+  <text x="600" y="846" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="14" fill="#64748b">教学抽象 · 非真实行情 · 不构成交易建议</text>
+</svg>

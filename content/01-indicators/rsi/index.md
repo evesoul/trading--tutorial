@@ -4,7 +4,7 @@ description: 用 0–100 的尺子观察涨跌动能；对照趋势粘滞与震�
 part: 1
 category: indicators
 level: beginner
-order: 5
+order: 6
 slug: rsi
 status: published
 indicator:
@@ -12,8 +12,6 @@ indicator:
   difficulty: beginner
 learning:
   prerequisites:
-    - kline
-    - ma
     - ema
   next:
     - volume
@@ -202,4 +200,4 @@ RSI 在震荡里通常比较直观；在强趋势里，更需要先看均线再�
 
 主路径的下一篇是 [Volume](/indicators/volume)（成交量）。量能是价格之外的第二个原始维度，用来回答「这段涨跌有没有转手」。
 
-RSI 只使用价格。成交量补的是转手，不是另一把 0–100 的尺子。读完 Volume 再进入 MACD，不容易把所有副图都当成振荡器。
+RSI 只使用价格。成交量补的是转手，不是另一把 0–100 的尺子。读完 Volume 之后是 ATR，再进布林带；需要组合先修时再读 MACD。这样不容易把所有副图都当成振荡器。

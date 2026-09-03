@@ -10,12 +10,12 @@ status: published
 learning:
   prerequisites: []
   next:
-    - kline
+    - perp-screen
 ---
 
 # 怎么学这门课
 
-本页只回答一件事：这门课怎么学，以及进入 K 线之前，你至少要知道永续合约会怎样亏钱。
+本页只回答一件事：这门课怎么学，以及进入屏幕和 K 线之前，你至少要知道永续合约会怎样亏钱。规则写完之后，还要能变成可能成交的单。
 
 需要查词时，可以打开 [/glossary](/glossary)，查完回到原文。术语页不占主路径。
 
@@ -61,22 +61,24 @@ learning:
 ### 三阶段地图
 
 ```text
-阶段 0  导学：认识本站、永续合约与风险   ← 你在这里
+阶段 0  导学：认识本站、永续合约、屏幕字段与风险   ← 你在这里
     ↓
-阶段 1  指标：每一个指标在回答什么问题
+阶段 1  指标：价格语言 → 手画结构 → 均线 → 动能 → 量能 → 波动尺子 → 合约数据
     ↓
 阶段 2  组合：多个维度何时互相支持、何时打架
     ↓
-阶段 3  交易系统：环境 → 方向 → 进出场 → 仓位 → 复盘
+阶段 3  交易系统：环境 → 多周期 → 方向 → 订单 → 进出场 → 成本 → 热度 → 复盘
 ```
 
 建议顺序是学习约束，不是考试路线。你可以跳读。文章会标明先修；未读先修时，用提示提醒你，而不是拦住你。
 
-现阶段能学完的阶段 1 是：
+现阶段能学完的阶段 1 主路径是：
 
-> 导学 → [K 线](/indicators/kline) → [趋势线与支撑阻力](/indicators/trendlines) → [MA](/indicators/ma) → [EMA](/indicators/ema) → [RSI](/indicators/rsi) → [成交量](/indicators/volume) → [MACD](/indicators/macd) → [KDJ](/indicators/kdj) → [布林带](/indicators/bollinger-bands) → [持仓量](/indicators/open-interest) → [资金费率](/indicators/funding-rate) → [多空比](/indicators/long-short-ratio) → [CVD](/indicators/cvd)
+> 导学 → [交易所屏幕](/course/perp-screen) → [K 线](/indicators/kline) → [趋势线与支撑阻力](/indicators/trendlines) → [摆动结构](/indicators/market-structure) → [MA](/indicators/ma) → [EMA](/indicators/ema) → [RSI](/indicators/rsi) → [成交量](/indicators/volume) → [ATR](/indicators/atr) → [布林带](/indicators/bollinger-bands)
 
-合约数据层（持仓量、资金费率、多空比、CVD）已经可学。
+主路径续：[MACD](/indicators/macd)（组合课先修，跟在布林带之后读）。  
+对照层：[KDJ](/indicators/kdj)（和 RSI 对照刻度，不是主路径，不扩写成第四把振荡器）。  
+合约数据层已经可学：[持仓量](/indicators/open-interest) → [资金费率](/indicators/funding-rate) → [多空比](/indicators/long-short-ratio) → [CVD](/indicators/cvd) → [清算瀑布](/indicators/liquidation-cascade)。
 
 阶段 2 已经可学：
 
@@ -84,9 +86,9 @@ learning:
 
 组合课不补讲公式。每篇先修是该组合用到的指标。
 
-阶段 3 十五篇已经可学：
+阶段 3 已经可学（二十篇，从理念走到案例）：
 
-> [什么是交易系统](/trading-system/what-is-a-trading-system) → [市场环境](/trading-system/market-regime) → [方向判断](/trading-system/direction) → [入场规则](/trading-system/entry-rules) → [出场规则](/trading-system/exit-rules) → [止损](/trading-system/stop-loss) → [止盈](/trading-system/take-profit) → [仓位管理](/trading-system/position-sizing) → [风险管理](/trading-system/risk-management) → [交易频率](/trading-system/trade-frequency) → [交易日志](/trading-system/trading-journal) → [回测](/trading-system/backtesting) → [数据统计](/trading-system/statistics) → [系统优化](/trading-system/system-optimization) → [完整交易系统案例](/trading-system/case-study)
+> [什么是交易系统](/trading-system/what-is-a-trading-system) → [市场环境](/trading-system/market-regime) → [多周期](/trading-system/multi-timeframe) → [方向判断](/trading-system/direction) → [订单与成交](/trading-system/order-types) → [入场规则](/trading-system/entry-rules) → [出场规则](/trading-system/exit-rules) → [止损](/trading-system/stop-loss) → [止盈](/trading-system/take-profit) → [仓位管理](/trading-system/position-sizing) → [成本对照 R](/trading-system/cost-vs-r) → [风险管理](/trading-system/risk-management) → [账户热度与相关](/trading-system/account-heat) → [交易频率](/trading-system/trade-frequency) → [执行偏差](/trading-system/execution-bias) → [交易日志](/trading-system/trading-journal) → [回测](/trading-system/backtesting) → [数据统计](/trading-system/statistics) → [系统优化](/trading-system/system-optimization) → [完整交易系统案例](/trading-system/case-study)
 
 案例说明过程，不证明该系统有效，不是跟单对象。读完案例后请回本页复习。
 
@@ -181,7 +183,7 @@ learning:
 读本站时，按这个顺序看：
 
 1. **先看本页风险**：保证金、杠杆、标记价、强平。
-2. **再看阶段 1 主路径**：先会读 K 线，再叠加均线和动量。
+2. **再看阶段 1 主路径**：先会读 K 线，再连趋势线，再读摆动结构，再叠加均线、动能、量能和波动尺子。
 3. **先修写在每篇文章开头**：例如学 RSI 前，建议先读完 K 线、MA、EMA。
 4. **一篇只解决一个问题**：不要把目录当成指标清单去背。
 
@@ -198,10 +200,10 @@ learning:
 
 建议每次 20–40 分钟，只读一篇。
 
-1. 从本页进入 [K 线](/indicators/kline)。
-2. 按主路径读到布林带，再读已发布的合约数据层：[持仓量](/indicators/open-interest) → [资金费率](/indicators/funding-rate) → [多空比](/indicators/long-short-ratio) → [CVD](/indicators/cvd)。
+1. 从本页进入 [交易所屏幕上有什么](/course/perp-screen)，再进入 [K 线](/indicators/kline)。
+2. 按主路径读到布林带（趋势线 → 摆动结构 → … → Volume → ATR → 布林带），需要组合先修时再读 MACD；KDJ 是对照层。再读已发布的合约数据层：[持仓量](/indicators/open-interest) → [资金费率](/indicators/funding-rate) → [多空比](/indicators/long-short-ratio) → [CVD](/indicators/cvd) → [清算瀑布](/indicators/liquidation-cascade)。
 3. 每读完一篇，试着用自己的话复述：**这一篇在回答什么问题？**
-4. 阶段 2 已开放，每次只选一篇组合。阶段 3 十五篇已开放，每次只选一篇系统规则；案例读完后回本页复习。
+4. 阶段 2、3 每次只选一篇。阶段 3 二十篇都已开放：多周期、订单、成本、热度、执行偏差都在链路里。案例读完后回本页复习。
 
 使用约定：
 
@@ -239,7 +241,7 @@ learning:
 2. 把永续当成加了杠杆的现货，忽略标记价、强平和资金费。
 3. 认为全仓比逐仓更安全。全仓只是缓冲来源不同。
 4. 认为收到资金费就证明方向正确。资金费是拥挤方向的补偿，不是趋势证明。
-5. 读完案例后继续寻找「实盘策略」或未发布页。阶段 1 十三篇、阶段 2 七篇、阶段 3 十五篇已发布；案例是教学作业纸，不证明有效，之后请回本页。
+5. 读完案例后继续寻找「实盘策略」或未发布页。案例是教学作业纸，不证明有效，之后请回本页。
 6. 用极高杠杆做「很小的止损」。手续费、滑点和盘中噪声会占很大比重，计划中的风险控制容易失效。
 
 ## 局限性
@@ -247,7 +249,7 @@ learning:
 - 本页只讲机制和学法，不讲买卖时机。
 - 数字例子忽略手续费与资金费，不能拿去对账。
 - 各交易所的标记价、维持保证金、强平流程并不完全相同。
-- 学完阶段 1 十三篇、阶段 2 七篇和阶段 3 十五篇，仍不等于已经具备稳定交易的能力。案例是作业纸，不证明有效，不能代表未来结果。
+- 学完已发布课文，仍不等于已经具备稳定交易的能力。案例是作业纸，不证明有效，不能代表未来结果。
 - 任何策略、指标组合都带有亏损可能。永续合约还可能被强平、亏掉保证金；极端情况下还可能遇到额外结算规则（视交易所保险基金与自动减仓而定）。
 
 ## 总结
@@ -262,6 +264,6 @@ learning:
 
 ## 下一步
 
-下一篇进入价格图的基本语言：[K 线](/indicators/kline)。
+下一篇先认屏幕上的数字：[交易所屏幕上有什么](/course/perp-screen)。
 
-先修就是本页。读 K 线时，请同时记住：K 线用最新价合成，强平看标记价。
+读完屏幕再进入 [K 线](/indicators/kline)。K 线用最新价合成，强平看标记价。

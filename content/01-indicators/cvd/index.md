@@ -4,7 +4,7 @@ description: 用累计成交量差观察主动买减主动卖的累积；CVD 不
 part: 1
 category: indicators
 level: intermediate
-order: 13
+order: 15
 slug: cvd
 status: published
 indicator:
@@ -14,7 +14,7 @@ learning:
   prerequisites:
     - volume
   next:
-    - trend-momentum
+    - liquidation-cascade
 visual:
   cover: /images/concept/vis-012-cvd.svg
   charts:
@@ -25,7 +25,7 @@ visual:
 
 累计成交量差（Cumulative Volume Delta，CVD）把每个时间桶的主动买减去主动卖，再依次相加。它和普通成交量、持仓量都不同。
 
-先修：[成交量](/indicators/volume)。阶段 1 已经读过 [持仓量](/indicators/open-interest)、[资金费率](/indicators/funding-rate) 和 [多空比](/indicators/long-short-ratio)。本篇把「转手里主动哪边更多」单独拿出来，作为阶段 1 收尾。
+先修：[成交量](/indicators/volume)。阶段 1 已经读过 [持仓量](/indicators/open-interest)、[资金费率](/indicators/funding-rate) 和 [多空比](/indicators/long-short-ratio)。本篇把「转手里主动哪边更多」单独拿出来；强平连锁时它会失真，见下一篇 [清算瀑布](/indicators/liquidation-cascade)。
 
 | | 成交量 Volume | 持仓量 OI | 累计成交量差 CVD |
 |---|---|---|---|
@@ -199,6 +199,6 @@ CVD 擅长补充「主动哪边更多」，不擅长预报转折。历史案例�
 
 ## 下一步
 
-阶段 1 到这里收束。阶段 2 第一篇是 [趋势 + 动量](/combinations/trend-momentum)：一个指标回答一个问题，组合用来对照，不是叠加信号。
+下一篇看强平连锁时这些数还能不能用：[清算瀑布怎么读图](/indicators/liquidation-cascade)。
 
-请先用一句话复述阶段 1 每篇在回答的问题，再进入组合课。也可以先回 [怎么学](/course) 看三阶段地图。
+瀑布进行中，成交量、OI、CVD 都可能同时失真。默认暂时不可解释方向。

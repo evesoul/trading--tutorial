@@ -77,3 +77,30 @@ Sprint 007 后七篇：
 - [x] 提示组件（RiskCallout）
 - [x] 上下章导航（LessonPager，未发布不链 404）
 - [x] Mobile（TASK-007 + 菜单修复；QA CDP 390 通过）
+
+## 教程全量升级（Sprint 009–013）
+
+总纲：`docs/product/curriculum-upgrade.md`。课序：`docs/product/learning-path.md`。
+
+### Sprint 009 — 产品方案
+- [x] 全量升级课序与任务拆分（TASK-031）
+
+### Sprint 010 — 读图主干
+- [x] 知识库：结构 / ATR / 瀑布 / 订单 / 屏幕（TASK-032）
+- [x] 策略框架：成交 / 多周期 / 成本对照 R（TASK-033）
+- [x] 示意图 vis-022 / vis-023（TASK-034）
+- [x] 课文 `market-structure`、`atr` + 主路径接线（TASK-035）
+
+### Sprint 011 — 机制与成交
+- [x] `perp-screen`、`order-types`、`liquidation-cascade`、`cost-vs-r`（TASK-036）
+
+### Sprint 012 — 系统执行层
+- [x] `multi-timeframe`、`account-heat`、`execution-bias` + 旧课修订 + 案例时间线（TASK-037）
+
+### Sprint 013 — 壳与终审
+- [x] `/course/[...slug]`、courseMeta、目录分层（TASK-038，completed）
+- [x] QA 终审（TASK-039，completed）
+
+### 不挡升级（可选）
+- [x] 真实行情 vis-109 / vis-110（结构 / ATR 练习窗）（TASK-040）
+- [x] MA / 布林带 / 趋势+动量 / 对齐后仍失败 冻结窗（TASK-041）

@@ -4,14 +4,14 @@ description: 频率影响手续费、滑点和情绪；有规则不等于该高�
 part: 3
 category: trading-system
 level: intermediate
-order: 10
+order: 14
 slug: trade-frequency
 status: published
 learning:
   prerequisites:
-    - risk-management
+    - account-heat
   next:
-    - trading-journal
+    - execution-bias
 visual:
   cover: /images/flow/vis-008-trading-system-flow.svg
   charts:
@@ -24,7 +24,7 @@ visual:
 
 本站只提供交易教育，不提供买卖信号、荐股、喊单或自动交易。教学示例只说明如何写规则，不是推荐策略，不能代表未来结果。
 
-先修：[风险管理](/trading-system/risk-management)。没有账户刹车，频率只是在同一条悬崖上跑得更快。理念里「一天最多看几次图」，见 [什么是交易系统](/trading-system/what-is-a-trading-system)。
+先修：[账户热度与相关](/trading-system/account-heat)。热度已经到上限时，再勤也只能先平或空仓。账户刹车见 [风险管理](/trading-system/risk-management)。理念里「一天最多看几次图」，见 [什么是交易系统](/trading-system/what-is-a-trading-system)。
 
 类比：有菜谱，不等于一天要做二十顿。火开关得越勤，燃气费、洗锅时间和失误次数都会上去。交易里对应的是手续费、滑点和情绪消耗。
 
@@ -77,7 +77,7 @@ visual:
 3. **写单位时间的新开上限。** 例如：同一决策周期内最多开一笔；或当天已达笔数 / 已达日亏损，不再开新仓。上限与风险刹车重叠时，先服从更严的那条。
 4. **写「不补做」。** 触发发生在你没盯盘的那根，事后不算。补做是另一套系统。
 5. **写成本假设怎么进入频率。** 若一笔的手续费加滑点已经接近你愿意亏的金额，这条触发对你来说过密，应提高决策周期或放弃，而不是把止损收近。
-6. **写情绪刹车。** 连续触发让你开始改仓位或改杠杆时，先停，记进日志，见 [交易日志](/trading-system/trading-journal)。
+6. **写情绪刹车。** 连续触发让你开始改仓位或改杠杆时，先停，记进日志。事先动作见下一篇 [执行偏差](/trading-system/execution-bias)。
 
 课堂检查句：
 
@@ -142,6 +142,6 @@ visual:
 
 ## 下一步
 
-下一篇把执行变成可检查的句子：[交易日志](/trading-system/trading-journal)。
+下一篇把「手会改规则」写成表：[执行偏差](/trading-system/execution-bias)。
 
-没有记录，就无法谈优化。正式先修是 [什么是交易系统](/trading-system/what-is-a-trading-system)；本篇读完再记，更容易写清「做了还是补做了」。
+错过追价、拖止损、为回本加仓，每条对应日志字段和事先动作。交易日志在偏差之后。

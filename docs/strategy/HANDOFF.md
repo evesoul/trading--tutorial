@@ -1,103 +1,86 @@
-# HANDOFF — TASK-004 策略框架
+# HANDOFF — TASK-033 升级所需策略框架
 
 Owner：Strategy Agent  
-日期：2026-09-02  
-状态：交付 QA / Content 阅读，任务 Status = review
+日期：2026-09-03  
+状态：交付 Content / QA 阅读，任务 status = completed
 
 ## 完成内容
 
-为 Part 2 指标组合与 Part 3 交易系统建立了可教学的策略框架，未写 `content/` 教程，未写代码，未提供交易信号。
+按 `docs/product/curriculum-upgrade.md` 第 3.5–3.9、第 4 节系统课修订、第 6.3 节、第 7.2 节，补齐教程升级所需的策略框架。未写 `content/`，未新开组合一级主题，未提供可跟单规则，未颁布推荐杠杆或标准仓位百分比。
 
 已落实：
 
-- 交易系统逻辑顺序：Market Regime → Direction → Setup → Entry → Stop Loss → Take Profit → Position Size → Exit → Review
-- 每个组合都说明：各指标回答什么问题、共振与冲突、适用/失效环境、常见误区、风险
-- 多指标课明确：**不是指标越多越准确**
-- 回测课覆盖：样本数量、胜率、盈亏比、Profit Factor、最大回撤、连续亏损、交易成本、滑点；并说明不能只报胜率
-- 无收益保证用语（已避开：一定、必然、100%准确、稳赚、必赚、无风险、保证盈利）
-- `system-template.md` 保留原 12 节，仅增加逻辑对照、填写说明和两则不编号补充
+- 新建 `execution.md`：规则如何变成可能成交的单；市价 / 限价 / 止损市价 / 止损限价；只减仓；部分成交；未成交必须事先选定「视为未入场」或「按已成交重算」；最新价止损 vs 标记价强平。对应模板第 6、7 节。
+- 新建 `multi-timeframe.md`：决策周期与执行周期事先写死；高周期定场，低周期只找触发；打架默认不交易或等对齐；未收盘低周期不能推翻已收盘高周期。不是三层周期共振系统。对应模板第 3、4、5 节。
+- 新建 `cost-vs-r.md`：1R = 入场到计划止损的亏损金额。同一笔教学数字贯穿：权益 10,000；1R = 100；名义 5,000；费率 0.05%/8h；持有 3 天（9 个周期）；taker 开平各 0.05%。演算：资金费 22.5 USDT = 0.225 R，手续费 5.0 USDT = 0.05 R，合计 27.5 USDT = 0.275 R。标明教学演算、忽略部分费用、不能对账、不能代表未来。止损滑点不优于入场。期望必须减成本。对应模板第 9、11 节。
+- `system-template.md` 仍为第 1–12 节。仅在填写说明与文末补充写入多周期、订单、止损价格口径、热度、事件 / 周末 / 连续强平 / 执行偏差、样本外与滚动前进、复盘字段。
+- `risk-management.md`：账户热度、BTC 共同风险因子、换交易对不是分散、事件 / 周末 / 连续强平、回撤恢复算术（亏 20% 需 +25%）、执行偏差表。
+- `position-sizing.md`：强平远于止损若干 ATR（不颁布标准倍数）、风险限额升高 MM、盈利加仓重算总热度、摊平仍是反模式。
+- `backtest.md`：样本外 / 滚动前进（A 段调、B 段只验证、不许再调）；收盘成交 vs 盘中止损；止损滑点不优于入场。
+- `combinations/rsi-macd.md`：硬约束——冲突时回结构 / 环境，不要再叠 KDJ 或第三把动量尺。未扩写成新课。
+- `README.md`：三份新文件已挂索引；链路已含多周期 / 订单 / 成本 / 热度；目录树已补文件名。
+
+无收益保证用语（已避开：一定、必然、100%准确、稳赚、必赚、无风险、保证盈利）。
 
 ## 修改文件
 
 ```
 docs/strategy/README.md
-docs/strategy/system-template.md          （扩展，未删 12 节）
+docs/strategy/HANDOFF.md
+docs/strategy/execution.md              （新建）
+docs/strategy/multi-timeframe.md        （新建）
+docs/strategy/cost-vs-r.md              （新建）
+docs/strategy/system-template.md        （填写说明与文末补充，未改 1–12 编号）
 docs/strategy/risk-management.md
 docs/strategy/position-sizing.md
 docs/strategy/backtest.md
-docs/strategy/HANDOFF.md
-docs/strategy/combinations/trend-momentum.md
-docs/strategy/combinations/trend-volume.md
-docs/strategy/combinations/price-oi.md
-docs/strategy/combinations/oi-volume.md
-docs/strategy/combinations/funding-oi.md
 docs/strategy/combinations/rsi-macd.md
-docs/strategy/combinations/multi-indicator.md
-docs/tasks/TASK-004-strategy-framework.md （Status → review，勾选验收）
+docs/tasks/TASK-033-strategy-upgrade.md （status → completed，勾选验收）
 ```
 
-未修改：`content/`、`docs/knowledge/`、`docs/product/`、代码与图表。
+未修改：`content/`、`docs/knowledge/`、`docs/product/`、`pages/`、`components/`、`public/`。
 
 ## 测试结果
 
 本任务无代码。已做文档自检：
 
-- 所需产出文件均已落地
-- 组合文件均含：问题分工、共振/冲突、适用/失效、误区、风险、系统链路位置
-- `system-template.md` 仍为第 1–12 节
-- 全文检索违禁词：除 README 中的禁止清单外，无使用
+- 三份新文件均含：教学目的、先分清概念、误区、给 Content Agent、在 12 节模板中的位置
+- `system-template.md` 仍为第 1–12 节（`## 1` … `## 12`）
+- 成本例题字段齐全，算术：22.5 + 5.0 = 27.5 USDT = 0.275 R
+- 回撤恢复：亏 20% 后剩余 80%，回到原点需 +25%
+- 全文检索违禁词：除禁止清单与 HANDOFF 自检句外，无当作承诺使用
+- 未新开组合一级主题；rsi-macd 只加硬约束，未扩课
 - 未进行 lint / typecheck / build（无工程改动）
 - 未做浏览器验证（无 UI）
 
 ## 已知问题
 
-1. Knowledge 侧除 RSI 草稿外，多数指标定义尚未完成（TASK-002 仍在进行）。本框架按教学职责引用指标，不重写公式；Content 转写前需核对 Knowledge，避免两套定义。
-2. Product 信息架构（TASK-001）已完成。组合 slug 与本目录 7 个文件对齐；**发布课序以 `docs/product/learning-path.md` 为准**（rsi-macd 为阶段 2 第 3 篇，不是第 6 篇）。本 README 的「建议顺序」是策略教学理由，Content 转写时跟学习路径。
-3. 无真实图表。各组合文件末尾列出了 Visual 需求，需 Visual Agent 另立任务出图。真实行情图必须带 symbol、timeframe、source、period。
-4. 回测与仓位中的数字均为标注过的教学算术，不是历史统计。QA 若发现未标注的数字，按内容事故处理。
-5. 未更新 `docs/CHANGELOG.md` 与 `docs/collaboration/SPRINT-001.md`（超出本任务目录；建议 Product / 协调人补一条）。
+1. Knowledge 的 `order-types.md`、`perp-screen.md`、ATR / 结构等条目由 TASK-032 交付。本框架按教学职责引用，不重写定义。Content 转写前需核对 Knowledge，避免两套术语。
+2. 成本例题按「持有期间持续支付资金费」单向假设，并写明忽略点差变动、强平罚金、多空不对称、返佣等。QA 若发现未标注「教学演算」的数字，按内容事故处理。
+3. 热度与执行偏差写在 `risk-management.md`，不另开策略文件。Content `account-heat` / `execution-bias` 转写本文件，不要另编公式。
+4. 无真实图表。新文件末尾列出 Visual 需求（vis-024 / 025 / 026 / 028 / 029）。示意图未交付前课文不插假行情。
+5. 未更新 `docs/CHANGELOG.md` 与 Sprint 文档（超出本任务目录）。
+6. 按用户要求未 git commit。
 
-## 核心策略原则（给后续 Agent）
+## 下一步（Content 可转写）
 
-1. 一个指标只回答一类问题。
-2. 组合是观察框架，不是买卖指令。
-3. 指标数量增加，并不等于判断更准。
-4. 先环境，后形态；冲突时等待或空仓。
-5. 止损、仓位、离场属于系统，不属于指标。
-6. 回测看一组数字，不能只报胜率。
-7. 永续有爆仓；不鼓励高杠杆。
-8. 历史观察不能代表未来结果。
+| Content 任务 | 转写本目录 |
+|---|---|
+| TASK-035 | 结构 / ATR 接线时可引用模板第 7 节（ATR 或结构并列）及仓位里的强平–ATR 检查；不在本任务写课文 |
+| TASK-036 | `order-types` ← `execution.md`；`cost-vs-r` ← `cost-vs-r.md`；瀑布 / 屏幕课不在本目录 |
+| TASK-037 | `multi-timeframe` ← `multi-timeframe.md`；`account-heat`、`execution-bias` ← `risk-management.md`；系统旧课修订对照模板填写说明与 `backtest.md` |
 
-## 给 Content Agent：写组合课时的注意点
+转写时：
 
-1. 先读 `docs/strategy/README.md` 和对应 `combinations/*.md`，再读 Knowledge。不要把框架里的“教学规则示例”抄成下单步骤。
-2. 课时结构仍用 Content 规范：学习目标 → 概念 → 原理 → 怎么看 → 怎么使用 → 案例 → 常见错误 → 局限性 → 总结 → 下一步。
-3. “怎么使用”写成观察步骤，并标明它落在链路的哪一步（通常是环境 / 方向 / 前提）。止损和仓位点到位置即可，细节链到系统课。
-4. 每个组合至少一正一反：共振画面、以及冲突或失效。反案例不是“亏钱案例秀”，是机制失效。
-5. 金叉、死叉、超买、超卖、背离、量价齐升、四象限，一律当观察工具。不要写成“出现即开多/开空”。
-6. RSI + MACD、多指标两课是纠错课：作业是“删掉重复的问题槽”，不是“写出七重共振条件”。
-7. Funding + OI 只教拥挤与持有成本、风险过滤；不要写成反向喊单。
-8. 需要图时开 Visual Task。禁止虚构权益曲线或用假数据证明组合能赚钱。
-9. 继续禁用：一定、必然、100%准确、稳赚、必赚、无风险、保证盈利。也不要用“战法”“必涨”“稳准”做标题。
-10. Part 3 用 `system-template.md` 当作业纸。完整案例是“如何写系统”，不是推荐策略。
-
-## 下一步建议
+1. 先读本 README 的原则和禁止表述，再读对应框架文件。
+2. 不要把教学规则示例抄成下单步骤。
+3. 成本课必须用同一笔数字贯穿，并标明教学演算、不能对账、不能代表未来。
+4. 多周期课不要写成三层共振系统。
+5. 继续禁用：一定、必然、100%准确、稳赚、必赚、无风险、保证盈利。
 
 | 对象 | 建议 |
 |---|---|
-| QA Agent | 按 `docs/qa/content-checklist.md` 审策略文档的交易表述、违禁词、是否写成信号 |
-| Content Agent | 等 TASK-002 指标定义就绪后，按本目录转写 Part 2；不要提前写可执行条件清单 |
-| Visual Agent | 按各组合文件“给 Visual Agent”小节出示意图规格；组合图放 `combination/` |
-| Knowledge Agent | 补齐 EMA、MACD、Volume、OI、Funding 等定义，便于与本框架交叉引用 |
-| Product Agent | 把本 README 的组合顺序纳入学习路径；案例页需标明“非信号” |
-| 协调人 | 更新 Sprint 状态与 CHANGELOG；不要 git commit（本任务按用户要求未提交） |
-
-## 建议的组合课顺序
-
-1. 趋势 + 动量（EMA+RSI，再 EMA+MACD）
-2. 趋势 + 成交量（EMA+Volume，再 Price+Volume）
-3. 价格 + OI
-4. OI + Volume
-5. Funding + OI
-6. RSI + MACD（纠错：信息重复）
-7. 多指标共振（收束：不是越多越准 → 进入系统模板）
+| QA Agent | 按内容清单审交易表述、违禁词、12 节编号、是否写成信号 |
+| Visual Agent | vis-024 订单、vis-025 多周期、vis-026 成本占 R、vis-028 执行偏差、vis-029 热度 |
+| Knowledge Agent | TASK-032 完成后与本框架交叉引用订单、ATR、屏幕字段 |
+| 协调人 | 更新 Sprint / CHANGELOG；不要 git commit（本任务按用户要求未提交） |

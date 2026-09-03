@@ -4,17 +4,22 @@
  */
 const base = (process.env.BASE_URL ?? 'http://127.0.0.1:3000').replace(/\/$/, '')
 
-const systemFifteen = [
+const systemTwenty = [
   'what-is-a-trading-system',
   'market-regime',
+  'multi-timeframe',
   'direction',
+  'order-types',
   'entry-rules',
   'exit-rules',
   'stop-loss',
   'take-profit',
   'position-sizing',
+  'cost-vs-r',
   'risk-management',
+  'account-heat',
   'trade-frequency',
+  'execution-bias',
   'trading-journal',
   'backtesting',
   'statistics',
@@ -36,11 +41,15 @@ const pages = [
   '/',
   '/course',
   '/indicators',
+  '/course/perp-screen',
   '/indicators/kline',
+  '/indicators/trendlines',
+  '/indicators/market-structure',
   '/indicators/ma',
   '/indicators/ema',
   '/indicators/rsi',
   '/indicators/volume',
+  '/indicators/atr',
   '/indicators/macd',
   '/indicators/kdj',
   '/indicators/bollinger-bands',
@@ -48,6 +57,7 @@ const pages = [
   '/indicators/funding-rate',
   '/indicators/long-short-ratio',
   '/indicators/cvd',
+  '/indicators/liquidation-cascade',
   '/combinations',
   '/combinations/trend-momentum',
   '/combinations/trend-volume',
@@ -57,7 +67,7 @@ const pages = [
   '/combinations/funding-oi',
   '/combinations/multi-indicator',
   '/trading-system',
-  ...systemFifteen.map(slug => `/trading-system/${slug}`),
+  ...systemTwenty.map(slug => `/trading-system/${slug}`),
   '/glossary',
 ]
 
@@ -66,6 +76,7 @@ const forbiddenEverywhere = [
   'HANDOFF —',
   'Content Agent HANDOFF',
   '后半仍在编写',
+  '仍待后续',
   '/images/charts/vis-101',
   '/images/charts/vis-102',
   '/images/charts/vis-103',
@@ -77,27 +88,35 @@ const forbiddenEverywhere = [
 
 const required = {
   '/course': [
+    '导学 1',
+    '导学 2',
     '主路径 1',
-    '主路径 8',
+    '主路径 9',
     '合约数据层 1',
-    '合约数据层 4',
+    '合约数据层 5',
     '指标组合 1',
     '指标组合 7',
     '交易系统 1',
     '交易系统 8',
     '交易系统 9',
     '交易系统 15',
+    '交易系统 20',
+    '摆动结构',
+    '清算瀑布',
+    '二十步',
     'href="/indicators/kline"',
+    'href="/indicators/market-structure"',
+    'href="/indicators/atr"',
     'href="/indicators/bollinger-bands"',
     'href="/indicators/open-interest"',
     'href="/indicators/cvd"',
     'href="/combinations/trend-momentum"',
     'href="/combinations/multi-indicator"',
-    ...systemFifteen.map(slug => `href="/trading-system/${slug}"`),
+    ...systemTwenty.map(slug => `href="/trading-system/${slug}"`),
     '案例是教学作业纸',
   ],
   '/trading-system': [
-    ...systemFifteen.map(slug => `href="/trading-system/${slug}"`),
+    ...systemTwenty.map(slug => `href="/trading-system/${slug}"`),
     '什么是交易系统',
     '仓位管理',
     '风险管理',
@@ -108,9 +127,8 @@ const required = {
     '什么是交易系统',
   ],
   '/trading-system/position-sizing': [
-    'href="/trading-system/risk-management"',
-    '风险管理',
-    '错了能否活下来',
+    'href="/trading-system/cost-vs-r"',
+    '成本对照 R',
   ],
   '/trading-system/risk-management': [
     '错了能否活下来',
@@ -119,7 +137,7 @@ const required = {
     '不鼓励高杠杆',
     '交易系统流程示意图',
     '/images/flow/vis-008-trading-system-flow.svg',
-    'href="/trading-system/trade-frequency"',
+    'href="/trading-system/account-heat"',
     '不是推荐策略',
   ],
   '/trading-system/trade-frequency': [
@@ -130,7 +148,7 @@ const required = {
     '不鼓励高杠杆',
     '交易系统流程示意图',
     '/images/flow/vis-008-trading-system-flow.svg',
-    'href="/trading-system/trading-journal"',
+    'href="/trading-system/execution-bias"',
     '不是推荐策略',
   ],
   '/trading-system/trading-journal': [
@@ -198,6 +216,11 @@ const mustNotContain = {
     '完整交易系统案例 编写中',
     '什么是交易系统 编写中',
     '仓位管理 编写中',
+    '多周期 编写中',
+    '订单与成交 编写中',
+    '成本对照 R 编写中',
+    '账户热度与相关 编写中',
+    '执行偏差 编写中',
   ],
   '/trading-system/position-sizing': [
     '风险管理 编写中',
@@ -217,7 +240,7 @@ const forbiddenWords = ['一定', '必然', '100%准确', '稳赚', '必赚', '�
 
 const lessonPages = [
   '/combinations/multi-indicator',
-  ...systemFifteen.map(slug => `/trading-system/${slug}`),
+  ...systemTwenty.map(slug => `/trading-system/${slug}`),
 ]
 
 let failed = 0

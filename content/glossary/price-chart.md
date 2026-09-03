@@ -17,6 +17,14 @@ status: published
 
 把一段时间的开盘价（Open）、最高价（High）、最低价（Low）、收盘价（Close）画成一根柱，简称 OHLC。实体表示开收差，影线表示最高最低超出实体的部分。详见[K 线](/indicators/kline)。
 
+### 摆动结构（Market Structure / Swing Structure）
+
+把相邻的已收盘摆动高点、摆动低点排成序列，写成更高高点 / 更高低点，或更低高点 / 更低低点。它是读图约定，不是算法指标，也不是开仓指令。详见[摆动结构与假突破](/indicators/market-structure)。
+
+### 假突破（False Breakout）
+
+影线越过前高或前低区域，收盘回到区内。记「到过，未收盘离开」。详见[摆动结构与假突破](/indicators/market-structure)。
+
 ### 趋势线（Trendline）
 
 用至少两个摆动低点或两个摆动高点连成的斜线。第三点是回测，不是对未来的保证。手连结构不是均线。详见[趋势线与支撑阻力](/indicators/trendlines)。
