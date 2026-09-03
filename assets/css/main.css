@@ -783,11 +783,66 @@ p {
 }
 
 .lesson-toc a:hover,
-.course-jump a:hover {
+.course-jump a:hover,
+.glossary-jump a:hover,
+.glossary-terms a:hover {
   border-color: transparent;
   color: var(--ink);
   text-decoration: underline;
   text-decoration-color: var(--mark);
+}
+
+.glossary-jump,
+.glossary-terms {
+  margin-top: 1rem;
+}
+
+.glossary-jump__hint {
+  margin: 0 0 0.35rem;
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+}
+
+.glossary-jump ol,
+.glossary-terms ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.glossary-jump li:not(:last-child)::after,
+.glossary-terms li:not(:last-child)::after {
+  content: "·";
+  margin: 0 0.45rem;
+  color: #d1d5db;
+}
+
+.glossary-jump a,
+.glossary-terms a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.6rem;
+  padding: 0;
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-size: 0.86rem;
+}
+
+.glossary-group {
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+  scroll-margin-top: calc(var(--header-h) + 1.1rem);
+}
+
+.glossary-group h2 {
+  margin-bottom: 0.35rem;
+}
+
+.glossary-prose h3 {
+  scroll-margin-top: calc(var(--header-h) + 1.1rem);
 }
 
 .lesson-prose h2:first-of-type + p + ul {

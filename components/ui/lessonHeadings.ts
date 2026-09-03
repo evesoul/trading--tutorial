@@ -32,18 +32,36 @@ function flattenText(node: unknown): string {
   return ''
 }
 
+export function headingSlug(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[（(]/g, '')
+    .replace(/[）)]/g, '')
+    .replace(/[/／,，]/g, '-')
+    .replace(/\s+/g, '-')
+    .replace(/[^\w\u3400-\u9fff-]+/g, '')
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '')
+}
+
+export function shortTermLabel(text: string): string {
+  const beforeParen = text.split('（')[0]?.trim()
+  return beforeParen || text
+}
+
 function pushHeading(acc: LessonHeading[], id: unknown, text: string, skipTitle?: string) {
   const trimmed = text.replace(/\s+/g, ' ').trim()
   if (!trimmed || trimmed === skipTitle) {
     return
   }
+  const raw = typeof id === 'string' && id && id !== trimmed ? id : headingSlug(trimmed)
   acc.push({
-    id: String(id ?? trimmed),
+    id: raw,
     text: trimmed,
   })
 }
 
-function walk(node: unknown, acc: LessonHeading[], skipTitle?: string) {
+function walk(node: unknown, acc: LessonHeading[], depth: number, skipTitle?: string) {
   if (!node) {
     return
   }
@@ -52,40 +70,47 @@ function walk(node: unknown, acc: LessonHeading[], skipTitle?: string) {
     const name = node[0]
     const props = isRecord(node[1]) ? node[1] : {}
 
-    if (name === 'h2') {
+    if (name === `h${depth}`) {
       pushHeading(acc, props.id, flattenText(node), skipTitle)
       return
     }
 
-    if (name === 'heading' && Number(props.depth) === 2) {
+    if (name === 'heading' && Number(props.depth) === depth) {
       pushHeading(acc, props.id, flattenText(node), skipTitle)
       return
     }
 
     for (const child of node) {
-      walk(child, acc, skipTitle)
+      walk(child, acc, depth, skipTitle)
     }
     return
   }
 
   if (isRecord(node)) {
-    if (node.type === 'heading' && Number(node.depth) === 2) {
+    if (node.type === 'heading' && Number(node.depth) === depth) {
       const props = isRecord(node.props) ? node.props : {}
       pushHeading(acc, props.id ?? node.id, flattenText(node), skipTitle)
       return
     }
 
     if (node.value !== undefined) {
-      walk(node.value, acc, skipTitle)
+      walk(node.value, acc, depth, skipTitle)
     }
     if (Array.isArray(node.children)) {
-      walk(node.children, acc, skipTitle)
+      walk(node.children, acc, depth, skipTitle)
     }
   }
 }
 
-export function extractLessonHeadings(body: unknown, skipTitle?: string): LessonHeading[] {
+export function extractHeadings(
+  body: unknown,
+  options: { depth?: number, skipTitle?: string } = {},
+): LessonHeading[] {
   const headings: LessonHeading[] = []
-  walk(body, headings, skipTitle)
+  walk(body, headings, options.depth ?? 2, options.skipTitle)
   return headings
+}
+
+export function extractLessonHeadings(body: unknown, skipTitle?: string): LessonHeading[] {
+  return extractHeadings(body, { depth: 2, skipTitle })
 }
