@@ -71,6 +71,7 @@ useSeoMeta({
       <p class="lede">
         第一次来：先读下面的导学，再看交易所屏幕，然后从 K 线开始。不要在一长串标题里随便点。
       </p>
+      <UiCourseJump />
     </header>
 
     <LessonContent

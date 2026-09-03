@@ -663,6 +663,74 @@ p {
   margin-bottom: 0;
 }
 
+.read-progress {
+  position: fixed;
+  top: var(--header-h);
+  left: 0;
+  right: 0;
+  z-index: 35;
+  height: 3px;
+  background: transparent;
+  pointer-events: none;
+}
+
+.read-progress__bar {
+  display: block;
+  height: 100%;
+  background: var(--brand);
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+.lesson-toc,
+.course-jump {
+  margin-top: 1rem;
+}
+
+.lesson-toc__label,
+.course-jump__hint {
+  margin: 0 0 0.45rem;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+}
+
+.lesson-toc ol,
+.course-jump ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lesson-toc a,
+.course-jump a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.9rem;
+  padding: 0.15rem 0.65rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--sheet);
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 0.82rem;
+}
+
+.lesson-toc a:hover,
+.course-jump a:hover {
+  border-color: #b7c9cd;
+  color: var(--brand);
+}
+
+.lesson-prose h2:first-of-type + p + ul {
+  padding: 0.85rem 1rem 0.85rem 1.8rem;
+  background: var(--sheet);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
 .lesson-crumb {
   margin: 0 0 0.85rem;
 }
@@ -901,6 +969,13 @@ p {
 
 .lesson-prose h1:first-of-type {
   display: none;
+}
+
+.lesson-prose h2,
+.lesson-prose h3,
+.path-band h2,
+#risk {
+  scroll-margin-top: calc(var(--header-h) + 1.1rem);
 }
 
 .lesson-prose h2 {

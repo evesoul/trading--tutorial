@@ -2,6 +2,8 @@
 import type { Collections } from '@nuxt/content'
 import type { LessonCategory } from '../types/content'
 import type { LessonNeighbor } from './ui/courseMeta'
+import type { LessonHeading } from './ui/lessonHeadings'
+import { extractLessonHeadings } from './ui/lessonHeadings'
 import { levelLabel, nextReason, plannedLessonTitle } from './ui/courseMeta'
 
 const props = defineProps<{
@@ -120,6 +122,62 @@ const { data: shell } = await useAsyncData(
 
 const fallback = computed(() => emptyBack[props.category])
 
+const headings = ref<LessonHeading[]>([])
+
+function refreshHeadings() {
+  const lesson = shell.value?.lesson
+  const fromBody = extractLessonHeadings(lesson?.body, lesson?.title)
+  if (fromBody.length >= 3 || !import.meta.client) {
+    headings.value = fromBody
+    return
+  }
+
+  headings.value = [...document.querySelectorAll('.lesson-prose h2[id]')].flatMap((element) => {
+    const text = element.textContent?.trim() ?? ''
+    return element.id && text ? [{ id: element.id, text }] : []
+  })
+}
+
+watch(() => shell.value?.lesson.id, () => {
+  headings.value = extractLessonHeadings(shell.value?.lesson.body, shell.value?.lesson.title)
+  nextTick(refreshHeadings)
+}, { immediate: true })
+
+const readProgress = ref(0)
+
+function updateReadProgress() {
+  if (!import.meta.client) {
+    return
+  }
+  const main = document.querySelector('.article-main')
+  if (!(main instanceof HTMLElement)) {
+    readProgress.value = 0
+    return
+  }
+  const start = main.offsetTop
+  const span = main.scrollHeight - window.innerHeight
+  if (span <= 0) {
+    readProgress.value = 100
+    return
+  }
+  readProgress.value = Math.min(100, Math.max(0, ((window.scrollY - start) / span) * 100))
+}
+
+onMounted(() => {
+  nextTick(refreshHeadings)
+  updateReadProgress()
+  window.addEventListener('scroll', updateReadProgress, { passive: true })
+  window.addEventListener('resize', updateReadProgress)
+})
+
+onBeforeUnmount(() => {
+  if (!import.meta.client) {
+    return
+  }
+  window.removeEventListener('scroll', updateReadProgress)
+  window.removeEventListener('resize', updateReadProgress)
+})
+
 useSeoMeta({
   title: () => shell.value?.lesson.title ?? fallback.value.title,
   description: () => shell.value?.lesson.description ?? fallback.value.description,
@@ -135,7 +193,21 @@ useSeoMeta({
     :action="fallback.action"
     as-title
   />
-  <article v-else class="page article-layout">
+  <div v-else>
+    <div
+      class="read-progress"
+      role="progressbar"
+      aria-label="本篇阅读进度"
+      :aria-valuenow="Math.round(readProgress)"
+      aria-valuemin="0"
+      aria-valuemax="100"
+    >
+      <span
+        class="read-progress__bar"
+        :style="{ transform: `scaleX(${readProgress / 100})` }"
+      />
+    </div>
+    <article class="page article-layout">
     <div class="article-main">
       <header class="article-header">
         <UiLessonCrumb
@@ -151,6 +223,7 @@ useSeoMeta({
           {{ shell.lesson.description }}
         </p>
         <UiPrerequisiteList :items="shell.prerequisites" />
+        <UiLessonToc :items="headings" />
       </header>
 
       <LessonContent :lesson="shell.lesson" :show-header="false" />
@@ -171,5 +244,6 @@ useSeoMeta({
       :current-slug="shell.lesson.slug"
       :siblings="shell.siblings"
     />
-  </article>
+    </article>
+  </div>
 </template>
