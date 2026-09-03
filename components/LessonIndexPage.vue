@@ -103,6 +103,17 @@ const showEmpty = computed(() => {
   }
   return (lessons.value ?? []).length === 0
 })
+
+function groupStart(groupIndex: number): number {
+  if (!groups.value) {
+    return 1
+  }
+  let start = 1
+  for (let index = 0; index < groupIndex; index += 1) {
+    start += groups.value[index]?.published.length ?? 0
+  }
+  return start
+}
 </script>
 
 <template>
@@ -110,27 +121,33 @@ const showEmpty = computed(() => {
     <header>
       <p><UiStageBadge :part="categoryPart(category)" /></p>
       <h1>{{ heading }}</h1>
-      <p class="lede">
+      <p class="lede catalog-lead">
         {{ leads[category] }}
       </p>
     </header>
 
     <template v-if="!showEmpty && groups">
       <section
-        v-for="group in groups"
+        v-for="(group, groupIndex) in groups"
         :key="group.key"
         class="catalog-group stack"
         :aria-labelledby="`catalog-${group.key}`"
       >
-        <h2 :id="`catalog-${group.key}`">
-          {{ group.heading }}
-        </h2>
-        <p v-if="group.note" class="lede">
+        <div class="catalog-group__head">
+          <h2 :id="`catalog-${group.key}`">
+            {{ group.heading }}
+          </h2>
+          <span class="catalog-group__count">
+            {{ group.published.length }} 篇
+          </span>
+        </div>
+        <p v-if="group.note" class="catalog-group__note">
           {{ group.note }}
         </p>
         <LessonList
           v-if="group.published.length"
           :lessons="group.published"
+          :start="groupStart(groupIndex)"
         />
         <ul
           v-if="group.unpublished.length"
@@ -170,8 +187,27 @@ const showEmpty = computed(() => {
   margin: 0;
 }
 
+.catalog-group__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
 .catalog-group h2 {
   margin: 0;
+}
+
+.catalog-group__count {
+  flex: none;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+}
+
+.catalog-group__note {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
 }
 
 .lesson-card.is-static {

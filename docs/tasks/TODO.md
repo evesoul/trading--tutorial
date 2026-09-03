@@ -77,6 +77,7 @@ Sprint 007 后七篇：
 - [x] 提示组件（RiskCallout）
 - [x] 上下章导航（LessonPager，未发布不链 404）
 - [x] Mobile（TASK-007 + 菜单修复；QA CDP 390 通过）
+- [x] 阅读壳打磨（TASK-047：首屏 CTA、课文面包屑与分组侧栏、目录编号）
 
 ## 教程全量升级（Sprint 009–013）
 

@@ -43,7 +43,7 @@ const emptyBack: Record<LessonCategory, { to: string, action: string, title: str
 
 const route = useRoute()
 const { fetchBySlug, slugFromRoute } = useLesson()
-const { fetchLessons, resolvePublishedPath, getLessonPath } = useCourse()
+const { fetchLessons, resolvePublishedPath } = useCourse()
 const slug = computed(() => slugFromRoute(route.params.slug))
 
 interface LessonShell {
@@ -136,8 +136,12 @@ useSeoMeta({
     as-title
   />
   <article v-else class="page article-layout">
-    <div>
+    <div class="article-main">
       <header class="article-header">
+        <UiLessonCrumb
+          :category="shell.lesson.category"
+          :title="shell.lesson.title"
+        />
         <p class="chip-row">
           <UiStageBadge :part="shell.lesson.part" />
           <span class="level-chip">{{ levelLabel(shell.lesson.level) }}</span>
@@ -157,26 +161,15 @@ useSeoMeta({
 
       <p class="back-course">
         <UiButtonLink to="/course" variant="ghost">
-          回课程
+          回怎么学
         </UiButtonLink>
       </p>
     </div>
 
-    <aside class="lesson-rail" aria-label="本阶段已发布课文">
-      <h2>{{ shell.lesson.part === 1 ? '指标主路径' : '本阶段课文' }}</h2>
-      <ol>
-        <li
-          v-for="item in shell.siblings"
-          :key="item.id"
-        >
-          <NuxtLink
-            :to="getLessonPath(item.category, item.slug)"
-            :aria-current="item.slug === shell.lesson.slug ? 'page' : undefined"
-          >
-            {{ item.title }}
-          </NuxtLink>
-        </li>
-      </ol>
-    </aside>
+    <UiLessonRail
+      :category="shell.lesson.category"
+      :current-slug="shell.lesson.slug"
+      :siblings="shell.siblings"
+    />
   </article>
 </template>

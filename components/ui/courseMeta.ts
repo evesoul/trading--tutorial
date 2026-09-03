@@ -130,12 +130,30 @@ export function catalogGroups(category: string): CatalogGroupMeta[] | null {
       { key: 'contract', heading: '合约数据层', slugs: CONTRACT_PATH_SLUGS },
     ]
   }
+  if (category === 'combinations') {
+    return [
+      { key: 'combo', heading: '组合七步', slugs: COMBINATION_PATH_SLUGS },
+    ]
+  }
   if (category === 'trading-system') {
     return [
       { key: 'system', heading: '二十步', slugs: SYSTEM_PATH_SLUGS },
     ]
   }
   return null
+}
+
+export function categoryIndexPath(category: string): string {
+  switch (category) {
+    case 'indicators':
+      return '/indicators'
+    case 'combinations':
+      return '/combinations'
+    case 'trading-system':
+      return '/trading-system'
+    default:
+      return '/course'
+  }
 }
 
 const PLANNED_TITLES: Record<string, string> = {

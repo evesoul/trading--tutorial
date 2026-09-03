@@ -10,7 +10,7 @@ import { LEARNING_STAGES } from './courseMeta'
       :to="stage.to"
       class="stage-map__item"
     >
-      <span class="stage-map__index">阶段 {{ stage.part }} · {{ stage.label }}</span>
+      <span class="stage-map__index">阶段 {{ stage.part }}</span>
       <strong>{{ stage.label }}</strong>
       <p>{{ stage.sentence }}</p>
     </NuxtLink>

@@ -15,10 +15,12 @@
   --focus: #1a4d56;
   --radius: 14px;
   --shadow: 0 12px 32px rgb(26 24 20 / 6%);
+  --lift: 0 10px 24px rgb(26 24 20 / 8%);
+  --ease: 0.16s ease;
   --font: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
   --width-page: 72rem;
   --width-prose: 42rem;
-  --width-figure: 40rem;
+  --width-figure: 100%;
   --header-h: 4rem;
 }
 
@@ -314,7 +316,29 @@ p {
 /* Home */
 
 .home-hero h1 {
-  max-width: 16ch;
+  max-width: 12em;
+}
+
+.home-hero__meta {
+  margin: 0 0 0.15rem;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+
+.home-hero .btn-row {
+  margin-top: 1.1rem;
+}
+
+.home-trust {
+  display: grid;
+  gap: 0.85rem;
+}
+
+@media (min-width: 800px) {
+  .home-trust {
+    grid-template-columns: 1.25fr 0.85fr;
+    align-items: start;
+  }
 }
 
 .stage-map {
@@ -338,11 +362,14 @@ p {
   display: grid;
   gap: 0.45rem;
   min-height: 100%;
+  transition: border-color var(--ease), box-shadow var(--ease), transform var(--ease);
 }
 
 .stage-map__item:hover {
   border-color: #b7c9cd;
   color: inherit;
+  box-shadow: var(--lift);
+  transform: translateY(-1px);
 }
 
 .stage-map__index {
@@ -470,18 +497,51 @@ p {
 
 .path-steps__item {
   display: grid;
-  gap: 0.35rem;
+  grid-template-columns: auto 1fr;
+  gap: 0.55rem 0.75rem;
+  align-items: start;
   padding: 1rem 1.1rem;
   border: 1px solid var(--line);
   background: var(--sheet);
   border-radius: var(--radius);
   text-decoration: none;
   color: inherit;
+  transition: border-color var(--ease), box-shadow var(--ease), transform var(--ease);
 }
 
 .path-steps__item:hover {
   color: inherit;
   border-color: #b7c9cd;
+  box-shadow: var(--lift);
+  transform: translateY(-1px);
+}
+
+.path-steps__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.7rem;
+  height: 1.7rem;
+  margin-top: 0.15rem;
+  border-radius: 999px;
+  background: var(--brand-soft);
+  color: var(--brand);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.path-steps__copy {
+  display: grid;
+  gap: 0.3rem;
+  min-width: 0;
+}
+
+.path-steps--compact {
+  gap: 0.55rem;
+}
+
+.path-steps--compact .path-steps__item {
+  padding: 0.75rem 0.85rem;
 }
 
 .path-steps__item.is-static {
@@ -523,9 +583,41 @@ p {
   color: inherit;
 }
 
+.lesson-card:has(.lesson-card__index) {
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 0.45rem 0.85rem;
+}
+
+.lesson-card {
+  transition: border-color var(--ease), box-shadow var(--ease), transform var(--ease);
+}
+
 .lesson-card:hover {
   color: inherit;
   border-color: #b7c9cd;
+  box-shadow: var(--lift);
+  transform: translateY(-1px);
+}
+
+.lesson-card__index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.7rem;
+  height: 1.7rem;
+  margin-top: 0.1rem;
+  border-radius: 999px;
+  background: var(--brand-soft);
+  color: var(--brand);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.lesson-card__body {
+  display: grid;
+  gap: 0.35rem;
+  min-width: 0;
 }
 
 .lesson-card p {
@@ -552,50 +644,170 @@ p {
 
 @media (min-width: 960px) {
   .article-layout {
-    grid-template-columns: minmax(0, 1fr) 15.5rem;
+    grid-template-columns: minmax(0, 42rem) 16rem;
+    justify-content: center;
     align-items: start;
+    gap: 2.25rem;
+  }
+
+  .article-layout .lesson-prose {
+    max-width: none;
   }
 }
 
 .article-header {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .article-header .lede {
   margin-bottom: 0;
 }
 
+.lesson-crumb {
+  margin: 0 0 0.85rem;
+}
+
+.lesson-crumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+}
+
+.lesson-crumb li:not(:last-child)::after {
+  content: "/";
+  margin-left: 0.35rem;
+  color: var(--line);
+}
+
+.lesson-crumb a {
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+.lesson-crumb a:hover {
+  color: var(--brand);
+}
+
+.lesson-crumb [aria-current="page"] {
+  color: var(--ink);
+}
+
 .lesson-rail {
   position: sticky;
   top: calc(var(--header-h) + 1rem);
-  padding: 1rem;
+  max-height: calc(100vh - var(--header-h) - 2rem);
+  overflow: auto;
+  padding: 0.9rem 1rem 1.05rem;
   border: 1px solid var(--line);
   background: var(--sheet);
   border-radius: var(--radius);
 }
 
+.lesson-rail__fold {
+  margin: 0;
+}
+
+.lesson-rail__summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  cursor: pointer;
+  font-weight: 700;
+  list-style: none;
+}
+
+.lesson-rail__summary::-webkit-details-marker {
+  display: none;
+}
+
+.lesson-rail__count {
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+  font-weight: 650;
+}
+
+.lesson-rail__progress {
+  display: none;
+  margin: 0 0 0.75rem;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+}
+
+.lesson-rail__group + .lesson-rail__group {
+  margin-top: 0.95rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--line);
+}
+
+.lesson-rail h2 {
+  margin: 0 0 0.45rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--brand);
+}
+
 .lesson-rail ol {
-  margin: 0.5rem 0 0;
-  padding-left: 1.15rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .lesson-rail li + li {
-  margin-top: 0.4rem;
+  margin-top: 0.2rem;
 }
 
 .lesson-rail a {
+  display: block;
+  padding: 0.28rem 0.45rem;
+  border-radius: 8px;
+  color: var(--ink-soft);
   text-decoration: none;
+  font-size: 0.9rem;
 }
 
+.lesson-rail a:hover {
+  background: #f6f0e6;
+  color: var(--brand);
+}
+
+.lesson-rail a.is-current,
 .lesson-rail a[aria-current="page"] {
+  background: var(--brand-soft);
+  color: var(--brand);
   font-weight: 700;
-  color: var(--ink);
+}
+
+@media (min-width: 960px) {
+  .lesson-rail__summary {
+    display: none;
+  }
+
+  .lesson-rail__progress,
+  .lesson-rail__group {
+    display: block !important;
+  }
 }
 
 @media (max-width: 959px) {
   .lesson-rail {
     order: 2;
     position: static;
+    max-height: none;
+  }
+
+  .lesson-rail__progress {
+    display: none;
+  }
+
+  .lesson-rail__fold:not([open]) .lesson-rail__group {
+    display: none;
   }
 }
 
@@ -622,9 +834,15 @@ p {
   color: inherit;
 }
 
+.pager-card {
+  transition: border-color var(--ease), box-shadow var(--ease), transform var(--ease);
+}
+
 .pager-card:hover {
   color: inherit;
   border-color: #b7c9cd;
+  box-shadow: var(--lift);
+  transform: translateY(-1px);
 }
 
 .pager-card--muted {
@@ -645,7 +863,24 @@ p {
 }
 
 .back-course {
-  margin-top: 1rem;
+  margin-top: 1.15rem;
+}
+
+.catalog-lead {
+  padding: 0.9rem 1rem;
+  background: var(--sheet);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+}
+
+.path-band {
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--line);
+}
+
+.path-band .lede {
+  margin-bottom: 1rem;
 }
 
 /* Empty */
@@ -669,12 +904,29 @@ p {
 }
 
 .lesson-prose h2 {
-  margin-top: 2rem;
+  margin-top: 2.35rem;
+  padding-top: 1.35rem;
+  border-top: 1px solid var(--line);
+}
+
+.lesson-prose h2:first-of-type {
+  margin-top: 0.4rem;
+  padding-top: 0;
+  border-top: 0;
 }
 
 .lesson-prose h3 {
   margin-top: 1.4rem;
   font-size: 1.05rem;
+}
+
+.lesson-prose :is(h2, h3, h4) a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.lesson-prose :is(h2, h3, h4) a:hover {
+  color: var(--brand);
 }
 
 .lesson-prose ul,
@@ -703,6 +955,11 @@ p {
 
 .lesson-prose th {
   background: #f6f0e6;
+  font-weight: 650;
+}
+
+.lesson-prose tbody tr:nth-child(even) {
+  background: rgb(246 240 230 / 45%);
 }
 
 .lesson-prose pre,
@@ -750,8 +1007,8 @@ p {
 /* Teaching windows: real-chart, never the schematic caption */
 .teaching-chart {
   width: min(100%, var(--width-figure));
-  margin: 1.5rem auto 1.75rem;
-  padding: 0.9rem 0.9rem 1rem;
+  margin: 1.6rem auto 1.85rem;
+  padding: 1rem 1rem 1.1rem;
   background: var(--sheet);
   border: 1px solid var(--line);
   border-radius: 12px;
@@ -885,7 +1142,15 @@ p {
 .site-footer nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem 1.1rem;
+  gap: 0.55rem 1.1rem;
+}
+
+.site-footer a {
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: var(--brand-hover);
 }
 
 .legend-yang {
