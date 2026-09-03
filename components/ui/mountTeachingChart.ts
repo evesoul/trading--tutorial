@@ -235,7 +235,7 @@ export function mountTeachingChart(
     width: host.clientWidth || host.parentElement?.clientWidth || 640,
     height,
     layout: {
-      background: { type: ColorType.Solid, color: '#fffdf8' },
+      background: { type: ColorType.Solid, color: '#ffffff' },
       textColor: '#4f4a41',
       attributionLogo: true,
       fontFamily: 'PingFang SC, Hiragino Sans GB, Noto Sans SC, ui-sans-serif, system-ui, sans-serif',
