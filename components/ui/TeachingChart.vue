@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ChartPayload } from '../../types/chart'
+import type { ChartPayload, DrawMode } from '../../types/chart'
 import {
   formatChartPeriod,
   isRealChartId,
@@ -28,7 +28,25 @@ const { data, error, pending } = await useAsyncData(
 const host = ref<HTMLElement | null>(null)
 const readout = ref('悬停看读数 · 滚轮缩放 · 拖动平移。冻结历史窗，不是直播行情。')
 const handle = ref<TeachingChartHandle | null>(null)
+const drawMode = ref<DrawMode>('idle')
+const teachingVisible = ref(true)
 let observer: ResizeObserver | null = null
+
+const canDraw = computed(() => Boolean(data.value?.drawTools))
+
+function setDrawMode(mode: DrawMode) {
+  drawMode.value = drawMode.value === mode ? 'idle' : mode
+  handle.value?.setDrawMode(drawMode.value)
+}
+
+function clearPractice() {
+  handle.value?.clearPractice()
+}
+
+function toggleTeaching() {
+  teachingVisible.value = !teachingVisible.value
+  handle.value?.setTeachingVisible(teachingVisible.value)
+}
 
 function teardown() {
   handle.value?.destroy()
@@ -43,6 +61,8 @@ function setup() {
   handle.value = mountTeachingChart(host.value, data.value, (text) => {
     readout.value = text
   })
+  handle.value.setDrawMode(drawMode.value)
+  handle.value.setTeachingVisible(teachingVisible.value)
 }
 
 watch([host, data], () => {
@@ -134,6 +154,45 @@ const altText = computed(() => {
         >
       </template>
     </ClientOnly>
+
+    <div v-if="canDraw" class="teaching-chart__tools">
+      <p class="teaching-chart__tools-hint">
+        练习划线：点一下画水平位，点两点画趋势线。清除只去掉你画的线。这是读图练习，不是交易终端。
+      </p>
+      <div class="teaching-chart__tool-row">
+        <button
+          type="button"
+          class="teaching-chart__tool"
+          :aria-pressed="drawMode === 'level'"
+          @click="setDrawMode('level')"
+        >
+          练习：水平位
+        </button>
+        <button
+          type="button"
+          class="teaching-chart__tool"
+          :aria-pressed="drawMode === 'trendline'"
+          @click="setDrawMode('trendline')"
+        >
+          练习：趋势线
+        </button>
+        <button
+          type="button"
+          class="teaching-chart__tool"
+          @click="clearPractice"
+        >
+          清除我的练习线
+        </button>
+        <button
+          type="button"
+          class="teaching-chart__tool"
+          :aria-pressed="teachingVisible"
+          @click="toggleTeaching"
+        >
+          {{ teachingVisible ? '隐藏教学线' : '显示教学线' }}
+        </button>
+      </div>
+    </div>
 
     <p v-if="data" class="teaching-chart__question">
       {{ data.teachingQuestion }}

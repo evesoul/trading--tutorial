@@ -42,7 +42,7 @@ const emptyCopy: Record<LessonCategory, {
 
 const leads: Record<LessonCategory, string> = {
   introduction: '先认路，再进入指标。',
-  indicators: '阶段 1：先搞清楚每个指标在回答什么问题。推荐先按 K 线 → MA → EMA → RSI → 成交量 → MACD → KDJ → 布林带读，再进入合约数据层：持仓量 → 资金费率 → 多空比 → 累计成交量差。',
+  indicators: '阶段 1：先搞清楚每个指标在回答什么问题。推荐先按 K 线 → 趋势线与支撑阻力 → MA → EMA → RSI → 成交量 → MACD → KDJ → 布林带读，再进入合约数据层：持仓量 → 资金费率 → 多空比 → 累计成交量差。',
   combinations: '阶段 2：用来对照多个指标，不构成交易信号。',
   'trading-system': '阶段 3：把观察写成可检查的规则，不是跟单策略。',
   glossary: '查一个词，然后回到课文。术语页不占主路径。',

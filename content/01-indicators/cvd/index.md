@@ -4,7 +4,7 @@ description: 用累计成交量差观察主动买减主动卖的累积；CVD 不
 part: 1
 category: indicators
 level: intermediate
-order: 12
+order: 13
 slug: cvd
 status: published
 indicator:

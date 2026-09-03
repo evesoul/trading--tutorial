@@ -4,7 +4,7 @@ description: 用两条 EMA 的差观察力度变化；金叉死叉和背离都�
 part: 1
 category: indicators
 level: beginner
-order: 6
+order: 7
 slug: macd
 status: published
 indicator:

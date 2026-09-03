@@ -4,7 +4,7 @@ description: 用简单移动平均把收盘价平滑成参照线；金叉死叉�
 part: 1
 category: indicators
 level: beginner
-order: 2
+order: 3
 slug: ma
 status: published
 indicator:
@@ -13,6 +13,7 @@ indicator:
 learning:
   prerequisites:
     - kline
+    - trendlines
   next:
     - ema
 ---
@@ -21,7 +22,7 @@ learning:
 
 均线（Moving Average，MA）把最近若干根价格平均后连成线。本站单独说「均线」或「MA」时，**默认指简单移动平均（Simple Moving Average，SMA）**。指数均线是另一种算法，下一篇再讲，不要把两者写成同一种东西。
 
-先修：[K 线](/indicators/kline)。MA 用的是已收盘的收盘价。
+先修：[K 线](/indicators/kline)、[趋势线与支撑阻力](/indicators/trendlines)。MA 用的是已收盘的收盘价。手连结构是你选定的历史点；本篇的均线每根都会重算。
 
 本篇没有真实行情图。没有实盘数据时，只用表格手算，不伪造 K 线。
 

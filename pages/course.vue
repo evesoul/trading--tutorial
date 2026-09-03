@@ -80,7 +80,7 @@ useSeoMeta({
     <section aria-labelledby="path-heading">
       <h2 id="path-heading">推荐主路径</h2>
       <p class="lede">
-        主路径八篇：K 线 → MA → EMA → RSI → 成交量 → MACD → KDJ → 布林带。已发布的可以点进去；未发布只标编写中，不会链到空地址。
+        主路径九篇：K 线 → 趋势线与支撑阻力 → MA → EMA → RSI → 成交量 → MACD → KDJ → 布林带。已发布的可以点进去；未发布只标编写中，不会链到空地址。
       </p>
       <UiPathSteps :steps="mainPath" />
       <p class="btn-row">

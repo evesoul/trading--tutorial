@@ -1,6 +1,6 @@
 ---
 title: 价格图与均线
-description: K 线、图表周期、回看参数、MA、EMA、趋势与震荡。查完回到课文。
+description: K 线、趋势线、支撑阻力、图表周期、回看参数、MA、EMA、趋势与震荡。查完回到课文。
 part: 0
 category: glossary
 level: beginner
@@ -16,6 +16,10 @@ status: published
 ### K 线（Candlestick / K-line）
 
 把一段时间的开盘价（Open）、最高价（High）、最低价（Low）、收盘价（Close）画成一根柱，简称 OHLC。实体表示开收差，影线表示最高最低超出实体的部分。详见[K 线](/indicators/kline)。
+
+### 趋势线（Trendline）
+
+用至少两个摆动低点或两个摆动高点连成的斜线。第三点是回测，不是对未来的保证。手连结构不是均线。详见[趋势线与支撑阻力](/indicators/trendlines)。
 
 ### 图表周期（Timeframe）
 
@@ -39,7 +43,7 @@ status: published
 
 ### 支撑与阻力（Support / Resistance）
 
-价格曾经多次止跌或受阻的区域。它们是观察位置，不是价格会停住的墙。突破之后原区域角色可能互换，也可能假突破。
+价格曾经多次止跌或受阻的区域，不是一根精确价。判断站上或跌破时，先看已收盘是否离开该区；影线扫到只说明到过。突破之后原区域角色可能互换，也可能假突破。详见[趋势线与支撑阻力](/indicators/trendlines)。
 
 ### 波动率（Volatility）
 

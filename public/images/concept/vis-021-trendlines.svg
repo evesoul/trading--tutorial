@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+  <title id="title">趋势线与支撑阻力示意图</title>
+  <desc id="desc">教学示意图。三格分别表示：用两个更高低点连上升趋势线、把支撑阻力看成区域、影线刺破但收盘回到区内。不是真实行情。</desc>
+  <rect width="960" height="560" fill="#f8fafc"/>
+  <rect width="960" height="64" fill="#ffffff"/>
+  <line x1="0" y1="64" x2="960" y2="64" stroke="#e2e8f0"/>
+  <text x="28" y="40" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#0f172a">趋势线与支撑阻力示意图</text>
+  <rect x="820" y="19" width="112" height="26" rx="4" fill="#fff7ed" stroke="#fdba74"/>
+  <text x="876" y="37" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#c2410c">示意图</text>
+
+  <rect x="48" y="84" width="288" height="368" rx="8" fill="#eff6ff" stroke="#bfdbfe"/>
+  <rect x="336" y="84" width="288" height="368" rx="8" fill="#fffbeb" stroke="#fde68a"/>
+  <rect x="624" y="84" width="288" height="368" rx="8" fill="#fef2f2" stroke="#fecaca"/>
+  <text x="192" y="108" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#1d4ed8">上升趋势线：两点更高低点</text>
+  <text x="480" y="108" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#a16207">水平位是区域，不是发丝</text>
+  <text x="768" y="108" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" fill="#b91c1c">假突破：影线穿、收盘回</text>
+
+  <line x1="80" y1="348" x2="80" y2="378" stroke="#16a34a" stroke-width="2"/><rect x="71" y="348" width="18" height="22" fill="#16a34a"/>
+  <line x1="126" y1="322" x2="126" y2="360" stroke="#16a34a" stroke-width="2"/><rect x="117" y="322" width="18" height="26" fill="#16a34a"/>
+  <line x1="172" y1="300" x2="172" y2="348" stroke="#dc2626" stroke-width="2"/><rect x="163" y="312" width="18" height="24" fill="#dc2626"/>
+  <line x1="218" y1="268" x2="218" y2="316" stroke="#16a34a" stroke-width="2"/><rect x="209" y="276" width="18" height="28" fill="#16a34a"/>
+  <line x1="264" y1="244" x2="264" y2="292" stroke="#16a34a" stroke-width="2"/><rect x="255" y="252" width="18" height="26" fill="#16a34a"/>
+  <line x1="310" y1="228" x2="310" y2="268" stroke="#16a34a" stroke-width="2"/><rect x="301" y="236" width="18" height="22" fill="#16a34a"/>
+  <circle cx="80" cy="378" r="4" fill="#2563eb"/>
+  <circle cx="172" cy="348" r="4" fill="#2563eb"/>
+  <line x1="72" y1="384" x2="318" y2="220" stroke="#2563eb" stroke-width="2.4"/>
+  <text x="192" y="436" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#475569">第三点是回测观察，不是未来保证</text>
+
+  <rect x="360" y="248" width="240" height="52" fill="#fde68a" fill-opacity="0.55"/>
+  <rect x="360" y="328" width="240" height="52" fill="#bbf7d0" fill-opacity="0.55"/>
+  <line x1="372" y1="360" x2="372" y2="400" stroke="#16a34a" stroke-width="2"/><rect x="363" y="368" width="18" height="22" fill="#16a34a"/>
+  <line x1="418" y1="300" x2="418" y2="356" stroke="#dc2626" stroke-width="2"/><rect x="409" y="312" width="18" height="28" fill="#dc2626"/>
+  <line x1="464" y1="236" x2="464" y2="300" stroke="#16a34a" stroke-width="2"/><rect x="455" y="248" width="18" height="30" fill="#16a34a"/>
+  <line x1="510" y1="268" x2="510" y2="340" stroke="#dc2626" stroke-width="2"/><rect x="501" y="280" width="18" height="36" fill="#dc2626"/>
+  <line x1="556" y1="252" x2="556" y2="292" stroke="#16a34a" stroke-width="2"/><rect x="547" y="260" width="18" height="24" fill="#16a34a"/>
+  <text x="480" y="238" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" fill="#a16207">阻力区</text>
+  <text x="480" y="400" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" fill="#15803d">支撑区</text>
+  <text x="480" y="436" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#475569">带状区域，不是一根精确价</text>
+
+  <rect x="648" y="268" width="240" height="36" fill="#fecaca" fill-opacity="0.7"/>
+  <line x1="672" y1="300" x2="672" y2="348" stroke="#16a34a" stroke-width="2"/><rect x="663" y="308" width="18" height="26" fill="#16a34a"/>
+  <line x1="726" y1="236" x2="726" y2="348" stroke="#dc2626" stroke-width="2"/><rect x="717" y="292" width="18" height="40" fill="#dc2626"/>
+  <line x1="780" y1="300" x2="780" y2="352" stroke="#16a34a" stroke-width="2"/><rect x="771" y="308" width="18" height="28" fill="#16a34a"/>
+  <line x1="834" y1="296" x2="834" y2="344" stroke="#16a34a" stroke-width="2"/><rect x="825" y="304" width="18" height="24" fill="#16a34a"/>
+  <text x="768" y="256" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" fill="#b91c1c">阻力区</text>
+  <text x="768" y="436" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#475569">到过不等于收在；先看已收盘</text>
+
+  <text x="480" y="478" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="13" fill="#334155">手连高低点是读图约定，不是开仓指令。角色可互换，假突破常见。</text>
+
+  <rect x="0" y="520" width="960" height="40" fill="#f1f5f9"/>
+  <text x="480" y="545" text-anchor="middle" font-family="PingFang SC, Hiragino Sans GB, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="12" fill="#64748b">示意图 · 教学抽象几何 · 非真实行情 · 不构成交易建议</text>
+</svg>

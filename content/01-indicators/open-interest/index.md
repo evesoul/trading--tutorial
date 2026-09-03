@@ -4,7 +4,7 @@ description: 用持仓量观察此刻还挂着多少未平仓合约；价与 OI 
 part: 1
 category: indicators
 level: beginner
-order: 9
+order: 10
 slug: open-interest
 status: published
 indicator:

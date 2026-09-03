@@ -15,7 +15,7 @@
 7. 指标交叉、超买超卖、量价配合都是观察工具，图注不得写成确定性买卖信号。
 8. 永续合约有爆仓风险；图中涉及杠杆、仓位时只讲风险约束，不鼓励高杠杆。
 
-优先级：**真实数据图表 > 教学示意图 > 流程图 > 装饰图**。vis-101–107 已从 Binance Vision 历史归档采集冻结窗；组合课实盘窗（vis-108+）仍未开。
+优先级：**真实数据图表 > 教学示意图 > 流程图 > 装饰图**。vis-101–107 已从 Binance Vision 历史归档采集冻结窗；vis-108 是单概念价格结构窗（复用 vis-101 K 线），不是组合课。组合课实盘窗仍未开。
 
 ## 图表分类
 
@@ -36,6 +36,9 @@
 | 示意图徽章 | 橙底「示意图」，每张抽象图必须出现 |
 | 阳线 / 上涨柱 | `#16a34a`（常见加密交易所习惯：绿涨红跌） |
 | 阴线 / 下跌柱 | `#dc2626` |
+| 教学趋势线 | `#2563eb` |
+| 教学水平位 | `#d97706` |
+| 练习划线 | `#0f766e` |
 | EMA | `#7c3aed` |
 | MACD DIF / KDJ K 值 | `#2563eb` |
 | MACD DEA / KDJ D 值 | `#d97706` |
@@ -140,6 +143,7 @@ UI Agent 在 Vue 中：
 | [vis-018](specs/vis-018-stop-loss.md) | 止损与强平区分 | schematic | delivered | `/images/concept/vis-018-stop-loss.svg` |
 | [vis-019](specs/vis-019-backtest.md) | 回测不能只看胜率 | schematic | delivered | `/images/concept/vis-019-backtest.svg` |
 | [vis-020](specs/vis-020-case-study.md) | 交易系统案例是作业纸 | schematic | delivered | `/images/concept/vis-020-case-study.svg` |
+| [vis-021](specs/vis-021-trendlines.md) | 趋势线与支撑阻力 | schematic | delivered | `/images/concept/vis-021-trendlines.svg` |
 
 ### 真实行情图（已交付冻结窗）
 
@@ -152,6 +156,7 @@ UI Agent 在 Vue 中：
 | [vis-105](specs/vis-105-volume-real.md) | Volume 真实行情教学窗 | real-chart | delivered | BTCUSDT 4h · 2024-10-01 → 2024-10-19 UTC |
 | [vis-106](specs/vis-106-oi-real.md) | Open Interest 真实行情教学窗 | real-chart | delivered | BTCUSDT 4h · 2024-10-11 → 2024-10-29 UTC |
 | [vis-107](specs/vis-107-funding-real.md) | Funding Rate 真实行情教学窗 | real-chart | delivered | BTCUSDT 8h · 2024-08-07 → 2024-09-05 UTC |
+| [vis-108](specs/vis-108-trendlines-real.md) | 趋势线与支撑阻力教学窗 | real-chart | delivered | BTCUSDT 4h · 2024-10-12 → 2024-10-30 UTC（复用 vis-101，单概念） |
 
 ## 目录
 
@@ -186,6 +191,7 @@ docs/visual/
     vis-018-stop-loss.md
     vis-019-backtest.md
     vis-020-case-study.md
+    vis-021-trendlines.md
     vis-101-kline-real.md
     vis-102-ema-real.md
     vis-103-macd-real.md
@@ -193,11 +199,12 @@ docs/visual/
     vis-105-volume-real.md
     vis-106-oi-real.md
     vis-107-funding-real.md
+    vis-108-trendlines-real.md
 
 public/images/
   concept/          # 示意图 SVG
   flow/             # 流程图 SVG
-  indicator/        # vis-101–107 SVG 快照（真实行情徽章）
+  indicator/        # vis-101–108 SVG 快照（真实行情徽章）
   combination/      # 预留
   system/           # 预留
 ```

@@ -833,6 +833,39 @@ p {
   color: var(--ink-soft);
 }
 
+.teaching-chart__tools {
+  margin-top: 0.7rem;
+}
+
+.teaching-chart__tools-hint {
+  margin: 0 0 0.45rem;
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+}
+
+.teaching-chart__tool-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.teaching-chart__tool {
+  padding: 0.28rem 0.65rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fffdf8;
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.teaching-chart__tool[aria-pressed='true'] {
+  background: var(--brand);
+  color: var(--sheet);
+  border-color: var(--brand);
+}
+
 /* Footer */
 
 .site-footer {

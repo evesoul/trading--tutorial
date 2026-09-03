@@ -4,7 +4,7 @@ description: 对比 SMA 的均等权重，理解 EMA 为什么更贴近期价格
 part: 1
 category: indicators
 level: beginner
-order: 3
+order: 4
 slug: ema
 status: published
 indicator:

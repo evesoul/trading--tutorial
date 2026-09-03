@@ -7,12 +7,19 @@ import {
   LineSeries,
   LineStyle,
   type IChartApi,
+  type IPriceLine,
   type ISeriesApi,
   type MouseEventParams,
   type SeriesType,
   type UTCTimestamp,
 } from 'lightweight-charts'
-import type { ChartPayload } from '../../types/chart'
+import type {
+  ChartGuide,
+  ChartLevelGuide,
+  ChartPayload,
+  ChartTrendlineGuide,
+  DrawMode,
+} from '../../types/chart'
 import { compactNumber } from '../../types/chart'
 
 const YANG = '#15803d'
@@ -27,7 +34,14 @@ const ZERO = '#94a3b8'
 export interface TeachingChartHandle {
   destroy: () => void
   resize: (width: number) => void
+  setDrawMode: (mode: DrawMode) => void
+  clearPractice: () => void
+  setTeachingVisible: (visible: boolean) => void
 }
+
+const GUIDE_TREND = '#2563eb'
+const GUIDE_LEVEL = '#d97706'
+const PRACTICE = '#0f766e'
 
 type SeriesMap = Map<string, ISeriesApi<SeriesType>>
 
@@ -68,6 +82,28 @@ function formatFunding(value: number): string {
 
 function compactAxis(value: number): string {
   return compactNumber(value)
+}
+
+function trendlinePoints(
+  times: number[],
+  from: { time: number, price: number },
+  to: { time: number, price: number },
+) {
+  const span = to.time - from.time
+  return times.map((time) => ({
+    time: asTime(time),
+    value: span === 0
+      ? from.price
+      : from.price + (to.price - from.price) * ((time - from.time) / span),
+  }))
+}
+
+function isTrendlineGuide(guide: ChartGuide): guide is ChartTrendlineGuide {
+  return guide.type === 'trendline'
+}
+
+function isLevelGuide(guide: ChartGuide): guide is ChartLevelGuide {
+  return guide.type === 'level'
 }
 
 export function formatChartReadout(param: MouseEventParams, series: SeriesMap): string {
@@ -359,18 +395,191 @@ export function mountTeachingChart(
 
   chart.timeScale().fitContent()
 
-  const handleMove = (param: MouseEventParams) => {
-    onReadout(formatChartReadout(param, series))
+  const teachingLines: ISeriesApi<'Line'>[] = []
+  const teachingPriceLines: IPriceLine[] = []
+  const practiceLines: ISeriesApi<'Line'>[] = []
+  const practicePriceLines: IPriceLine[] = []
+  let teachingVisible = true
+  let drawMode: DrawMode = 'idle'
+  let pendingTrend: { time: number, price: number } | null = null
+  let practiceCount = 0
+
+  function idleHint() {
+    if (payload.drawTools) {
+      return '悬停看读数 · 滚轮缩放 · 拖动平移。可用下方按钮练习划线。冻结历史窗，不是直播行情。'
+    }
+    return '悬停看读数 · 滚轮缩放 · 拖动平移。冻结历史窗，不是直播行情。'
   }
+
+  function addTrendline(guide: ChartTrendlineGuide, color: string, dashed: boolean) {
+    const line = chart.addSeries(LineSeries, {
+      color,
+      lineWidth: 2,
+      lineStyle: dashed ? LineStyle.Dashed : LineStyle.Solid,
+      lastValueVisible: false,
+      priceLineVisible: false,
+      crosshairMarkerVisible: false,
+      title: guide.label,
+    }, 0)
+    line.setData(trendlinePoints(times, guide.from, guide.to))
+    return line
+  }
+
+  function addLevel(guide: ChartLevelGuide, color: string) {
+    return candles.createPriceLine({
+      price: guide.price,
+      color,
+      lineWidth: 2,
+      lineStyle: LineStyle.Dashed,
+      axisLabelVisible: true,
+      title: guide.label,
+    })
+  }
+
+  function renderTeachingGuides() {
+    for (const line of teachingLines) {
+      chart.removeSeries(line)
+    }
+    teachingLines.length = 0
+    for (const line of teachingPriceLines) {
+      candles.removePriceLine(line)
+    }
+    teachingPriceLines.length = 0
+    if (!teachingVisible || !payload.guides) {
+      return
+    }
+    for (const guide of payload.guides) {
+      if (guide.role !== 'teaching') {
+        continue
+      }
+      if (isTrendlineGuide(guide)) {
+        teachingLines.push(addTrendline(guide, GUIDE_TREND, false))
+      }
+      if (isLevelGuide(guide)) {
+        teachingPriceLines.push(addLevel(guide, GUIDE_LEVEL))
+      }
+    }
+  }
+
+  function clearPractice() {
+    for (const line of practiceLines) {
+      chart.removeSeries(line)
+    }
+    practiceLines.length = 0
+    for (const line of practicePriceLines) {
+      candles.removePriceLine(line)
+    }
+    practicePriceLines.length = 0
+    pendingTrend = null
+    practiceCount = 0
+  }
+
+  function readClick(param: MouseEventParams): { time: number, price: number } | null {
+    if (!param.point) {
+      return null
+    }
+    const price = candles.coordinateToPrice(param.point.y)
+    if (price == null || !Number.isFinite(price)) {
+      return null
+    }
+    const timeValue = param.time == null
+      ? chart.timeScale().coordinateToTime(param.point.x)
+      : param.time
+    if (typeof timeValue !== 'number') {
+      return null
+    }
+    return { time: timeValue, price }
+  }
+
+  const handleMove = (param: MouseEventParams) => {
+    if (drawMode === 'idle') {
+      onReadout(formatChartReadout(param, series))
+      return
+    }
+    const clicked = readClick(param)
+    if (!clicked) {
+      onReadout(drawMode === 'level'
+        ? '练习水平位：点图上某处取价。'
+        : pendingTrend
+          ? '练习趋势线：再点第二个点。'
+          : '练习趋势线：先点第一个点。')
+      return
+    }
+    onReadout(`取价 ${formatPrice(clicked.price)}`)
+  }
+
+  const handleClick = (param: MouseEventParams) => {
+    if (drawMode === 'idle') {
+      return
+    }
+    const clicked = readClick(param)
+    if (!clicked) {
+      return
+    }
+    practiceCount += 1
+    if (drawMode === 'level') {
+      practicePriceLines.push(addLevel({
+        id: `practice-level-${practiceCount}`,
+        type: 'level',
+        role: 'practice',
+        label: `练习位 ${practiceCount}`,
+        price: clicked.price,
+      }, PRACTICE))
+      onReadout(`已画水平位 ${formatPrice(clicked.price)}。可继续点，或清除练习线。`)
+      return
+    }
+    if (!pendingTrend) {
+      pendingTrend = clicked
+      onReadout(`已记下第一点 ${formatPrice(clicked.price)}。再点第二个点连成趋势线。`)
+      return
+    }
+    practiceLines.push(addTrendline({
+      id: `practice-trend-${practiceCount}`,
+      type: 'trendline',
+      role: 'practice',
+      label: `练习线 ${practiceCount}`,
+      from: pendingTrend,
+      to: clicked,
+    }, PRACTICE, true))
+    pendingTrend = null
+    onReadout(`已连趋势线到 ${formatPrice(clicked.price)}。可继续点两点，或清除练习线。`)
+  }
+
+  renderTeachingGuides()
   chart.subscribeCrosshairMove(handleMove)
-  onReadout('悬停看读数 · 滚轮缩放 · 拖动平移。冻结历史窗，不是直播行情。')
+  chart.subscribeClick(handleClick)
+  onReadout(idleHint())
 
   return {
     resize(width: number) {
       chart.applyOptions({ width, height })
     },
+    setDrawMode(mode: DrawMode) {
+      drawMode = mode
+      pendingTrend = null
+      host.style.cursor = mode === 'idle' ? '' : 'crosshair'
+      if (mode === 'level') {
+        onReadout('练习水平位：点图上某处取价。')
+        return
+      }
+      if (mode === 'trendline') {
+        onReadout('练习趋势线：先点第一个点，再点第二个点。')
+        return
+      }
+      onReadout(idleHint())
+    },
+    clearPractice() {
+      clearPractice()
+      onReadout('已清除你画的练习线。教学线还在。')
+    },
+    setTeachingVisible(visible: boolean) {
+      teachingVisible = visible
+      renderTeachingGuides()
+    },
     destroy() {
       chart.unsubscribeCrosshairMove(handleMove)
+      chart.unsubscribeClick(handleClick)
+      host.style.cursor = ''
       chart.remove()
     },
   }

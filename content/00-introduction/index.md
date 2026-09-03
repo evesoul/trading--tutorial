@@ -74,7 +74,7 @@ learning:
 
 现阶段能学完的阶段 1 是：
 
-> 导学 → [K 线](/indicators/kline) → [MA](/indicators/ma) → [EMA](/indicators/ema) → [RSI](/indicators/rsi) → [成交量](/indicators/volume) → [MACD](/indicators/macd) → [KDJ](/indicators/kdj) → [布林带](/indicators/bollinger-bands) → [持仓量](/indicators/open-interest) → [资金费率](/indicators/funding-rate) → [多空比](/indicators/long-short-ratio) → [CVD](/indicators/cvd)
+> 导学 → [K 线](/indicators/kline) → [趋势线与支撑阻力](/indicators/trendlines) → [MA](/indicators/ma) → [EMA](/indicators/ema) → [RSI](/indicators/rsi) → [成交量](/indicators/volume) → [MACD](/indicators/macd) → [KDJ](/indicators/kdj) → [布林带](/indicators/bollinger-bands) → [持仓量](/indicators/open-interest) → [资金费率](/indicators/funding-rate) → [多空比](/indicators/long-short-ratio) → [CVD](/indicators/cvd)
 
 合约数据层（持仓量、资金费率、多空比、CVD）已经可学。
 
@@ -239,7 +239,7 @@ learning:
 2. 把永续当成加了杠杆的现货，忽略标记价、强平和资金费。
 3. 认为全仓比逐仓更安全。全仓只是缓冲来源不同。
 4. 认为收到资金费就证明方向正确。资金费是拥挤方向的补偿，不是趋势证明。
-5. 读完案例后继续寻找「实盘策略」或未发布页。阶段 1 十二篇、阶段 2 七篇、阶段 3 十五篇已发布；案例是教学作业纸，不证明有效，之后请回本页。
+5. 读完案例后继续寻找「实盘策略」或未发布页。阶段 1 十三篇、阶段 2 七篇、阶段 3 十五篇已发布；案例是教学作业纸，不证明有效，之后请回本页。
 6. 用极高杠杆做「很小的止损」。手续费、滑点和盘中噪声会占很大比重，计划中的风险控制容易失效。
 
 ## 局限性
@@ -247,7 +247,7 @@ learning:
 - 本页只讲机制和学法，不讲买卖时机。
 - 数字例子忽略手续费与资金费，不能拿去对账。
 - 各交易所的标记价、维持保证金、强平流程并不完全相同。
-- 学完阶段 1 十二篇、阶段 2 七篇和阶段 3 十五篇，仍不等于已经具备稳定交易的能力。案例是作业纸，不证明有效，不能代表未来结果。
+- 学完阶段 1 十三篇、阶段 2 七篇和阶段 3 十五篇，仍不等于已经具备稳定交易的能力。案例是作业纸，不证明有效，不能代表未来结果。
 - 任何策略、指标组合都带有亏损可能。永续合约还可能被强平、亏掉保证金；极端情况下还可能遇到额外结算规则（视交易所保险基金与自动减仓而定）。
 
 ## 总结

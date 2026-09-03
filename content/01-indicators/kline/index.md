@@ -14,7 +14,7 @@ learning:
   prerequisites:
     - introduction
   next:
-    - ma
+    - trendlines
 visual:
   cover: /images/concept/vis-001-kline-ohlc.svg
   charts:
@@ -183,6 +183,6 @@ K 线是后续课程的地基，不是一套形态交易系统。
 
 ## 下一步
 
-下一篇学习把收盘价平滑成一条参照线：[MA 移动平均线](/indicators/ma)。
+下一篇先用手连高低点，看出一段结构：[趋势线与支撑阻力](/indicators/trendlines)。
 
-MA 默认指简单移动平均（SMA）。你会用到本篇的收盘价，以及「已收盘才拿来算」这条规则。
+会读开高低收之后，先标摆动点、连趋势线、把支撑阻力看成区域，再学均线这种算法平滑。

@@ -4,7 +4,7 @@ description: 用收盘价在最近高低区间里的位置观察动能；K 值�
 part: 1
 category: indicators
 level: beginner
-order: 7
+order: 8
 slug: kdj
 status: published
 indicator:

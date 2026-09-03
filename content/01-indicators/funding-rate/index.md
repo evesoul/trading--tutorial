@@ -4,7 +4,7 @@ description: 用资金费率观察永续多空谁在付钱；费率不是资金�
 part: 1
 category: indicators
 level: beginner
-order: 10
+order: 11
 slug: funding-rate
 status: published
 indicator:

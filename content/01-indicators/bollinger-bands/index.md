@@ -4,7 +4,7 @@ description: 用均线加减标准差观察波动通道；开口收口和碰轨�
 part: 1
 category: indicators
 level: beginner
-order: 8
+order: 9
 slug: bollinger-bands
 status: published
 indicator:

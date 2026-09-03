@@ -6,6 +6,7 @@ export const REAL_CHART_IDS = [
   'vis-105',
   'vis-106',
   'vis-107',
+  'vis-108',
 ] as const
 
 export type RealChartId = (typeof REAL_CHART_IDS)[number]
@@ -30,6 +31,32 @@ export interface ChartPeriod {
   start: string
   end: string
 }
+
+export interface ChartGuidePoint {
+  time: number
+  price: number
+}
+
+export interface ChartTrendlineGuide {
+  id: string
+  type: 'trendline'
+  role: 'teaching' | 'practice'
+  label: string
+  from: ChartGuidePoint
+  to: ChartGuidePoint
+}
+
+export interface ChartLevelGuide {
+  id: string
+  type: 'level'
+  role: 'teaching' | 'practice'
+  label: string
+  price: number
+}
+
+export type ChartGuide = ChartTrendlineGuide | ChartLevelGuide
+
+export type DrawMode = 'idle' | 'level' | 'trendline'
 
 export interface ChartPayload {
   id: string
@@ -56,6 +83,8 @@ export interface ChartPayload {
   funding?: Array<number | null>
   panels: string[]
   parameters?: Record<string, string | number>
+  drawTools?: boolean
+  guides?: ChartGuide[]
 }
 
 export const REAL_CHART_SNAPSHOTS: Record<RealChartId, string> = {
@@ -66,6 +95,7 @@ export const REAL_CHART_SNAPSHOTS: Record<RealChartId, string> = {
   'vis-105': '/images/indicator/vis-105-volume-real.svg',
   'vis-106': '/images/indicator/vis-106-oi-real.svg',
   'vis-107': '/images/indicator/vis-107-funding-real.svg',
+  'vis-108': '/images/indicator/vis-108-trendlines-real.svg',
 }
 
 export function isRealChartId(value: string): value is RealChartId {

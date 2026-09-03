@@ -4,7 +4,7 @@ description: 用 0–100 的尺子观察涨跌动能；对照趋势粘滞与震�
 part: 1
 category: indicators
 level: beginner
-order: 4
+order: 5
 slug: rsi
 status: published
 indicator:

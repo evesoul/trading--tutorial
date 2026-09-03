@@ -38,6 +38,8 @@ Content 解决：
 | 规范中文 | 英文 | 缩写 | 使用约定 |
 |---|---|---|---|
 | K 线 | Candlestick / K-line | — | 标题用「K 线」；正文可并列「蜡烛图」 |
+| 趋势线 | Trendline | — | 至少两点；手连结构，不是算法指标 |
+| 支撑 / 阻力 | Support / Resistance | S/R | 区域，不是一根精确价 |
 | 均线 | Moving Average | MA | 单独说「均线 / MA」时默认指简单移动平均（SMA） |
 | 指数均线 | Exponential Moving Average | EMA | 不与 MA 混称为同一种算法 |
 | 动量 | Momentum | — | 指标类别，不是单一线条 |
@@ -70,22 +72,23 @@ Content 解决：
 
 ### 第一部分：常用指标
 
-下表是知识文件索引。发布课序以 `docs/product/learning-path.md` 为准（主路径：K 线 → MA → EMA → RSI → Volume → MACD）。每个文件按 10 问写全：是什么、测量什么、如何计算、如何观察、常见参数、典型形态、何时有用、何时失效、常见误区、可组合对象。
+下表是知识文件索引。发布课序以 `docs/product/learning-path.md` 为准（主路径：K 线 → 趋势线与支撑阻力 → MA → EMA → RSI → Volume → MACD）。每个文件按 10 问写全：是什么、测量什么、如何计算、如何观察、常见参数、典型形态、何时有用、何时失效、常见误区、可组合对象。
 
 | 顺序 | 文件 | 中文 | 英文 | 类型 |
 |---|---|---|---|---|
 | 1 | [indicators/kline.md](./indicators/kline.md) | K 线 | Candlestick | 价格表达 |
-| 2 | [indicators/ma.md](./indicators/ma.md) | 均线 | Moving Average (SMA) | 趋势 / 均线 |
-| 3 | [indicators/ema.md](./indicators/ema.md) | 指数均线 | Exponential Moving Average | 趋势 / 均线 |
-| 4 | [indicators/macd.md](./indicators/macd.md) | 平滑异同移动平均线 | MACD | 趋势 + 动量 |
-| 5 | [indicators/rsi.md](./indicators/rsi.md) | 相对强弱指标 | RSI | 动量 |
-| 6 | [indicators/kdj.md](./indicators/kdj.md) | 随机指标（KDJ） | Stochastic / KDJ | 动量 |
-| 7 | [indicators/bollinger-bands.md](./indicators/bollinger-bands.md) | 布林带 | Bollinger Bands | 波动率 / 通道 |
-| 8 | [indicators/volume.md](./indicators/volume.md) | 成交量 | Volume | 市场活跃度 |
-| 9 | [indicators/open-interest.md](./indicators/open-interest.md) | 持仓量 | Open Interest | 合约存量 |
-| 10 | [indicators/funding-rate.md](./indicators/funding-rate.md) | 资金费率 | Funding Rate | 永续机制 / 拥挤度 |
-| 11 | [indicators/long-short-ratio.md](./indicators/long-short-ratio.md) | 多空比 | Long/Short Ratio | 持仓结构 |
-| 12 | [indicators/cvd.md](./indicators/cvd.md) | 累计成交量差 | CVD | 主动买卖压力 |
+| 2 | [indicators/trendlines.md](./indicators/trendlines.md) | 趋势线与支撑阻力 | Trendline / Support / Resistance | 价格结构 |
+| 3 | [indicators/ma.md](./indicators/ma.md) | 均线 | Moving Average (SMA) | 趋势 / 均线 |
+| 4 | [indicators/ema.md](./indicators/ema.md) | 指数均线 | Exponential Moving Average | 趋势 / 均线 |
+| 5 | [indicators/macd.md](./indicators/macd.md) | 平滑异同移动平均线 | MACD | 趋势 + 动量 |
+| 6 | [indicators/rsi.md](./indicators/rsi.md) | 相对强弱指标 | RSI | 动量 |
+| 7 | [indicators/kdj.md](./indicators/kdj.md) | 随机指标（KDJ） | Stochastic / KDJ | 动量 |
+| 8 | [indicators/bollinger-bands.md](./indicators/bollinger-bands.md) | 布林带 | Bollinger Bands | 波动率 / 通道 |
+| 9 | [indicators/volume.md](./indicators/volume.md) | 成交量 | Volume | 市场活跃度 |
+| 10 | [indicators/open-interest.md](./indicators/open-interest.md) | 持仓量 | Open Interest | 合约存量 |
+| 11 | [indicators/funding-rate.md](./indicators/funding-rate.md) | 资金费率 | Funding Rate | 永续机制 / 拥挤度 |
+| 12 | [indicators/long-short-ratio.md](./indicators/long-short-ratio.md) | 多空比 | Long/Short Ratio | 持仓结构 |
+| 13 | [indicators/cvd.md](./indicators/cvd.md) | 累计成交量差 | CVD | 主动买卖压力 |
 
 历史草稿文件名 `RSI.md` 已合并进 [indicators/rsi.md](./indicators/rsi.md)。macOS 等大小写不敏感文件系统上二者为同一路径，因此**不再另留指针文件**，以免覆盖规范正文。引用一律用 `rsi.md`。
 
@@ -94,6 +97,7 @@ Content 解决：
 | 类型 | 指标 | 主要观察 |
 |---|---|---|
 | 价格表达 | K 线 | 开高低收、实体与影线 |
+| 价格结构 | 趋势线与支撑阻力 | 摆动点连线、水平区域、假突破 |
 | 趋势 / 均线 | MA、EMA | 方向、斜率、交叉、距离 |
 | 趋势 + 动量 | MACD | 快慢均线差、柱状图、交叉 |
 | 动量 | RSI、KDJ | 涨跌力度、极端区、背离 |

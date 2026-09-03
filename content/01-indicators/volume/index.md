@@ -4,7 +4,7 @@ description: 用成交量观察这段时间转手了多少；放量缩量是参�
 part: 1
 category: indicators
 level: beginner
-order: 5
+order: 6
 slug: volume
 status: published
 indicator:

@@ -50,6 +50,7 @@ export const LEARNING_STAGES: StageMeta[] = [
 
 export const MAIN_PATH_SLUGS = [
   'kline',
+  'trendlines',
   'ma',
   'ema',
   'rsi',
@@ -97,6 +98,7 @@ export const SYSTEM_PATH_SLUGS = [
 const PLANNED_TITLES: Record<string, string> = {
   introduction: '怎么学这门课',
   kline: 'K 线',
+  trendlines: '趋势线与支撑阻力',
   ma: 'MA 移动平均线',
   ema: 'EMA 指数移动平均线',
   rsi: 'RSI 相对强弱指标',
@@ -134,7 +136,8 @@ const PLANNED_TITLES: Record<string, string> = {
 
 const NEXT_REASONS: Record<string, string> = {
   kline: '先认清一根 K 线的开高低收，后面的指标都从这里来。',
-  ma: '先用均线看价格的平滑方向。',
+  trendlines: '会读 OHLC 之后，先手连高低点，再学均线。',
+  ma: '手画结构之后，再用均线看算法平滑。',
   ema: '对比加权后的均线，看它为何更贴近期价格。',
   rsi: '有了趋势参照之后，再用尺子看涨跌动能。',
   volume: '价格涨跌之后，再看成交量有没有跟上。',
