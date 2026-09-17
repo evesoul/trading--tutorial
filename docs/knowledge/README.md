@@ -66,6 +66,9 @@ Content 解决：
 | 风险限额 | Risk Limit | — | 名义做大，维持保证金率可能升高 |
 | 热度 | Account Heat | — | 未平仓计划风险之和，相关后不是简单相加 |
 | 决策 / 执行周期 | Decision / Execution Timeframe | — | 事先写死；低周期不能推翻已收盘高周期 |
+| 吸筹 / 拉升 / 派发 / 下跌 | Accumulation / Markup / Distribution / Markdown | — | 威科夫四阶段，是读图命名，不是开仓指令 |
+| Creek / Ice | Creek / Ice | — | 吸筹上沿 / 派发下沿，手画区域 |
+| Spring / SOS / UTAD / SOW | Spring / Sign of Strength / Upthrust After Distribution / Sign of Weakness | — | 事件要有区间、收盘和量 |
 
 禁止把上述观察用语写成「买入信号」或「卖出信号」。
 
@@ -79,6 +82,7 @@ Content 解决：
 | [perpetual-futures.md](./perpetual-futures.md) | U 本位永续合约、保证金、杠杆、强平、资金费、风险限额、保险基金 / ADL | Content 写引言与风险说明前 |
 | [perp-screen.md](./perp-screen.md) | 交易所屏幕字段：权益、三价、强平、资金费倒计时、仓位档位 | Content 写导学第二篇前 |
 | [order-types.md](./order-types.md) | 市价 / 限价 / 止损单、只减仓、只做 maker、成交结果 | Content 写订单与入场课前 |
+| [wyckoff.md](./wyckoff.md) | 四阶段、Creek / Ice、Spring / SOS / UTAD / SOW、努力与结果 | Content 写阶段 4 前 |
 
 `perp-screen.md`、`order-types.md` 用「是什么 / 解决什么 / 常见误读」，不硬套指标 10 问。
 

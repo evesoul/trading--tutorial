@@ -33,6 +33,7 @@ part:
 - 1 = 指标基础
 - 2 = 指标组合
 - 3 = 交易系统
+- 4 = 威科夫与量价（`category: wyckoff`，映射到 `/wyckoff/{slug}`）
 
 level:
 - beginner
@@ -44,6 +45,7 @@ category:
 - indicators
 - combinations
 - trading-system
+- wyckoff
 - glossary
 
 status:

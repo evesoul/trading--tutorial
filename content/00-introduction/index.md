@@ -1,6 +1,6 @@
 ---
 title: 怎么学这门课
-description: 先认识本站边界、三阶段学习地图，以及 U 本位永续合约里的保证金、杠杆、强平和标记价。
+description: 先认识本站边界、四阶段学习地图，以及 U 本位永续合约里的保证金、杠杆、强平和标记价。
 part: 0
 category: introduction
 level: beginner
@@ -24,7 +24,7 @@ learning:
 读完本页，你应该能：
 
 - 说出本站是教育站，不是信号站、荐股站或自动交易工具
-- 画出三阶段地图：指标 → 组合 → 交易系统
+- 画出四阶段地图：指标 → 组合 → 交易系统 → 威科夫与量价
 - 用自己的话解释保证金、杠杆、强平、标记价格
 - 区分最新价和标记价：读图看前者，估算强平看后者
 - 记住：历史案例不能代表未来结果
@@ -58,7 +58,7 @@ learning:
 
 指标、形态、交叉、背离、超买超卖，在本站都叫**观察工具**。它们描述图上发生了什么，不代替你决定开仓或平仓。
 
-### 三阶段地图
+### 四阶段地图
 
 ```text
 阶段 0  导学：认识本站、永续合约、屏幕字段与风险   ← 你在这里
@@ -68,6 +68,8 @@ learning:
 阶段 2  组合：多个维度何时互相支持、何时打架
     ↓
 阶段 3  交易系统：环境 → 多周期 → 方向 → 订单 → 进出场 → 成本 → 热度 → 复盘
+    ↓
+阶段 4  威科夫与量价：四阶段 → 事件 → 量价 → 永续过滤器
 ```
 
 建议顺序是学习约束，不是考试路线。你可以跳读。文章会标明先修；未读先修时，用提示提醒你，而不是拦住你。
@@ -90,7 +92,13 @@ learning:
 
 > [什么是交易系统](/trading-system/what-is-a-trading-system) → [市场环境](/trading-system/market-regime) → [多周期](/trading-system/multi-timeframe) → [方向判断](/trading-system/direction) → [订单与成交](/trading-system/order-types) → [入场规则](/trading-system/entry-rules) → [出场规则](/trading-system/exit-rules) → [止损](/trading-system/stop-loss) → [止盈](/trading-system/take-profit) → [仓位管理](/trading-system/position-sizing) → [成本对照 R](/trading-system/cost-vs-r) → [风险管理](/trading-system/risk-management) → [账户热度与相关](/trading-system/account-heat) → [交易频率](/trading-system/trade-frequency) → [执行偏差](/trading-system/execution-bias) → [交易日志](/trading-system/trading-journal) → [回测](/trading-system/backtesting) → [数据统计](/trading-system/statistics) → [系统优化](/trading-system/system-optimization) → [完整交易系统案例](/trading-system/case-study)
 
-案例说明过程，不证明该系统有效，不是跟单对象。读完案例后请回本页复习。
+案例说明过程，不证明该系统有效，不是跟单对象。读完案例后可以回本页复习，或进入选修模块 [威科夫与量价](/wyckoff)。
+
+阶段 4 已经可学（十三篇，从「永续里怎么改读法」走到清单）：
+
+> [威科夫怎么用在永续](/wyckoff/wyckoff-on-perps) → [吸筹与 Spring](/wyckoff/accumulation-spring) → [拉升](/wyckoff/markup-sos) → [派发](/wyckoff/distribution-utad) → [下跌](/wyckoff/markdown-sow) → [事件变形](/wyckoff/event-variants) → [努力与结果](/wyckoff/effort-result) → [多周期怎么对阶段](/wyckoff/wyckoff-mtf) → [完整读图流程](/wyckoff/wyckoff-process) → [永续特有过滤器](/wyckoff/perp-filters) → [综合案例](/wyckoff/wyckoff-cases) → [把阶段写成系统](/wyckoff/wyckoff-system) → [检查清单](/wyckoff/wyckoff-checklist)
+
+威科夫形态是观察工具，不是买卖指令。建议先读完阶段 1 的 [K 线](/indicators/kline)、[摆动结构](/indicators/market-structure)、[成交量](/indicators/volume)，以及阶段 3 的 [多周期](/trading-system/multi-timeframe) 和 [仓位管理](/trading-system/position-sizing)。
 
 ## 原理
 

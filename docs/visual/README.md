@@ -26,6 +26,7 @@
 | `indicator/` | `real-chart` | 单指标真实行情教学窗 | JSON 在 `public/data/charts/`，快照在 `public/images/indicator/` |
 | `combination/` | `real-chart` | 多指标对照的真实行情 | vis-113 / vis-114 / vis-119–123 已交付；不是交易终端 |
 | `system/` | `real-chart` / `flow` | 交易系统读图与流程 | vis-008 流程 + vis-118 / vis-124–130 冻结窗；不填成绩 |
+| `wyckoff/` | `real-chart`（静态标注图） | 阶段 4 四阶段 / 事件 / 案例 | `public/images/wyckoff/`；索引见 [wyckoff-charts.md](./wyckoff-charts.md) |
 
 `indicator/` 现有 vis-101–117 的 SVG 快照（缺 vis-113 / vis-114，它们在 `combination/`），徽章写「真实行情」。课文用 `::real-chart{id="vis-101"}`，不要用 markdown 图片，以免被标成示意图。
 

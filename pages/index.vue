@@ -8,7 +8,7 @@ const publishedCount = computed(() =>
 
 useSeoMeta({
   title: 'U 本位永续合约交易教程（教育）',
-  description: '面向零基础的永续合约教程站。先认识风险，再按指标 → 组合 → 交易系统学习。不是信号、荐股或自动交易。',
+  description: '面向零基础的永续合约教程站。先认识风险，再按指标 → 组合 → 交易系统 → 威科夫与量价学习。不是信号、荐股或自动交易。',
 })
 </script>
 
@@ -34,7 +34,7 @@ useSeoMeta({
     </header>
 
     <section aria-labelledby="stages-heading">
-      <h2 id="stages-heading">三条学习阶段</h2>
+      <h2 id="stages-heading">四条学习阶段</h2>
       <UiStageMap />
     </section>
 

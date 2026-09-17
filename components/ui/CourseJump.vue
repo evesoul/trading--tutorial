@@ -1,11 +1,12 @@
 <script setup lang="ts">
 const jumps = [
-  { href: '#map-heading', label: '三阶段' },
+  { href: '#map-heading', label: '四阶段' },
   { href: '#stage0-heading', label: '导学' },
   { href: '#path-heading', label: '主路径' },
   { href: '#contract-path-heading', label: '合约层' },
   { href: '#combination-path-heading', label: '组合' },
   { href: '#system-path-heading', label: '系统' },
+  { href: '#wyckoff-path-heading', label: '威科夫' },
 ] as const
 </script>
 

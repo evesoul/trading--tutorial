@@ -102,6 +102,7 @@ Market Regime（市场环境）
 | [execution.md](./execution.md) | 订单类型、成交、部分成交、最新价止损 vs 标记价强平 |
 | [multi-timeframe.md](./multi-timeframe.md) | 决策周期与执行周期；打架则空仓 |
 | [cost-vs-r.md](./cost-vs-r.md) | 手续费 / 资金费 / 滑点对照 1R |
+| [wyckoff.md](./wyckoff.md) | 四阶段读图在系统链路中的位置；不颁布信号 |
 
 Part 3 发布课序以 `docs/product/learning-path.md` 为准（二十篇）。教学顺序：理念 → 环境 → 多周期 → 方向 → 订单 → 进出场 → 仓位 → 成本 → 风险 → 热度 → 频率 → 执行偏差 → 日志 → 回测 → 统计 → 优化 → 案例。
 

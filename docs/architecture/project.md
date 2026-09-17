@@ -24,6 +24,7 @@ content/
 ├── 01-indicators/
 ├── 02-combinations/
 ├── 03-trading-system/
+├── 04-wyckoff/
 └── glossary/
 
 ## 学习关系
@@ -39,4 +40,6 @@ content/
  /combinations/[...slug]
  /trading-system
  /trading-system/[...slug]
+ /wyckoff
+ /wyckoff/[...slug]
  /glossary

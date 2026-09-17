@@ -24,6 +24,7 @@ export const NAV_ITEMS: NavItem[] = [
   { to: '/indicators', label: '指标', match: 'prefix' },
   { to: '/combinations', label: '组合', match: 'prefix' },
   { to: '/trading-system', label: '交易系统', match: 'prefix' },
+  { to: '/wyckoff', label: '威科夫', match: 'prefix' },
   { to: '/glossary', label: '术语', match: 'exact' },
 ]
 
@@ -45,6 +46,12 @@ export const LEARNING_STAGES: StageMeta[] = [
     label: '交易系统',
     sentence: '把观察写成可重复的规则，并管住仓位和风险。',
     to: '/trading-system',
+  },
+  {
+    part: 4,
+    label: '威科夫与量价',
+    sentence: '用四阶段和量价读永续图，过滤器用来否决，不单独当信号。',
+    to: '/wyckoff',
   },
 ]
 
@@ -114,6 +121,22 @@ export const SYSTEM_PATH_SLUGS = [
   'case-study',
 ] as const
 
+export const WYCKOFF_PATH_SLUGS = [
+  'wyckoff-on-perps',
+  'accumulation-spring',
+  'markup-sos',
+  'distribution-utad',
+  'markdown-sow',
+  'event-variants',
+  'effort-result',
+  'wyckoff-mtf',
+  'wyckoff-process',
+  'perp-filters',
+  'wyckoff-cases',
+  'wyckoff-system',
+  'wyckoff-checklist',
+] as const
+
 export interface CatalogGroupMeta {
   key: string
   heading: string
@@ -140,6 +163,13 @@ export function catalogGroups(category: string): CatalogGroupMeta[] | null {
       { key: 'system', heading: '二十步', slugs: SYSTEM_PATH_SLUGS },
     ]
   }
+  if (category === 'wyckoff') {
+    return [
+      { key: 'phases', heading: '四阶段', note: '先定阶段，再谈事件。', slugs: WYCKOFF_PATH_SLUGS.slice(0, 5) },
+      { key: 'filters', heading: '变形、量价与流程', slugs: WYCKOFF_PATH_SLUGS.slice(5, 10) },
+      { key: 'practice', heading: '案例与自评', slugs: WYCKOFF_PATH_SLUGS.slice(10) },
+    ]
+  }
   return null
 }
 
@@ -151,6 +181,8 @@ export function categoryIndexPath(category: string): string {
       return '/combinations'
     case 'trading-system':
       return '/trading-system'
+    case 'wyckoff':
+      return '/wyckoff'
     default:
       return '/course'
   }
@@ -202,10 +234,23 @@ const PLANNED_TITLES: Record<string, string> = {
   statistics: '数据统计',
   'system-optimization': '系统优化',
   'case-study': '完整交易系统案例',
+  'wyckoff-on-perps': '威科夫怎么用在永续',
+  'accumulation-spring': '吸筹与 Spring',
+  'markup-sos': '拉升：SOS 与 BUEC',
+  'distribution-utad': '派发：UTAD 与 LPSY',
+  'markdown-sow': '下跌：SOW',
+  'event-variants': '关键事件变形',
+  'effort-result': '努力与结果',
+  'wyckoff-mtf': '多周期怎么对阶段',
+  'wyckoff-process': '完整读图流程',
+  'perp-filters': '永续特有过滤器',
+  'wyckoff-cases': '综合案例复盘',
+  'wyckoff-system': '把阶段写成系统',
+  'wyckoff-checklist': '检查清单与自评',
 }
 
 const NEXT_REASONS: Record<string, string> = {
-  introduction: '先讲清三阶段、本站边界，以及一篇只解决一个问题。',
+  introduction: '先讲清四阶段、本站边界，以及一篇只解决一个问题。',
   'perp-screen': '会认权益、标记价、强平和资金费倒计时，再去读 K 线。',
   kline: '先认清一根 K 线的开高低收，后面的指标都从这里来。',
   trendlines: '会读 OHLC 之后，先手连高低点，再读摆动结构。',
@@ -250,6 +295,19 @@ const NEXT_REASONS: Record<string, string> = {
   statistics: '胜率只是其中一个数字，还要看回撤、盈亏比、样本和成本。',
   'system-optimization': '有了统计之后才谈调整，并单独写过拟合风险。',
   'case-study': '用一份教学案例把前面的规则串起来，说明过程，不证明有效。',
+  'wyckoff-on-perps': '股票教材里的威科夫不能直接套永续，先改读法再谈事件。',
+  'accumulation-spring': '下跌之后先认区间和弹簧，不要把中段反弹叫底部。',
+  'markup-sos': '离开区间看收盘和量，主观察回踩而不是高潮追价。',
+  'distribution-utad': '高位区间先减多，上冲收回才谈派发，不把健康回踩当顶部。',
+  'markdown-sow': '破位看收盘；恐慌量用来停止加空，不是立刻反手。',
+  'event-variants': '缺收盘或大周期时降级，不要把每根长针都命名。',
+  'effort-result': '量是努力，位移是结果；冲突时先减仓或空仓。',
+  'wyckoff-mtf': '日线定阶段，4H 定事件，更短周期只负责触发。',
+  'wyckoff-process': '把阶段、事件、量价和仓位写成一格可检查的计划。',
+  'perp-filters': '插针、费率、清算用来否决或降仓，很少单独反向开仓。',
+  'wyckoff-cases': '用三段历史走完读图，方向对错不是唯一分数。',
+  'wyckoff-system': '只留少数可重复规则，一次只改一件事。',
+  'wyckoff-checklist': '开仓前扫清单，用过程分而不是盈亏当总分。',
 }
 
 export function plannedLessonTitle(slug: string): string {
@@ -270,6 +328,8 @@ export function categoryPart(category: string): number {
       return 2
     case 'trading-system':
       return 3
+    case 'wyckoff':
+      return 4
     default:
       return 0
   }

@@ -35,6 +35,12 @@ const emptyBack: Record<LessonCategory, { to: string, action: string, title: str
     title: '这篇系统课还没发布',
     description: '系统课是第三阶段。先建立看图能力，再回来。',
   },
+  wyckoff: {
+    to: '/wyckoff',
+    action: '回到威科夫目录',
+    title: '这篇威科夫课还没发布',
+    description: '阶段 4 依赖已学的看图和系统课。未发布的课不会做成可点链接。',
+  },
   glossary: {
     to: '/course',
     action: '回到怎么学',

@@ -10,7 +10,7 @@ const emptyCopy: Record<LessonCategory, {
 }> = {
   introduction: {
     title: '导学还没写好',
-    description: '先回到怎么学，看三阶段地图和已经开放的起点。',
+    description: '先回到怎么学，看学习地图和已经开放的起点。',
     to: '/course',
     action: '回到怎么学',
   },
@@ -32,6 +32,12 @@ const emptyCopy: Record<LessonCategory, {
     to: '/course',
     action: '回到怎么学',
   },
+  wyckoff: {
+    title: '威科夫课尚未开放',
+    description: '阶段 4 用四阶段和量价读永续图，不是跟单策略。现在还没有正文，建议先读完指标、组合和交易系统。',
+    to: '/course',
+    action: '回到怎么学',
+  },
   glossary: {
     title: '术语表建设中',
     description: '词条正文还在整理。课文里第一次出现的术语会先解释。查完后回到怎么学继续读。',
@@ -45,6 +51,7 @@ const leads: Record<LessonCategory, string> = {
   indicators: '阶段 1：先搞清楚每个指标在回答什么问题。推荐先按 K 线 → 趋势线与支撑阻力 → 摆动结构与假突破 → MA → EMA → RSI → 成交量 → ATR → 布林带读。MACD 是主路径续。KDJ 是对照层，不进主路径。再进入合约数据层：持仓量 → 资金费率 → 多空比 → 累计成交量差 → 清算瀑布。',
   combinations: '阶段 2：用来对照多个指标，不构成交易信号。',
   'trading-system': '阶段 3：把观察写成可检查的规则，不是跟单策略。按二十步从理念走到案例；未发布只标编写中。',
+  wyckoff: '阶段 4：用威科夫四阶段和量价读永续图。先定阶段，再用事件和过滤器对照。形态是观察工具，不是买卖指令。历史图不能代表未来结果。',
   glossary: '查一个词，然后回到课文。术语页不占主路径。',
 }
 

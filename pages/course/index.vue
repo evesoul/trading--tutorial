@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { COMBINATION_PATH_SLUGS, CONTRACT_PATH_SLUGS, MAIN_PATH_SLUGS, STAGE0_PATH_SLUGS, SYSTEM_PATH_SLUGS, nextReason, plannedLessonTitle } from '../../components/ui/courseMeta'
+import { COMBINATION_PATH_SLUGS, CONTRACT_PATH_SLUGS, MAIN_PATH_SLUGS, STAGE0_PATH_SLUGS, SYSTEM_PATH_SLUGS, WYCKOFF_PATH_SLUGS, nextReason, plannedLessonTitle } from '../../components/ui/courseMeta'
 import type { LessonNeighbor } from '../../components/ui/courseMeta'
 
 const { fetchLessons, resolvePublishedPath } = useCourse()
@@ -34,6 +34,7 @@ const { data: pathBundle } = await useAsyncData('course-paths', async () => {
     contractPath: await toSteps(CONTRACT_PATH_SLUGS),
     combinationPath: await toSteps(COMBINATION_PATH_SLUGS),
     systemPath: await toSteps(SYSTEM_PATH_SLUGS),
+    wyckoffPath: await toSteps(WYCKOFF_PATH_SLUGS),
   }
 })
 
@@ -42,6 +43,7 @@ const mainPath = computed(() => pathBundle.value?.mainPath ?? [])
 const contractPath = computed(() => pathBundle.value?.contractPath ?? [])
 const combinationPath = computed(() => pathBundle.value?.combinationPath ?? [])
 const systemPath = computed(() => pathBundle.value?.systemPath ?? [])
+const wyckoffPath = computed(() => pathBundle.value?.wyckoffPath ?? [])
 
 const screenStep = computed(() =>
   stage0Path.value.find(step => step.slug === 'perp-screen') ?? null,
@@ -59,7 +61,7 @@ const startLabel = computed(() =>
 
 useSeoMeta({
   title: '怎么学',
-  description: '先认识本站边界、风险和交易所屏幕，再按主路径从 K 线读到布林带（含摆动结构和 ATR），然后进入合约数据层，再进入指标组合七步，最后进入交易系统二十步。未发布的课只标编写中。',
+  description: '先认识本站边界、风险和交易所屏幕，再按主路径从 K 线读到布林带（含摆动结构和 ATR），然后进入合约数据层、指标组合七步、交易系统二十步，最后进入威科夫与量价。未发布的课只标编写中。',
 })
 </script>
 
@@ -83,9 +85,9 @@ useSeoMeta({
     <UiRiskCallout id="risk" />
 
     <section class="path-band" aria-labelledby="map-heading">
-      <h2 id="map-heading">三阶段地图</h2>
+      <h2 id="map-heading">四阶段地图</h2>
       <p class="lede">
-        阶段 2 用来对照多个指标，不构成交易信号。阶段 3 把观察写成可检查的规则。案例是教学作业纸，不是跟单策略。
+        阶段 2 用来对照多个指标，不构成交易信号。阶段 3 把观察写成可检查的规则。阶段 4 用威科夫四阶段和量价读永续图。案例是教学作业纸，不是跟单策略。
       </p>
       <UiStageMap />
     </section>
@@ -147,6 +149,18 @@ useSeoMeta({
       <UiPathSteps
         :steps="systemPath"
         label="交易系统"
+        compact
+      />
+    </section>
+
+    <section class="path-band" aria-labelledby="wyckoff-path-heading">
+      <h2 id="wyckoff-path-heading">威科夫与量价</h2>
+      <p class="lede">
+        阶段 4 十三步：威科夫怎么用在永续 → 吸筹与 Spring → 拉升 → 派发 → 下跌 → 事件变形 → 努力与结果 → 多周期怎么对阶段 → 完整读图流程 → 永续特有过滤器 → 综合案例 → 把阶段写成系统 → 检查清单。建议先读完阶段 1 的看图课和阶段 3 的多周期、仓位、订单。形态是观察工具，不是买卖指令。
+      </p>
+      <UiPathSteps
+        :steps="wyckoffPath"
+        label="威科夫与量价"
         compact
       />
     </section>

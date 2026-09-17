@@ -22,6 +22,7 @@
 | 指标 | `/indicators` | 阶段 1 目录 |
 | 组合 | `/combinations` | 阶段 2 目录 |
 | 交易系统 | `/trading-system` | 阶段 3 目录 |
+| 威科夫 | `/wyckoff` | 阶段 4 目录（选修） |
 | 术语 | `/glossary` | 查词，不占主路径 |
 
 移动端：同一组链接收入菜单。当前分区在菜单中高亮。
@@ -42,7 +43,7 @@
 必须完成：
 
 1. 一句话说清：面向零基础的永续合约**教程**
-2. 展示三阶段（指标 → 组合 → 交易系统），每阶段一句目标
+2. 展示四阶段（指标 → 组合 → 交易系统 → 威科夫与量价），每阶段一句目标
 3. 风险说明（杠杆、爆仓、历史≠未来）
 4. 明确「不提供信号 / 荐股 / 自动交易」
 5. 主 CTA：开始学习 → `/course`
@@ -57,7 +58,7 @@
 必须完成：
 
 1. 渲染 `content/00-introduction/` 导学（或等价查询），而不是在 Vue 里写死长文
-2. 三阶段地图，链到 `/indicators`、`/combinations`、`/trading-system`
+2. 四阶段地图，链到 `/indicators`、`/combinations`、`/trading-system`、`/wyckoff`
 3. **推荐起点**固定为导学 → 交易所屏幕 → K 线，避免指标目录变成选课超市
 4. 阶段 1 目录：主路径置顶；KDJ 标对照层；合约层含清算瀑布
 5. 风险锚点 `#risk`
@@ -105,6 +106,13 @@
 
 系统文必须在页头提示：规则用于练习设计自己的系统；案例不是荐股或跟单对象。
 
+### `/wyckoff` 与 `/wyckoff/[...slug]`
+
+职责同指标目录 / 文章，数据源换为 `part: 4`。  
+阶段 4 十三篇已发布。形态、Spring、SOS、UTAD、SOW 都是观察工具，不是买卖指令。
+
+威科夫文必须在页头或导语提示：本模块是选修读图练习，历史图不能代表未来结果。
+
 ### `/glossary` 术语
 
 **用户来这里做什么：** 查一个词，然后回到课文。
@@ -131,6 +139,7 @@
 | `content/02-combinations/{slug}/index.md` | `part: 2` | `/combinations/{slug}` |
 | `content/03-trading-system/index.md`（可选） | `category: trading-system` | `/trading-system` 引言 |
 | `content/03-trading-system/{slug}/index.md` | `part: 3` | `/trading-system/{slug}` |
+| `content/04-wyckoff/{slug}/index.md` | `part: 4` | `/wyckoff/{slug}` |
 | `content/glossary/index.md` 或 `content/glossary/*.md` | `category: glossary` | `/glossary`（单页 + 锚点） |
 
 slug 必须与文件目录名、Front Matter `slug`、URL 最后一段三者一致。规范见 [learning-path.md](./learning-path.md)。
@@ -160,6 +169,7 @@ part:
   1 = 指标基础
   2 = 指标组合
   3 = 交易系统
+  4 = 威科夫与量价
 ```
 
 `category` 已包含 `introduction`。列表可用 `part: 0`。取枢纽正文必须再加 `slug === 'introduction'`，不能只按 category 取第一篇。

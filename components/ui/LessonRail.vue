@@ -77,6 +77,9 @@ const railTitle = computed(() => {
   if (props.category === 'trading-system') {
     return '系统目录'
   }
+  if (props.category === 'wyckoff') {
+    return '威科夫目录'
+  }
   return '本阶段课文'
 })
 </script>

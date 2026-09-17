@@ -12,6 +12,7 @@
 | `/indicators` | 指标目录 | `part: 1` 文章列表 | 推荐卡 → `/indicators/kline` | 无 published 时说明「第一批教程准备中」 |
 | `/combinations` | 组合目录 | `part: 2` 文章列表 | 有文则进第一篇；否则回 `/indicators` | MVP 默认空状态 |
 | `/trading-system` | 交易系统目录 | `part: 3` 文章列表 | 有文则进第一篇；否则回 `/course` | MVP 默认空状态 |
+| `/wyckoff` | 威科夫与量价目录 | `part: 4` 文章列表 | 有文则进第一篇；否则回 `/course` | 空状态说明先读指标与系统 |
 | `/glossary` | 术语 | `content/glossary/` | 返回上一页或 `/course` | 无词条时展示「术语表建设中」+ 链到导学 |
 
 ## 动态路由
@@ -22,6 +23,7 @@
 | `/indicators/[...slug]` | `content/01-indicators/**` | `/indicators/kline`、`/indicators/atr` | 未知 slug → 404，提供回 `/indicators` |
 | `/combinations/[...slug]` | `content/02-combinations/**` | `/combinations/trend-momentum` | 同上，回 `/combinations` |
 | `/trading-system/[...slug]` | `content/03-trading-system/**` | `/trading-system/what-is-a-trading-system` | 同上，回 `/trading-system` |
+| `/wyckoff/[...slug]` | `content/04-wyckoff/**` | `/wyckoff/wyckoff-on-perps` | 同上，回 `/wyckoff` |
 
 `[...slug]` 预留给以后的嵌套（例如 `trend-momentum/ema-rsi`）。MVP 只用单段 slug。
 
@@ -98,6 +100,24 @@ Nuxt 在文件存在前不应注册死链。目录页对未发布项显示「编
 | 19 | `/trading-system/system-optimization` | `system-optimization` | 已发布，Sprint 012 修订 |
 | 20 | `/trading-system/case-study` | `case-study` | 已发布，Sprint 012 补时间线 |
 
+## 阶段 4 文章路由
+
+| 顺序 | 路径 | slug |
+|---|---|---|
+| 1 | `/wyckoff/wyckoff-on-perps` | `wyckoff-on-perps` |
+| 2 | `/wyckoff/accumulation-spring` | `accumulation-spring` |
+| 3 | `/wyckoff/markup-sos` | `markup-sos` |
+| 4 | `/wyckoff/distribution-utad` | `distribution-utad` |
+| 5 | `/wyckoff/markdown-sow` | `markdown-sow` |
+| 6 | `/wyckoff/event-variants` | `event-variants` |
+| 7 | `/wyckoff/effort-result` | `effort-result` |
+| 8 | `/wyckoff/wyckoff-mtf` | `wyckoff-mtf` |
+| 9 | `/wyckoff/wyckoff-process` | `wyckoff-process` |
+| 10 | `/wyckoff/perp-filters` | `perp-filters` |
+| 11 | `/wyckoff/wyckoff-cases` | `wyckoff-cases` |
+| 12 | `/wyckoff/wyckoff-system` | `wyckoff-system` |
+| 13 | `/wyckoff/wyckoff-checklist` | `wyckoff-checklist` |
+
 ## 查询约定（给 Nuxt）
 
 `composables/useCourse`（或等价）至少支持：
@@ -113,6 +133,7 @@ Nuxt 在文件存在前不应注册死链。目录页对未发布项显示「编
 category: indicators      → /indicators/{slug}
 category: combinations    → /combinations/{slug}
 category: trading-system  → /trading-system/{slug}
+category: wyckoff         → /wyckoff/{slug}
 category: introduction + slug introduction → /course
 category: introduction + 其他 slug         → /course/{slug}
 category: glossary        → /glossary#{slug}

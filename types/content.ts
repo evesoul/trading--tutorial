@@ -3,6 +3,7 @@ export type LessonCategory =
   | 'indicators'
   | 'combinations'
   | 'trading-system'
+  | 'wyckoff'
   | 'glossary'
 
 export type LessonLevel = 'beginner' | 'intermediate' | 'advanced'
@@ -42,6 +43,7 @@ export function isLessonCategory(value: string): value is LessonCategory {
     'indicators',
     'combinations',
     'trading-system',
+    'wyckoff',
     'glossary',
   ].includes(value)
 }

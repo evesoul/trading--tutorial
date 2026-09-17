@@ -20,6 +20,9 @@
         <NuxtLink to="/trading-system">
           交易系统
         </NuxtLink>
+        <NuxtLink to="/wyckoff">
+          威科夫
+        </NuxtLink>
         <NuxtLink to="/glossary">
           术语
         </NuxtLink>

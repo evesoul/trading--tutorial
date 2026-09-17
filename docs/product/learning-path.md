@@ -6,7 +6,7 @@
 
 升级总纲见 [curriculum-upgrade.md](./curriculum-upgrade.md)。本文件是课序、slug、先修的唯一来源。
 
-## 三阶段总览
+## 四阶段总览
 
 ```text
 阶段 0  导学：认识本站、永续合约、屏幕字段与风险
@@ -16,6 +16,8 @@
 阶段 2  组合：多个维度何时互相支持、何时互相打架
     ↓
 阶段 3  交易系统：环境 → 多周期 → 方向 → 订单 → 进出场 → 成本 → 热度 → 复盘
+    ↓
+阶段 4  威科夫与量价（选修）：四阶段 → 事件 → 量价 → 永续过滤器
 ```
 
 建议顺序是产品约束，不是考试路线。用户可以跳读，但文章页必须标明先修；未完成先修时，用提示而不是拦截。
@@ -28,6 +30,7 @@
 4. **阶段 2 的每一篇，先修是该组合用到的全部指标。** 组合课不补讲指标公式。
 5. **阶段 3 建议至少读完** `kline`、`market-structure`、`atr`、`ema`、`rsi`、`trend-momentum`。系统课假设读者已经能看图。入场篇建议先读 `order-types`。
 6. **术语页不占用主路径。** 需要查词时从正文链到 `/glossary`，查完回到原文。
+7. **阶段 4 是选修读图模块。** 建议至少读完 `kline`、`market-structure`、`volume`、`funding-rate`、`liquidation-cascade`、`multi-timeframe`、`position-sizing`。不替代阶段 3，不新开第四个振荡器，不把 Spring / SOS / UTAD / SOW 写成买卖指令。
 
 `learning.prerequisites` 填写 slug；`learning.next` 填写建议下一篇 slug。顺序号 `order` 在同一 `part` 内递增。阶段 0 的 `introduction` 为 `order: 0`。
 
@@ -40,7 +43,7 @@
 
 | 顺序 | slug | 标题（产品名） | 先修 | 建议下一篇 | 为什么这样排 |
 |---|---|---|---|---|---|
-| 0 | `introduction` | 怎么学这门课 | 无 | `perp-screen` | 先讲清三阶段、本站边界和「一篇只解决一个问题」。 |
+| 0 | `introduction` | 怎么学这门课 | 无 | `perp-screen` | 先讲清四阶段、本站边界和「一篇只解决一个问题」。 |
 | 1 | `perp-screen` | 交易所屏幕上有什么 | `introduction` | `kline` | 会认权益、标记价、强平、资金费倒计时，再去读 K 线。 |
 
 `introduction` 映射到 `/course`，不建 `/introduction`。  
@@ -147,7 +150,38 @@
 | 17 | `backtesting` | 回测 | `trading-journal` | `statistics` | 检验规则，含样本外与成本。 |
 | 18 | `statistics` | 数据统计 | `backtesting` | `system-optimization` | 胜率只是其中一个数字。 |
 | 19 | `system-optimization` | 系统优化 | `statistics` | `case-study` | 优化放在统计之后，并写过拟合。 |
-| 20 | `case-study` | 完整交易系统案例 | 本阶段 1–19 | （回 `/course` 复习） | 作业纸 + 执行时间线，不证明有效。 |
+| 20 | `case-study` | 完整交易系统案例 | 本阶段 1–19 | （回 `/course` 复习；可进阶段 4） | 作业纸 + 执行时间线，不证明有效。`learning.next` 保持空，避免旧课测试把选修模块写成阶段 3 必经下一篇。 |
+
+---
+
+## 阶段 4 — 威科夫与量价（选修）
+
+对应内容：`content/04-wyckoff/{slug}/`  
+对应页面：`/wyckoff`、`/wyckoff/{slug}`  
+`part: 4`，`category: wyckoff`
+
+目标：把股票教材里的威科夫四阶段，改写成永续图上的观察顺序：先定阶段，再用事件和量价对照，最后用插针、费率、清算做过滤器。  
+不是：交付可跟单的威科夫策略，或证明某次 Spring / SOS 之后价格会沿同一方向走。
+
+来源：合并自独立文档库 `trading-up/docs`（第 0–12 章 + 附录）。第 0 章与本站已有的屏幕、仓位课重叠处，改为链回，不重开第二套公式。
+
+建议先修（整阶段入口）：`kline`、`market-structure`、`volume`、`atr`、`open-interest`、`funding-rate`、`liquidation-cascade`、`multi-timeframe`、`position-sizing`。单篇另有先修时以表内为准。
+
+| order | slug | 标题 | 先修 | 建议下一篇 | 为什么这样排 |
+|---|---|---|---|---|---|
+| 1 | `wyckoff-on-perps` | 威科夫怎么用在永续 | 阶段 4 入口先修 | `accumulation-spring` | 先讲永续和股票教材差在哪，再谈四阶段。 |
+| 2 | `accumulation-spring` | 吸筹与 Spring | `wyckoff-on-perps` | `markup-sos` | 四阶段从底部区间开始。 |
+| 3 | `markup-sos` | 拉升：SOS 与 BUEC | `accumulation-spring` | `distribution-utad` | 离开区间之后，主观察回踩。 |
+| 4 | `distribution-utad` | 派发：UTAD 与 LPSY | `markup-sos` | `markdown-sow` | 吸筹的镜像。 |
+| 5 | `markdown-sow` | 下跌：SOW | `distribution-utad` | `event-variants` | 破位看收盘，恐慌量先停止。 |
+| 6 | `event-variants` | 关键事件变形 | 本阶段 2–5 | `effort-result` | 标准件之后再谈残次品。 |
+| 7 | `effort-result` | 努力与结果 | `event-variants`、`volume` | `wyckoff-mtf` | 事件告诉你在哪，量价问有没有人认真做。 |
+| 8 | `wyckoff-mtf` | 多周期怎么对阶段 | `effort-result`、`multi-timeframe` | `wyckoff-process` | 日线定阶段，短周期不推翻。 |
+| 9 | `wyckoff-process` | 完整读图流程 | `wyckoff-mtf`、`position-sizing` | `perp-filters` | 把零件装成一格可检查的计划。 |
+| 10 | `perp-filters` | 永续特有过滤器 | `wyckoff-process`、`funding-rate`、`liquidation-cascade` | `wyckoff-cases` | 插针、费率、清算用来否决。 |
+| 11 | `wyckoff-cases` | 综合案例复盘 | `perp-filters` | `wyckoff-system` | 用三段历史走完读图，不填成绩。 |
+| 12 | `wyckoff-system` | 把阶段写成系统 | `wyckoff-cases`、`what-is-a-trading-system` | `wyckoff-checklist` | 只留少数规则，一次只改一件事。 |
+| 13 | `wyckoff-checklist` | 检查清单与自评 | `wyckoff-system` | （回 `/course`） | 过程分，不是盈亏总分。 |
 
 ---
 
@@ -160,6 +194,7 @@
 3. 按阶段 1 主路径读到布林带；需要组合先修时再读 MACD
 4. 合约数据层读到清算瀑布，再进阶段 2
 5. 阶段 2、3 每次只选一篇；读完用自己的话复述本篇回答的问题
+6. 阶段 3 案例之后，若要学四阶段读图，再进 `/wyckoff`；跳读可以，但先修提示仍在
 
 不在产品层规定「几天学完」或「学完即可交易」。
 
@@ -167,15 +202,15 @@
 
 与 `docs/architecture/content-model.md` 对齐，并补充：
 
-| 字段 | 阶段 0 | 阶段 1 | 阶段 2 | 阶段 3 |
-|---|---|---|---|---|
-| `part` | `0` | `1` | `2` | `3` |
-| `category` | `introduction` | `indicators` | `combinations` | `trading-system` |
-| `level` | `beginner` | 默认 `beginner`；CVD、清算瀑布、ATR 可用 `intermediate` | 默认 `intermediate` | 默认 `intermediate`；案例可用 `advanced` |
-| `order` | 上表 0–1 | 上表 1–16 | 上表 1–7 | 上表 1–20 |
-| `slug` | 上表 | 上表 | 上表 | 上表 |
-| `learning.prerequisites` | `[]` 或 `introduction` | slug 数组 | 指标 slug + 可选组合 slug | 系统篇 slug 和/或指标 slug |
-| `learning.next` | 上表 | 上表 | 上表 | 上表 |
+| 字段 | 阶段 0 | 阶段 1 | 阶段 2 | 阶段 3 | 阶段 4 |
+|---|---|---|---|---|---|
+| `part` | `0` | `1` | `2` | `3` | `4` |
+| `category` | `introduction` | `indicators` | `combinations` | `trading-system` | `wyckoff` |
+| `level` | `beginner` | 默认 `beginner`；CVD、清算瀑布、ATR 可用 `intermediate` | 默认 `intermediate` | 默认 `intermediate`；案例可用 `advanced` | 默认 `intermediate`；案例与清单可用 `advanced` |
+| `order` | 上表 0–1 | 上表 1–16 | 上表 1–7 | 上表 1–20 | 上表 1–13 |
+| `slug` | 上表 | 上表 | 上表 | 上表 | 上表 |
+| `learning.prerequisites` | `[]` 或 `introduction` | slug 数组 | 指标 slug + 可选组合 slug | 系统篇 slug 和/或指标 slug | 威科夫 slug + 指标 / 系统 slug |
+| `learning.next` | 上表 | 上表 | 上表 | 上表 | 上表 |
 
 路径拼接：
 
@@ -185,7 +220,8 @@ category: introduction + 其他 slug         → /course/{slug}
 category: indicators                       → /indicators/{slug}
 category: combinations                     → /combinations/{slug}
 category: trading-system                   → /trading-system/{slug}
+category: wyckoff                          → /wyckoff/{slug}
 category: glossary                         → /glossary#{slug}
 ```
 
-术语条目：`category: glossary`，不进入三阶段 `order` 主链。
+术语条目：`category: glossary`，不进入四阶段 `order` 主链。

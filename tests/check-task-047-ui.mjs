@@ -22,7 +22,7 @@ const meta = await readFile(join(root, 'components/ui/courseMeta.ts'), 'utf8')
 const course = await readFile(join(root, 'pages/course/index.vue'), 'utf8')
 const steps = await readFile(join(root, 'components/ui/PathSteps.vue'), 'utf8')
 
-if (!home.includes('class="btn-row"') || home.indexOf('开始学习') > home.indexOf('三条学习阶段')) {
+if (!home.includes('class="btn-row"') || home.indexOf('开始学习') > home.indexOf('四条学习阶段')) {
   fail('首页主 CTA 未提到首屏')
 }
 else {

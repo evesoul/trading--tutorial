@@ -5,6 +5,7 @@ const lessonCategory = z.enum([
   'indicators',
   'combinations',
   'trading-system',
+  'wyckoff',
   'glossary',
 ])
 
